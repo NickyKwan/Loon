@@ -1,9 +1,9 @@
-{
-	"id": "cenbomin.app.sub",
-	"name": "CenBomin Movies🎬",
-	"author": "@cenbomin",
-	"icon": "https://avatars0.githubusercontent.com/u/75375782?s=400&u=86eee41f7f138c5d0187aa10d2242bfc9799182e&v=4",
-	"repo": "https://github.com/CenBoMin/GithubSync",
+﻿{
+	"id": "NickyKwan.app.sub",
+	"name": "NickyKwan Movies🎬",
+	"author": "@NickyKwan",
+	"icon": "https://raw.githubusercontent.com/NickyKwan/Loon/main/icon/NickyKwan.png",
+	"repo": "https://github.com/NickyKwan/Loon",
 	"apps": [{
 		"id": "chonghauapp",
 		"name": "加点葱花",
@@ -75,55 +75,6 @@
 		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png","https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png"
 		]
 	},{
-		"id": "wlapp",
-		"name": "一毛看点",
-		"keys": ["getdomainbody", "getdomainkey", "userloginbody", "userloginkey", "artlistbody", "artlistkey", "artstationurl", "artstationkey", "readaccountbody", "readaccountkey", "infomebody", "infomekey", "videoartlistbody", "videoartlistkey", "videoreadaccountbody", "videoreadaccountkey", "artdetailbody", "artdetailkey"],
-		"settings": [
-			{
-				"id": "cash",
-				"name": "提现开关:0,不自动提现;1，提现1元；5，提现5元",
-				"val": "",
-				"type": "number",
-				"desc": "默认为0,不自动提现"
-			}
-		],
-		"author": "@cenbomin",
-		"repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
-		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/WLAPP/wlapp.js",
-		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/WLAPP/IMG_1069.JPG","https://raw.githubusercontent.com/CenBoMin/GithubSync/main/WLAPP/IMG_1068.JPG"
-		]
-	},{
-		"id": "shuqiapp",
-		"name": "舒淇想说",
-		"keys": ["readuploadbody","readuploadkey","boxtaskbody","boxtaskkey","loadresourcebody","loadresourcekey","sploadresourcebody","sploadresourcekey","withdrawbody","bubblebody","receivebody","signinactionbody","readlotterybody","videolotterybody","luckylotterybody","luckyredurl","luckyredbody","sharebody","booktaskurl","booktaskbody","spsigninactionbody","spreadcoinurl","spreadcoinbody","sp1videocoinbody","sp2videocoinbody","spsharebody","lotteryinfourl","videoinfourl","spvideoinfourl","readuploadbody2","readuploadkey2","boxtaskbody2","boxtaskkey2","loadresourcebody2","loadresourcekey2","sploadresourcebody2","sploadresourcekey2","withdrawbody2","bubblebody2","receivebody2","signinactionbody2","readlotterybody2","videolotterybody2","luckylotterybody2","luckyredurl2","luckyredbody2","sharebody2","booktaskurl2","booktaskbody2","spsigninactionbody2","spreadcoinurl2","spreadcoinbody2","sp1videocoinbody2","sp2videocoinbody2","spsharebody2","lotteryinfourl2","videoinfourl2","spvideoinfourl2","readuploadbody3","readuploadkey3","boxtaskbody3","boxtaskkey3","loadresourcebody3","loadresourcekey3","sploadresourcebody3","sploadresourcekey3","withdrawbody3","bubblebody3","receivebody3","signinactionbody3","readlotterybody3","videolotterybody3","luckylotterybody3","luckyredurl3","luckyredbody3","sharebody3","booktaskurl3","booktaskbody3","spsigninactionbody3","spreadcoinurl3","spreadcoinbody3","sp1videocoinbody3","sp2videocoinbody3","spsharebody3","lotteryinfourl3","videoinfourl3","spvideoinfourl3","readuploadbody4","readuploadkey4","boxtaskbody4","boxtaskkey4","loadresourcebody4","loadresourcekey4","sploadresourcebody4","sploadresourcekey4","withdrawbody4","bubblebody4","receivebody4","signinactionbody4","readlotterybody4","videolotterybody4","luckylotterybody4","luckyredurl4","luckyredbody4","sharebody4","booktaskurl4","booktaskbody4","spsigninactionbody4","spreadcoinurl4","spreadcoinbody4","sp1videocoinbody4","sp2videocoinbody4","spsharebody4","lotteryinfourl4","videoinfourl4","spvideoinfourl4","readuploadbody5","readuploadkey5","boxtaskbody5","boxtaskkey5","loadresourcebody5","loadresourcekey5","sploadresourcebody5","sploadresourcekey5","withdrawbody5","bubblebody5","receivebody5","signinactionbody5","readlotterybody5","videolotterybody5","luckylotterybody5","luckyredurl5","luckyredbody5","sharebody5","booktaskurl5","booktaskbody5","spsigninactionbody5","spreadcoinurl5","spreadcoinbody5","sp1videocoinbody5","sp2videocoinbody5","spsharebody5","lotteryinfourl5","videoinfourl5","spvideoinfourl5"],
-		"settings": [
-
-      {
-				"id": "shuqiappSuffix",
-				"name": "当前抓取ck账号",
-				"val": "1",
-				"type": "number",
-				"desc": "当前抓取ck记录的账号序号，如：1、2、3、"
-			},{
-				"id": "shuqiappCount",
-				"name": "脚本执行账号个数",
-				"val": "1",
-				"type": "number",
-				"desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
-			},{
- 	      "id": "mymaxtime",
- 	      "name": "阅读时长最大值:阅读挑战赛建议设置360。",
- 	      "val": "",
- 	      "type": "text",
- 	      "desc": "默认180,需要突破限制请添加数字。"
- 	    }
-		],
-		"author": "@cenbomin",
-		"repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
-		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/SHUQI/shuqi.js",
-		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/SHUQI/shuqi-mini.png", "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/SHUQI/shuqi.png"
-		]
-	},{
 		"id": "dkdvideo",
 		"name": "想看多看点",
 		"keys": ["dkdtokenbody", "dkdtokenkey", "getawardbody","getawardbody_index","dkdcashkey","dkdlottokey"],
@@ -187,5 +138,37 @@
 	  "script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/RUNSTEP/runstep.js",
 	  "icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/RUNSTEP/runstep120X120.png", "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/RUNSTEP/runstep120X120.png"
 	  ]
-	}]
+	},
+{
+            "id": "shuqi",
+            "name": "书旗小说APP",
+            "keys": ["shuqiuserurl", "shuqisyurl", "shuqisybody", "shuqispbody", "shuqiscbody", "shuqiydbody", "shuqiqdbody",   "shuqirwbody", "shuqifxbody", "shuqisprwurl", "shuqijlbody", "shuqisqjlbody", "shuqicjyurl", "shuqicjcsbody", "shuqicjbody", "shuqijsspbody", "shuqijsydurl", "shuqijsydbody", "shuqijsqdbody", "shuqijsqdspyurl", "shuqijsqdspbody",   "shuqijsrwbody", "shuqijsfxbody", "shuqijsbookurl", "shuqijsbookbody", "shuqijssprwurl", "shuqiuserurl2", "shuqisyurl2", "shuqisybody2", "shuqispbody2", "shuqiscbody2", "shuqiydbody2", "shuqiqdbody2",   "shuqirwbody2", "shuqifxbody2", "shuqisprwurl2", "shuqijlbody2", "shuqisqjlbody2", "shuqicjyurl2", "shuqicjcsbody2", "shuqicjbody2", "shuqijsspbody2", "shuqijsydurl2", "shuqijsydbody2", "shuqijsqdbody2", "shuqijsqdspyurl2", "shuqijsqdspbody2",   "shuqijsrwbody2", "shuqijsfxbody2", "shuqijsbookurl2", "shuqijsbookbody2", "shuqijssprwurl2", "shuqiuserurl3", "shuqisyurl3", "shuqisybody3", "shuqispbody3", "shuqiscbody3", "shuqiydbody3", "shuqiqdbody3",   "shuqirwbody3", "shuqifxbody3", "shuqisprwurl3", "shuqijlbody3", "shuqisqjlbody3", "shuqicjyurl3", "shuqicjcsbody3", "shuqicjbody3", "shuqijsspbody3", "shuqijsydurl3", "shuqijsydbody3", "shuqijsqdbody3", "shuqijsqdspyurl3", "shuqijsqdspbody3",   "shuqijsrwbody3", "shuqijsfxbody3", "shuqijsbookurl3", "shuqijsbookbody3", "shuqijssprwurl3", "shuqiuserurl4", "shuqisyurl4", "shuqisybody4", "shuqispbody4", "shuqiscbody4", "shuqiydbody4", "shuqiqdbody4",   "shuqirwbody4", "shuqifxbody4", "shuqisprwurl4", "shuqijlbody4", "shuqisqjlbody4", "shuqicjyurl4", "shuqicjcsbody4", "shuqicjbody4", "shuqijsspbody4", "shuqijsydurl4", "shuqijsydbody4", "shuqijsqdbody4", "shuqijsqdspyurl4", "shuqijsqdspbody4",   "shuqijsrwbody4", "shuqijsfxbody4", "shuqijsbookurl4", "shuqijsbookbody4", "shuqijssprwurl4", "shuqiuserurl5", "shuqisyurl5", "shuqisybody5", "shuqispbody5", "shuqiscbody5", "shuqiydbody5", "shuqiqdbody5",   "shuqirwbody5", "shuqifxbody5", "shuqisprwurl5", "shuqijlbody5", "shuqisqjlbody5", "shuqicjyurl5", "shuqicjcsbody5", "shuqicjbody5", "shuqijsspbody5", "shuqijsydurl5", "shuqijsydbody5", "shuqijsqdbody5", "shuqijsqdspyurl5", "shuqijsqdspbody5",   "shuqijsrwbody5", "shuqijsfxbody5", "shuqijsbookurl5", "shuqijsbookbody5", "shuqijssprwurl5", "shuqiuserurl6", "shuqisyurl6", "shuqisybody6", "shuqispbody6", "shuqiscbody6", "shuqiydbody6", "shuqiqdbody6",   "shuqirwbody6", "shuqifxbody6", "shuqisprwurl6", "shuqijlbody6", "shuqisqjlbody6", "shuqicjyurl6", "shuqicjcsbody6", "shuqicjbody6", "shuqijsspbody6", "shuqijsydurl6", "shuqijsydbody6", "shuqijsqdbody6", "shuqijsqdspyurl6", "shuqijsqdspbody6",   "shuqijsrwbody6", "shuqijsfxbody6", "shuqijsbookurl6", "shuqijsbookbody6", "shuqijssprwurl6", "shuqiuserurl7", "shuqisyurl7", "shuqisybody7", "shuqispbody7", "shuqiscbody7", "shuqiydbody7", "shuqiqdbody7",   "shuqirwbody7", "shuqifxbody7", "shuqisprwurl7", "shuqijlbody7", "shuqisqjlbody7", "shuqicjyurl7", "shuqicjcsbody7", "shuqicjbody7", "shuqijsspbody7", "shuqijsydurl7", "shuqijsydbody7", "shuqijsqdbody7", "shuqijsqdspyurl7", "shuqijsqdspbody7",   "shuqijsrwbody7", "shuqijsfxbody7", "shuqijsbookurl7", "shuqijsbookbody7", "shuqijssprwurl7"],
+            "author": "@ziye",
+            "settings": [{
+                    "id": "shuqiSuffix",
+                    "name": "当前账号",
+                    "val": "1",
+                    "type": "number",
+                    "desc": "当前抓取ck记录的账号序号，如：1、2、3、"
+                },
+                {
+                    "id": "shuqiCount",
+                    "name": "账号个数",
+                    "val": "1",
+                    "type": "number",
+                    "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+                },
+                {
+                    "id": "shuqiXH",
+                    "name": "循环获取CK",
+                    "val": "0",
+                    "type": "number",
+                    "desc": "0关闭 1开启,默认关闭"
+                }
+            ],
+            "repo": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/shuqi.js",
+            "icons": ["https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/shuqi.png", "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/shuqi.png"],
+            "script": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/yuedongzu.js"
+        }
+]
 }
