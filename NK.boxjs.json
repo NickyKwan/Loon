@@ -288,7 +288,7 @@
                 }
             ],
             "repo": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/zhima.js",
-            "icons": ["https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/zhima.png", "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/zhima.png"],
+            "icons": ["https://raw.githubusercontent.com/NickyKwan/Loon/main/icon/zhima.png", "https://raw.githubusercontent.com/NickyKwan/Loon/main/icon/zhima.png"],
             "script": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/zhima.js"
         },
         {
