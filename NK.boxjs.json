@@ -711,6 +711,10 @@
       "id": "youthBanner",
       "name": "中青看看赚",
       "keys": ["youth_banner", "youth_banner2", "youth_banner3", "youth_banner4", "youth_banner5", "youth_banner6"],
+      "descs_html": [
+        "<h4 align=\"center\">获取Cookie以及脚本配置请查看<a href=\"https://raw.githubusercontent.com/ztxtop/x/main/rewrite-zqread.plugin\">配置说明</a></h4>", 
+        "<br />", 
+      ],	  
       "author": "@ztxtop",
       "settings": [{
         "id": "delErrorData",
