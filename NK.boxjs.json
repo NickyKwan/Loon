@@ -1,13 +1,18 @@
 ﻿{
 	"id": "NickyKwan.app.sub",
-	"name": "NickyKwan Movies🎬",
+	"name": "NickyKwan Boxjs🎬",
 	"author": "@NickyKwan",
 	"icon": "https://raw.githubusercontent.com/NickyKwan/Loon/main/icon/NickyKwan.png",
 	"repo": "https://github.com/NickyKwan/Loon",
-	"apps": [{
+	"apps": [
+	{
 		"id": "chonghua",
-		"name": "亿点点葱花",
+		"name": "再来点葱花",
 		"keys": ["uid","chgetbody_video", "chgetbody_share", "chgetbody_timered", "chgetbody_taskcenter", "chgetbody_sharereward", "logbutton", "tzbutton","chgetbody_video_index"],
+		"descs_html": [
+        "<h4 align=\"center\">获取Body<a href=\"https://raw.githubusercontent.com/CenBoMin/GithubSync/main/CONGHUA/GetBody.conf\">重写引用conf</a></h4>", 
+        "<br />"
+      ],
 		"settings": [
 			{
 				"id": "chgetbody_video",
@@ -51,12 +56,14 @@
 			}
 		],
 		"author": "@cenbomin",
-		"repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+		"repo": "https://github.com/CenBoMin/GithubSync/tree/main/CONGHUA",
 		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/CONGHUA/chonghua.js",
-		"icons": ["https://raw.githubusercontent.com/ChuheGit/1/main/QuantumultX/Gallery/API-Icon/AutoRead.png",
-			"https://raw.githubusercontent.com/58xinian/icon/master/chsp.png"
+		"icons": [
+		         "https://raw.githubusercontent.com/ChuheGit/1/main/QuantumultX/Gallery/API-Icon/AutoRead.png",
+		         "https://raw.githubusercontent.com/58xinian/icon/master/chsp.png"
 		]
-	},{
+	},
+	{
 		"id": "txstockapp",
 		"name": "自选羊毛股",
 		"keys": ["signheader", "signkey", "taskheader", "taskkey", "userheader", "userkey", "wxtaskkey","cash"],
@@ -72,9 +79,28 @@
 		"author": "@cenbomin",
 		"repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
 		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txstockqx.js",
+		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png","https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png"]
+	},
+	{
+		"id": "txstockapp",
+		"name": "自选企鹅股",
+		"keys": ["signheader2", "signkey2", "taskheader2", "taskkey2", "userheader2", "userkey2", "wxtaskkey2","cash2"],
+		"settings": [
+			{
+				"id": "cash",
+				"name": "提现开关:0,不自动提现;1，提现1元；5，提现5元",
+				"val": "",
+				"type": "number",
+				"desc": "默认为0,不自动提现"
+			}
+		],
+		"author": "@cenbomin",
+		"repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txstockqx.js",
 		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png","https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png"
 		]
-	},{
+	},	
+	{
 		"id": "dkdvideo",
 		"name": "多看亿点点",
 		"keys": ["dkdtokenbody", "dkdtokenkey", "getawardbody","getawardbody_index","dkdcashkey","dkdlottokey"],
