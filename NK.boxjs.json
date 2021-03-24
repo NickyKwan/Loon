@@ -380,7 +380,7 @@
     {
             "id": "ysm",
             "name": "每天扫个码",
-            "keys": ["ysmurl", "ysmhd","ysmbody","ysm2body", "ysmtx","ysmurl2", "ysmhd2","ysmbody2","ysm2body2", "ysmtx2","ysmurl3", "ysmhd3","ysmbody3","ysm2body3","ysmtx3","ysmurl4", "ysmhd4","ysmbody4","ysm2body4","ysmtx4","ysmurl5", "ysmhd5","ysmbody5","ysm2body5","ysmtx5","ysmurl6", "ysmhd6","ysmbody6","ysm2body6","ysmtx6","ysmurl7", "ysmhd7","ysmbody7","ysm2body7","ysmtx7","ysmurl8", "ysmhd8","ysmbody8","ysm2body8","ysmtx8","ysmurl9", "ysmhd9","ysmbody9","ysm2body9","ysmtx9"],
+            "keys": ["ysmurl", "ysmhd","ysmbody","ysm2body", "ysmtx","ysmurl2", "ysmhd2","ysmbody2","ysm2body2", "ysmtx2","ysmurl3", "ysmhd3","ysmbody3","ysm2body3","ysmtx3","ysmurl4", "ysmhd4","ysmbody4","ysm2body4","ysmtx4","ysmurl5", "ysmhd5","ysmbody5","ysm2body5","ysmtx5","ysmurl6", "ysmhd6","ysmbody6","ysm2body6","ysmtx6"],
             "author": "@feizao",
             "settings": [
 		{
@@ -454,7 +454,7 @@
     {
             "id": "hldsp",
             "name": "哈喽短视频",
-            "keys": ["hldspurl", "hldsphd", "hldspurl2", "hldsphd2","hldspurl3", "hldsphd3","hldspurl4", "hldsphd4","hldspurl5", "hldsphd5","hldspurl6", "hldsphd6","hldspurl7", "hldsphd7","hldspurl8", "hldsphd8","hldspurl9", "hldsphd9","hldspurl10", "hldsphd10"],
+            "keys": ["hldspurl", "hldsphd", "hldspurl2", "hldsphd2","hldspurl3", "hldsphd3","hldspurl4", "hldsphd4","hldspurl5", "hldsphd5","hldspurl6", "hldsphd6"],
             "author": "@feizao",
             "settings": [
 		{
@@ -478,7 +478,7 @@
     {
             "id": "cfz",
             "name": "春风转不动",
-            "keys": ["cfzurl", "cfzhd", "cfzurl2", "cfzhd2","cfzurl3", "cfzhd3", "cfzurl4", "cfzhd4","cfzurl5", "cfzhd5", "cfzurl6", "cfzhd6", "cfzurl7", "cfzhd7","cfzurl8", "cfzhd8", "cfzurl9", "cfzhd9", "cfzurl10", "cfzhd10"],
+            "keys": ["cfzurl", "cfzhd", "cfzurl2", "cfzhd2","cfzurl3", "cfzhd3", "cfzurl4", "cfzhd4","cfzurl5", "cfzhd5", "cfzurl6", "cfzhd6"],
             "author": "@feizao",
             "settings": [
 		{
@@ -710,7 +710,7 @@
     {
       "id": "youthBanner",
       "name": "中青看看赚",
-      "keys": ["youth_banner", "youth_android_readtime", "youth_android_reward", "youth_android_newtask", "youth_banner2", "youth_android_readtime2", "youth_android_reward2", "youth_android_newtask2", "youth_banner3", "youth_android_readtime3", "youth_android_reward3", "youth_android_newtask3", "youth_banner4", "youth_android_readtime4", "youth_android_reward4", "youth_android_newtask4"],
+      "keys": ["youth_banner", "youth_banner2", "youth_banner3", "youth_banner4", "youth_banner5", "youth_banner6"],
       "author": "@ztxtop",
       "settings": [{
         "id": "delErrorData",
