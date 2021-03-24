@@ -9,10 +9,9 @@
 		"id": "chonghua",
 		"name": "再来点葱花",
 		"keys": ["uid","chgetbody_video", "chgetbody_share", "chgetbody_timered", "chgetbody_taskcenter", "chgetbody_sharereward", "logbutton", "tzbutton","chgetbody_video_index"],
-		"descs_html": [
-        "<h4 align=\"center\">获取Body<a href=\"https://raw.githubusercontent.com/CenBoMin/GithubSync/main/CONGHUA/GetBody.conf\">重写引用conf</a></h4>", 
-        "<br />"
-      ],
+		"descs_html": ["<h4 align=\"center\">脚本配置请查看<a href=\"https://github.com/CenBoMin/GithubSync/tree/main/CONGHUA\">配置说明</a></h4>", 
+                       "<br />"
+                      ],
 		"settings": [
 			{
 				"id": "chgetbody_video",
@@ -61,12 +60,15 @@
 		"icons": [
 		         "https://raw.githubusercontent.com/ChuheGit/1/main/QuantumultX/Gallery/API-Icon/AutoRead.png",
 		         "https://raw.githubusercontent.com/58xinian/icon/master/chsp.png"
-		]
+		         ]
 	},
 	{
 		"id": "txstockapp",
 		"name": "自选羊毛股",
 		"keys": ["signheader", "signkey", "taskheader", "taskkey", "userheader", "userkey", "wxtaskkey","cash"],
+		"descs_html": ["<h4 align=\"center\">脚本配置请查看<a href=\"https://github.com/CenBoMin/GithubSync/tree/main/TXSTOCK\">配置说明</a></h4>", 
+                       "<br />"
+                      ],		
 		"settings": [
 			{
 				"id": "cash",
@@ -77,14 +79,20 @@
 			}
 		],
 		"author": "@cenbomin",
-		"repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+		"repo": "https://github.com/CenBoMin/GithubSync/tree/main/TXSTOCK",
 		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txstockqx.js",
-		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png","https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png"]
+		"icons": [
+		          "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png",
+				  "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png"
+				  ]
 	},
 	{
 		"id": "txstockapp",
 		"name": "自选企鹅股",
 		"keys": ["signheader2", "signkey2", "taskheader2", "taskkey2", "userheader2", "userkey2", "wxtaskkey2","cash2"],
+		"descs_html": ["<h4 align=\"center\">脚本配置请查看<a href=\"https://github.com/CenBoMin/GithubSync/tree/main/TXSTOCK\">配置说明</a></h4>", 
+                       "<br />"
+                      ],		
 		"settings": [
 			{
 				"id": "cash",
@@ -95,15 +103,19 @@
 			}
 		],
 		"author": "@cenbomin",
-		"repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+		"repo": ["https://github.com/CenBoMin/GithubSync/tree/main/TXSTOCK"],
 		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txstockqx.js",
-		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png","https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png"
-		]
+		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png",
+		          "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png"
+		         ]
 	},	
 	{
 		"id": "dkdvideo",
 		"name": "多看亿点点",
 		"keys": ["dkdtokenbody", "dkdtokenkey", "getawardbody","getawardbody_index","dkdcashkey","dkdlottokey"],
+		"descs_html": ["<h4 align=\"center\">脚本配置请查看<a href=\"https://github.com/CenBoMin/GithubSync/tree/main/DKDVIDEO\">配置说明</a></h4>", 
+                       "<br />"
+                      ],		
 		"settings": [
 			{
 				"id": "getawardbody",
@@ -130,14 +142,19 @@
  	    }
 		],
 		"author": "@cenbomin",
-		"repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+		"repo": "https://github.com/CenBoMin/GithubSync/tree/main/DKDVIDEO",
 		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/DKDVIDEO/dkdvideo.js",
-		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/DKDVIDEO/dkd.png", "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/DKDVIDEO/dkd.png"
-		]
-	},{
+		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/DKDVIDEO/dkd.png", 
+		          "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/DKDVIDEO/dkd.png"
+		         ]
+	},
+	{
 	  "id": "runstep",
 	  "name": "不走会亏钱",
-	  "keys": ["version", "runsteptoken", "runstepkey", "txtoken", "txkey", "runsteptoken2", "runstepkey2", "txtoken2", "txkey2", "runsteptoken3", "runstepkey3", "txtoken3", "txkey3", "runsteptoken4", "runstepkey4", "txtoken4", "txkey4", "runsteptoken5", "runstepkey5", "txtoken5", "txkey5", "runsteptoken6", "runstepkey6", "txtoken6", "txkey6", "runsteptoken7", "runstepkey7", "txtoken7", "txkey7"],
+	  "keys": ["version", "runsteptoken", "runstepkey", "txtoken", "txkey", "runsteptoken2", "runstepkey2", "txtoken2", "txkey2", "runsteptoken3", "runstepkey3", "txtoken3", "txkey3", "runsteptoken4", "runstepkey4", "txtoken4", "txkey4", "runsteptoken5", "runstepkey5", "txtoken5", "txkey5"],
+		"descs_html": ["<h4 align=\"center\">脚本配置请查看<a href=\"https://github.com/CenBoMin/GithubSync/tree/main/RUNSTEP\">配置说明</a></h4>", 
+                       "<br />"
+                      ],	  
 	  "settings": [
 	    {
 	      "id": "version",
@@ -160,16 +177,20 @@
 			}
 	  ],
 	  "author": "@cenbomin",
-	  "repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+	  "repo": "https://github.com/CenBoMin/GithubSync/tree/main/RUNSTEP",
 	  "script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/RUNSTEP/runstep.js",
-	  "icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/RUNSTEP/runstep120X120.png", "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/RUNSTEP/runstep120X120.png"
-	  ]
+	  "icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/RUNSTEP/runstep120X120.png",
+            	"https://raw.githubusercontent.com/CenBoMin/GithubSync/main/RUNSTEP/runstep120X120.png"
+	           ]
 	},
-{
-            "id": "shuqi",
-            "name": "舒淇她想说",
-            "keys": ["shuqiuserurl", "shuqisyurl", "shuqisybody", "shuqispbody", "shuqiscbody", "shuqiydbody", "shuqiqdbody",   "shuqirwbody", "shuqifxbody", "shuqisprwurl", "shuqijlbody", "shuqisqjlbody", "shuqicjyurl", "shuqicjcsbody", "shuqicjbody", "shuqijsspbody", "shuqijsydurl", "shuqijsydbody", "shuqijsqdbody", "shuqijsqdspyurl", "shuqijsqdspbody",   "shuqijsrwbody", "shuqijsfxbody", "shuqijsbookurl", "shuqijsbookbody", "shuqijssprwurl", "shuqiuserurl2", "shuqisyurl2", "shuqisybody2", "shuqispbody2", "shuqiscbody2", "shuqiydbody2", "shuqiqdbody2",   "shuqirwbody2", "shuqifxbody2", "shuqisprwurl2", "shuqijlbody2", "shuqisqjlbody2", "shuqicjyurl2", "shuqicjcsbody2", "shuqicjbody2", "shuqijsspbody2", "shuqijsydurl2", "shuqijsydbody2", "shuqijsqdbody2", "shuqijsqdspyurl2", "shuqijsqdspbody2",   "shuqijsrwbody2", "shuqijsfxbody2", "shuqijsbookurl2", "shuqijsbookbody2", "shuqijssprwurl2", "shuqiuserurl3", "shuqisyurl3", "shuqisybody3", "shuqispbody3", "shuqiscbody3", "shuqiydbody3", "shuqiqdbody3",   "shuqirwbody3", "shuqifxbody3", "shuqisprwurl3", "shuqijlbody3", "shuqisqjlbody3", "shuqicjyurl3", "shuqicjcsbody3", "shuqicjbody3", "shuqijsspbody3", "shuqijsydurl3", "shuqijsydbody3", "shuqijsqdbody3", "shuqijsqdspyurl3", "shuqijsqdspbody3",   "shuqijsrwbody3", "shuqijsfxbody3", "shuqijsbookurl3", "shuqijsbookbody3", "shuqijssprwurl3", "shuqiuserurl4", "shuqisyurl4", "shuqisybody4", "shuqispbody4", "shuqiscbody4", "shuqiydbody4", "shuqiqdbody4",   "shuqirwbody4", "shuqifxbody4", "shuqisprwurl4", "shuqijlbody4", "shuqisqjlbody4", "shuqicjyurl4", "shuqicjcsbody4", "shuqicjbody4", "shuqijsspbody4", "shuqijsydurl4", "shuqijsydbody4", "shuqijsqdbody4", "shuqijsqdspyurl4", "shuqijsqdspbody4",   "shuqijsrwbody4", "shuqijsfxbody4", "shuqijsbookurl4", "shuqijsbookbody4", "shuqijssprwurl4", "shuqiuserurl5", "shuqisyurl5", "shuqisybody5", "shuqispbody5", "shuqiscbody5", "shuqiydbody5", "shuqiqdbody5",   "shuqirwbody5", "shuqifxbody5", "shuqisprwurl5", "shuqijlbody5", "shuqisqjlbody5", "shuqicjyurl5", "shuqicjcsbody5", "shuqicjbody5", "shuqijsspbody5", "shuqijsydurl5", "shuqijsydbody5", "shuqijsqdbody5", "shuqijsqdspyurl5", "shuqijsqdspbody5",   "shuqijsrwbody5", "shuqijsfxbody5", "shuqijsbookurl5", "shuqijsbookbody5", "shuqijssprwurl5", "shuqiuserurl6", "shuqisyurl6", "shuqisybody6", "shuqispbody6", "shuqiscbody6", "shuqiydbody6", "shuqiqdbody6",   "shuqirwbody6", "shuqifxbody6", "shuqisprwurl6", "shuqijlbody6", "shuqisqjlbody6", "shuqicjyurl6", "shuqicjcsbody6", "shuqicjbody6", "shuqijsspbody6", "shuqijsydurl6", "shuqijsydbody6", "shuqijsqdbody6", "shuqijsqdspyurl6", "shuqijsqdspbody6",   "shuqijsrwbody6", "shuqijsfxbody6", "shuqijsbookurl6", "shuqijsbookbody6", "shuqijssprwurl6", "shuqiuserurl7", "shuqisyurl7", "shuqisybody7", "shuqispbody7", "shuqiscbody7", "shuqiydbody7", "shuqiqdbody7",   "shuqirwbody7", "shuqifxbody7", "shuqisprwurl7", "shuqijlbody7", "shuqisqjlbody7", "shuqicjyurl7", "shuqicjcsbody7", "shuqicjbody7", "shuqijsspbody7", "shuqijsydurl7", "shuqijsydbody7", "shuqijsqdbody7", "shuqijsqdspyurl7", "shuqijsqdspbody7",   "shuqijsrwbody7", "shuqijsfxbody7", "shuqijsbookurl7", "shuqijsbookbody7", "shuqijssprwurl7"],
-            "author": "@ziye",
+    {
+      "id": "shuqi",
+      "name": "舒淇她想说",
+      "keys": ["shuqiuserurl", "shuqisyurl", "shuqisybody", "shuqispbody", "shuqiscbody", "shuqiydbody", "shuqiqdbody",   "shuqirwbody", "shuqifxbody", "shuqisprwurl", "shuqijlbody", "shuqisqjlbody", "shuqicjyurl", "shuqicjcsbody", "shuqicjbody", "shuqijsspbody", "shuqijsydurl", "shuqijsydbody", "shuqijsqdbody", "shuqijsqdspyurl", "shuqijsqdspbody",   "shuqijsrwbody", "shuqijsfxbody", "shuqijsbookurl", "shuqijsbookbody", "shuqijssprwurl", "shuqiuserurl2", "shuqisyurl2", "shuqisybody2", "shuqispbody2", "shuqiscbody2", "shuqiydbody2", "shuqiqdbody2",   "shuqirwbody2", "shuqifxbody2", "shuqisprwurl2", "shuqijlbody2", "shuqisqjlbody2", "shuqicjyurl2", "shuqicjcsbody2", "shuqicjbody2", "shuqijsspbody2", "shuqijsydurl2", "shuqijsydbody2", "shuqijsqdbody2", "shuqijsqdspyurl2", "shuqijsqdspbody2",   "shuqijsrwbody2", "shuqijsfxbody2", "shuqijsbookurl2", "shuqijsbookbody2", "shuqijssprwurl2", "shuqiuserurl3", "shuqisyurl3", "shuqisybody3", "shuqispbody3", "shuqiscbody3", "shuqiydbody3", "shuqiqdbody3",   "shuqirwbody3", "shuqifxbody3", "shuqisprwurl3", "shuqijlbody3", "shuqisqjlbody3", "shuqicjyurl3", "shuqicjcsbody3", "shuqicjbody3", "shuqijsspbody3", "shuqijsydurl3", "shuqijsydbody3", "shuqijsqdbody3", "shuqijsqdspyurl3", "shuqijsqdspbody3",   "shuqijsrwbody3", "shuqijsfxbody3", "shuqijsbookurl3", "shuqijsbookbody3", "shuqijssprwurl3", "shuqiuserurl4", "shuqisyurl4", "shuqisybody4", "shuqispbody4", "shuqiscbody4", "shuqiydbody4", "shuqiqdbody4",   "shuqirwbody4", "shuqifxbody4", "shuqisprwurl4", "shuqijlbody4", "shuqisqjlbody4", "shuqicjyurl4", "shuqicjcsbody4", "shuqicjbody4", "shuqijsspbody4", "shuqijsydurl4", "shuqijsydbody4", "shuqijsqdbody4", "shuqijsqdspyurl4", "shuqijsqdspbody4",   "shuqijsrwbody4", "shuqijsfxbody4", "shuqijsbookurl4", "shuqijsbookbody4", "shuqijssprwurl4", "shuqiuserurl5", "shuqisyurl5", "shuqisybody5", "shuqispbody5", "shuqiscbody5", "shuqiydbody5", "shuqiqdbody5",   "shuqirwbody5", "shuqifxbody5", "shuqisprwurl5", "shuqijlbody5", "shuqisqjlbody5", "shuqicjyurl5", "shuqicjcsbody5", "shuqicjbody5", "shuqijsspbody5", "shuqijsydurl5", "shuqijsydbody5", "shuqijsqdbody5", "shuqijsqdspyurl5", "shuqijsqdspbody5",   "shuqijsrwbody5", "shuqijsfxbody5", "shuqijsbookurl5", "shuqijsbookbody5", "shuqijssprwurl5", "shuqiuserurl6", "shuqisyurl6", "shuqisybody6", "shuqispbody6", "shuqiscbody6", "shuqiydbody6", "shuqiqdbody6",   "shuqirwbody6", "shuqifxbody6", "shuqisprwurl6", "shuqijlbody6", "shuqisqjlbody6", "shuqicjyurl6", "shuqicjcsbody6", "shuqicjbody6", "shuqijsspbody6", "shuqijsydurl6", "shuqijsydbody6", "shuqijsqdbody6", "shuqijsqdspyurl6", "shuqijsqdspbody6",   "shuqijsrwbody6", "shuqijsfxbody6", "shuqijsbookurl6", "shuqijsbookbody6", "shuqijssprwurl6", "shuqiuserurl7", "shuqisyurl7", "shuqisybody7", "shuqispbody7", "shuqiscbody7", "shuqiydbody7", "shuqiqdbody7",   "shuqirwbody7", "shuqifxbody7", "shuqisprwurl7", "shuqijlbody7", "shuqisqjlbody7", "shuqicjyurl7", "shuqicjcsbody7", "shuqicjbody7", "shuqijsspbody7", "shuqijsydurl7", "shuqijsydbody7", "shuqijsqdbody7", "shuqijsqdspyurl7", "shuqijsqdspbody7",   "shuqijsrwbody7", "shuqijsfxbody7", "shuqijsbookurl7", "shuqijsbookbody7", "shuqijssprwurl7"],
+		"descs_html": ["<h4 align=\"center\">ziye舒淇请查看<a href=\"https://mp.weixin.qq.com/s/v-qHnfgn6cyV8VCQD8XXYg\">获取ck教程</a></h4>", 
+                       "<br />"
+                      ],      
+	        "author": "@ziye",
             "settings": [{
                     "id": "shuqiSuffix",
                     "name": "当前账号",
@@ -193,10 +214,12 @@
                 }
             ],
             "repo": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/shuqi.js",
-            "icons": ["https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/shuqi.png", "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/shuqi.png"],
+            "icons": ["https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/shuqi.png",
+            		  "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/shuqi.png"
+					  ],
             "script": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/shuqi.js"
         },
-        {
+    {
             "id": "iboxpay",
             "name": "笑谱来一打",
             "keys": ["refreshtoken", "iboxpayvideoheader", "iboxpayvideobody", "refreshtoken2", "iboxpayvideoheader2", "iboxpayvideobody2", "refreshtoken3", "iboxpayvideoheader3", "iboxpayvideobody3", "refreshtoken4", "iboxpayvideoheader4", "iboxpayvideobody4", "refreshtoken5", "iboxpayvideoheader5", "iboxpayvideobody5", "refreshtoken6", "iboxpayvideoheader6", "iboxpayvideobody6", "refreshtoken7", "iboxpayvideoheader7", "iboxpayvideobody7", "refreshtoken8", "iboxpayvideoheader8", "iboxpayvideobody8"],
@@ -245,12 +268,14 @@
                 }
             ],
             "repo": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/iboxpay.js",
-            "icons": ["https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/iboxpay.png", "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/iboxpay.png"],
+            "icons": ["https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/iboxpay.png", 
+			          "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/iboxpay.png"
+					  ],
             "script": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/iboxpay.js"
-        },
-{
+    },
+    {
             "id": "flw",
-            "name": "返利才有网",
+            "name": "返利那个旺",
             "keys": ["flwurl", "flwheader", "flwspbody", "flwqwbody", "flwydbody", "flwurl2", "flwheader2", "flwspbody2", "flwqwbody2", "flwydbody2", "flwurl3", "flwheader3", "flwspbody3", "flwqwbody3", "flwydbody3", "flwurl4", "flwheader4", "flwspbody4", "flwqwbody4", "flwydbody4", "flwurl5", "flwheader5", "flwspbody5", "flwqwbody5", "flwydbody5", "flwurl6", "flwheader6", "flwspbody6", "flwqwbody6", "flwydbody6"],
             "author": "@ziye",
             "settings": [{
@@ -285,10 +310,10 @@
             "repo": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/flw.js",
             "icons": ["https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/flw.png", "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/flw.png"],
             "script": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/flw.js"
-        },
-        {
+    },
+    {
             "id": "zhima",
-            "name": "芝嫲没视频",
+            "name": "芝麻＆绿豆",
             "keys": ["zhimabody", "zhimatxbody", "zhimabody2", "zhimatxbody2", "zhimabody3", "zhimatxbody3", "zhimabody4", "zhimatxbody4", "zhimabody5", "zhimatxbody5", "zhimabody6", "zhimatxbody6"],
             "author": "@ziye",
             "settings": [{
@@ -314,12 +339,14 @@
                 }
             ],
             "repo": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/zhima.js",
-            "icons": ["https://raw.githubusercontent.com/NickyKwan/Loon/main/icon/zhima.png", "https://raw.githubusercontent.com/NickyKwan/Loon/main/icon/zhima.png"],
+            "icons": ["https://raw.githubusercontent.com/NickyKwan/Loon/main/icon/zhima.png", 
+			          "https://raw.githubusercontent.com/NickyKwan/Loon/main/icon/zhima.png"
+					  ],
             "script": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/zhima.js"
-        },
-        {
+    },
+    {
             "id": "bububao",
-            "name": "宝宝步步走",
+            "name": "3毛钱宝宝",
             "keys": ["bububaotoken", "bububaotoken2", "bububaotoken3", "bububaotoken4", "bububaotoken5", "bububaotoken6"],
             "author": "@ziye",
             "settings": [{
@@ -345,8 +372,10 @@
                 }
             ],
             "repo": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/bububao.js",
-            "icons": ["https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/bububao.png", "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/bububao.png"],
+            "icons": ["https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/bububao.png", 
+			          "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/bububao.png"
+					  ],
             "script": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/bububao.js"
-        }
+    }
 ]
 }
