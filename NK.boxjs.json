@@ -5,8 +5,8 @@
 	"icon": "https://raw.githubusercontent.com/NickyKwan/Loon/main/icon/NickyKwan.png",
 	"repo": "https://github.com/NickyKwan/Loon",
 	"apps": [{
-		"id": "chonghauapp",
-		"name": "加点葱花",
+		"id": "chonghua",
+		"name": "亿点点葱花",
 		"keys": ["uid","chgetbody_video", "chgetbody_share", "chgetbody_timered", "chgetbody_taskcenter", "chgetbody_sharereward", "logbutton", "tzbutton","chgetbody_video_index"],
 		"settings": [
 			{
@@ -76,7 +76,7 @@
 		]
 	},{
 		"id": "dkdvideo",
-		"name": "想看多看点",
+		"name": "多看亿点点",
 		"keys": ["dkdtokenbody", "dkdtokenkey", "getawardbody","getawardbody_index","dkdcashkey","dkdlottokey"],
 		"settings": [
 			{
@@ -262,7 +262,7 @@
         },
         {
             "id": "zhima",
-            "name": "芝嫲看视频",
+            "name": "芝嫲没视频",
             "keys": ["zhimabody", "zhimatxbody", "zhimabody2", "zhimatxbody2", "zhimabody3", "zhimatxbody3", "zhimabody4", "zhimatxbody4", "zhimabody5", "zhimatxbody5", "zhimabody6", "zhimatxbody6"],
             "author": "@ziye",
             "settings": [{
