@@ -345,7 +345,6 @@
             "repo": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/shuqi.js",
             "icons": ["https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/shuqi.png", "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/shuqi.png"],
             "script": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/yuedongzu.js"
-        },
-
+        }
 ]
 }
