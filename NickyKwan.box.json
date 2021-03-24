@@ -1,0 +1,257 @@
+﻿{
+	"id": "NickyKwan.app.sub",
+	"name": "NickyKwan Movies🎬",
+	"author": "@NickyKwan",
+	"icon": "https://raw.githubusercontent.com/NickyKwan/Loon/main/touxiang.jpg",
+	"repo": "https://github.com/NickyKwan/Loon",
+	"apps": [{
+		"id": "chonghauapp",
+		"name": "葱花（小姐姐）",
+		"keys": ["uid","chgetbody_video", "chgetbody_share", "chgetbody_timered", "chgetbody_taskcenter", "chgetbody_sharereward", "logbutton", "tzbutton","chgetbody_video_index"],
+		"settings": [
+			{
+				"id": "chgetbody_video",
+				"name": "请求body",
+				"val": "",
+				"type": "textarea",
+				"autoGrow": false,
+				"rows": 1,
+				"desc": "看视频，倒计时转一圈显示金币到账。。建议看5篇视频,获取请求包"
+			},
+			{
+				"id": "uid",
+				"name": "自己的邀请码",
+				"val": "",
+				"type": "text",
+				"desc": "输入才可查看账户金币明细"
+			},
+			{
+					"id": "chgetbody_video_index",
+					"name": "上次执行位置",
+					"val": "",
+					"type": "textarea",
+					"autoGrow": false,
+					"rows": 1,
+					"desc": "记录上次执行的位置，可以控制从第几个body开始执行"
+				},
+			{
+				"id": "logbutton",
+				"name": "日志开关",
+				"val": "",
+				"type": "number",
+				"desc": "0为关闭日志，1为开启，默认为关闭日志"
+			}
+      ,
+			{
+				"id": "tzbutton",
+				"name": "安静开关",
+				"val": "",
+				"type": "number",
+				"desc": "0为关闭通知，1为所有通知，默认为关闭通知"
+			}
+		],
+		"author": "@cenbomin",
+		"repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/CONGHUA/chonghua.js",
+		"icons": ["https://raw.githubusercontent.com/ChuheGit/1/main/QuantumultX/Gallery/API-Icon/AutoRead.png",
+			"https://raw.githubusercontent.com/58xinian/icon/master/chsp.png"
+		]
+	},
+{
+		"id": "txstockapp",
+		"name": "腾讯自选股",
+		"keys": ["signheader", "signkey", "taskheader", "taskkey", "userheader", "userkey", "wxtaskkey","cash"],
+		"settings": [
+			{
+				"id": "cash",
+				"name": "提现开关:0,不自动提现;1，提现1元；5，提现5元",
+				"val": "",
+				"type": "number",
+				"desc": "默认为0,不自动提现"
+			}
+		],
+		"author": "@cenbomin",
+		"repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txstockqx.js",
+		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png","https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png"
+		]
+	},
+{
+		"id": "txstockapp2",
+		"name": "腾讯自选股2",
+		"keys": ["signheader2", "signkey2", "taskheader2", "taskkey2", "userheader2", "userkey2", "wxtaskkey2","cash2"],
+		"settings": [
+			{
+				"id": "cash",
+				"name": "提现开关:0,不自动提现;1，提现1元；5，提现5元",
+				"val": "",
+				"type": "number",
+				"desc": "默认为0,不自动提现"
+			}
+		],
+		"author": "@cenbomin",
+		"repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txstockqx2.js",
+		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png","https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png"
+		]
+	},
+{
+		"id": "dkdvideo",
+		"name": "多看点（小姐姐）",
+		"keys": ["dkdtokenbody", "dkdtokenkey", "getawardbody","getawardbody_index","dkdcashkey","dkdlottokey"],
+		"settings": [
+			{
+				"id": "getawardbody",
+				"name": "视频请求",
+				"val": "",
+				"type": "textarea",
+				"autoGrow": false,
+				"rows": 1,
+				"desc": "看视频，倒计时转一圈显示金币到账。"
+			},
+{
+				"id": "getawardbody_index",
+				"name": "上次执行位置",
+				"val": "",
+				"type": "textarea",
+				"autoGrow": false,
+				"rows": 1,
+				"desc": "记录上次执行的位置，可以控制从第几个视频请求开始执行"
+			},{
+ 	      "id": "myselfcash",
+ 	      "name": "自定义未满50元的提现金额,1,3,5,15",
+ 	      "val": "",
+ 	      "type": "text",
+ 	      "desc": "默认1,即未满50提现1元。"
+ 	    }
+		],
+		"author": "@cenbomin",
+		"repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/DKDVIDEO/dkdvideo.js",
+		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/DKDVIDEO/dkd.png", "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/DKDVIDEO/dkd.png"
+		]
+	},
+{
+	  "id": "runstep",
+	  "name": "走路赚",
+	  "keys": ["version", "runsteptoken", "runstepkey", "txtoken", "txkey", "runsteptoken2", "runstepkey2", "txtoken2", "txkey2", "runsteptoken3", "runstepkey3", "txtoken3", "txkey3", "runsteptoken4", "runstepkey4", "txtoken4", "txkey4", "runsteptoken5", "runstepkey5", "txtoken5", "txkey5", "runsteptoken6", "runstepkey6", "txtoken6", "txkey6", "runsteptoken7", "runstepkey7", "txtoken7", "txkey7"],
+	  "settings": [
+	    {
+	      "id": "version",
+	      "name": "APP版本号:更新软件,请更改。",
+	      "val": "",
+	      "type": "text",
+	      "desc": "默认1.5.1,更新APP软件,请更改。"
+	    },
+{
+				"id": "runstepSuffix",
+				"name": "当前抓取ck账号",
+				"val": "1",
+				"type": "number",
+				"desc": "当前抓取ck记录的账号序号，如：1、2、3、"
+			},{
+				"id": "runstepCount",
+				"name": "脚本执行账号个数",
+				"val": "1",
+				"type": "number",
+				"desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+			}
+	  ],
+	  "author": "@cenbomin",
+	  "repo": ["https://raw.githubusercontent.com/CenBoMin/GithubSync"],
+	  "script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/RUNSTEP/runstep.js",
+	  "icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/RUNSTEP/runstep120X120.png", "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/RUNSTEP/runstep120X120.png"
+	  ]
+	},
+        {
+            "id": "iboxpay",
+            "name": "笑谱",
+            "keys": ["refreshtoken", "iboxpayvideoheader", "iboxpayvideobody", "refreshtoken2", "iboxpayvideoheader2", "iboxpayvideobody2", "refreshtoken3", "iboxpayvideoheader3", "iboxpayvideobody3", "refreshtoken4", "iboxpayvideoheader4", "iboxpayvideobody4", "refreshtoken5", "iboxpayvideoheader5", "iboxpayvideobody5", "refreshtoken6", "iboxpayvideoheader6", "iboxpayvideobody6", "refreshtoken7", "iboxpayvideoheader7", "iboxpayvideobody7", "refreshtoken8", "iboxpayvideoheader8", "iboxpayvideobody8"],
+            "author": "@ziye",
+            "settings": [{
+                    "id": "iboxpaySuffix",
+                    "name": "当前账号",
+                    "val": "1",
+                    "type": "number",
+                    "desc": "当前抓取ck记录的账号序号，如：1、2、4、"
+                },
+                {
+                    "id": "iboxpayCount",
+                    "name": "账号个数",
+                    "val": "1",
+                    "type": "number",
+                    "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+                },
+                {
+                    "id": "iboxpayLIVE",
+                    "name": "任务控制",
+                    "val": "1",
+                    "type": "number",
+                    "desc": "默认为1开启直播，视频请获取ck，设置2关闭视频，新人请设置888"
+                },
+                {
+                    "id": "iboxpayCASH",
+                    "name": "提现标准",
+                    "val": "0",
+                    "type": "number",
+                    "desc": "0不提现，可设置 0 1 15 30 100 888 设置888，由大至小循环提现 "
+                },
+                {
+                    "id": "iboxpayphone",
+                    "name": "手机号",
+                    "val": "0",
+                    "type": "number",
+                    "desc": "请输入完整手机号"
+                },
+                {
+                    "id": "iboxpaysms",
+                    "name": "验证码",
+                    "val": "0",
+                    "type": "number",
+                    "desc": "输入短信验证码，默认为0，不启动获取token功能"
+                }
+            ],
+            "repo": "https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/iboxpay.js",
+            "icons": ["https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/iboxpay.png", "https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/iboxpay.png"],
+            "script": "https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/iboxpay.js"
+        },
+{
+            "id": "flw",
+            "name": "返利网",
+            "keys": ["flwurl", "flwheader", "flwspbody", "flwqwbody", "flwydbody", "flwurl2", "flwheader2", "flwspbody2", "flwqwbody2", "flwydbody2", "flwurl3", "flwheader3", "flwspbody3", "flwqwbody3", "flwydbody3", "flwurl4", "flwheader4", "flwspbody4", "flwqwbody4", "flwydbody4", "flwurl5", "flwheader5", "flwspbody5", "flwqwbody5", "flwydbody5", "flwurl6", "flwheader6", "flwspbody6", "flwqwbody6", "flwydbody6"],
+            "author": "@ziye",
+            "settings": [{
+                    "id": "flwSuffix",
+                    "name": "当前账号",
+                    "val": "1",
+                    "type": "number",
+                    "desc": "当前抓取ck记录的账号序号，如：1、2、3、"
+                },
+                {
+                    "id": "flwCount",
+                    "name": "账号个数",
+                    "val": "1",
+                    "type": "number",
+                    "desc": "指定任务最多跑几个账号，根据抓取的账号数据个数来设值"
+                },
+                {
+                    "id": "flwCASH",
+                    "name": "天天领现金提现标准",
+                    "val": "0",
+                    "type": "number",
+                    "desc": "默认0，设置0.3及以上时启动天天领现金模块，且大于等于此值时自动提现"
+                },
+                {
+                    "id": "flwDHCASH",
+                    "name": "兑换标准",
+                    "val": "0",
+                    "type": "number",
+                    "desc": "默认0，可设置设置 0 5 50 100"
+                }
+            ],
+            "repo": "https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/flw.js",
+            "icons": ["https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/flw.png", "https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/flw.png"],
+            "script": "https://raw.githubusercontent.com/6Svip120apk69/gitee_q8qsTAUA_cThxc1RBVUE/main/Task/flw.js"
+        },
+]
+}
