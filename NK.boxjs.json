@@ -84,7 +84,7 @@
 				  ]
 	},
 	{
-		"id": "txstockapp",
+		"id": "txstockapp2",
 		"name": "自选企鹅股",
 		"keys": ["signheader2", "signkey2", "taskheader2", "taskkey2", "userheader2", "userkey2", "wxtaskkey2","cash2"],	
 		"settings": [
