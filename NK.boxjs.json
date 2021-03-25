@@ -221,7 +221,7 @@
         },
     {
             "id": "iboxpay",
-            "name": "笑谱来一打",
+            "name": "笑谱天天要",
             "keys": ["refreshtoken", "iboxpayvideoheader", "iboxpayvideobody", "refreshtoken2", "iboxpayvideoheader2", "iboxpayvideobody2", "refreshtoken3", "iboxpayvideoheader3", "iboxpayvideobody3", "refreshtoken4", "iboxpayvideoheader4", "iboxpayvideobody4", "refreshtoken5", "iboxpayvideoheader5", "iboxpayvideobody5", "refreshtoken6", "iboxpayvideoheader6", "iboxpayvideobody6", "refreshtoken7", "iboxpayvideoheader7", "iboxpayvideobody7", "refreshtoken8", "iboxpayvideoheader8", "iboxpayvideobody8"],
             "author": "@ziye",
             "settings": [{
@@ -313,7 +313,7 @@
     },
     {
             "id": "zhima",
-            "name": "芝麻＆绿豆",
+            "name": "芝麻和绿豆",
             "keys": ["zhimabody", "zhimatxbody", "zhimabody2", "zhimatxbody2", "zhimabody3", "zhimatxbody3", "zhimabody4", "zhimatxbody4", "zhimabody5", "zhimatxbody5", "zhimabody6", "zhimatxbody6"],
             "author": "@ziye",
             "settings": [{
@@ -379,7 +379,7 @@
     },
     {
             "id": "ysm",
-            "name": "每天扫个码",
+            "name": "白云扫个码",
             "keys": ["ysmurl", "ysmhd","ysmbody","ysm2body", "ysmtx","ysmurl2", "ysmhd2","ysmbody2","ysm2body2", "ysmtx2","ysmurl3", "ysmhd3","ysmbody3","ysm2body3","ysmtx3","ysmurl4", "ysmhd4","ysmbody4","ysm2body4","ysmtx4","ysmurl5", "ysmhd5","ysmbody5","ysm2body5","ysmtx5","ysmurl6", "ysmhd6","ysmbody6","ysm2body6","ysmtx6"],
             "author": "@feizao",
             "settings": [
@@ -453,7 +453,7 @@
     },
     {
             "id": "hldsp",
-            "name": "哈喽短视频",
+            "name": "hello短视频",
             "keys": ["hldspurl", "hldsphd", "hldspurl2", "hldsphd2","hldspurl3", "hldsphd3","hldspurl4", "hldsphd4","hldspurl5", "hldsphd5","hldspurl6", "hldsphd6"],
             "author": "@feizao",
             "settings": [
@@ -508,7 +508,7 @@
     } ,
     {
             "id": "wkzz",
-            "name": "微客是智障",
+            "name": "握草的微客",
             "keys": ["wkzzurl", "wkzzhd", "wkzzurl2", "wkzzhd2", "wkzzurl3", "wkzzhd3", "wkzzurl4", "wkzzhd4", "wkzzurl5", "wkzzhd5", "wkzzurl6", "wkzzhd6"],
             "author": "@feizao",
             "settings": [
@@ -532,7 +532,7 @@
     } ,
     {
             "id": "ranlv",
-            "name": "燃烧着旅游",
+            "name": "旅游还燃烧？",
             "keys": ["rlurl", "rlheader","rlurl2","rlheader2","rlurl3","rlheader3","rlurl4","rlheader4","rlurl5", "rlheader5"],
             "author": "@ZhiYi-N",
             "settings": [
@@ -677,7 +677,7 @@
           ]
         }
       ], 
-      "name": "中青多看点", 
+      "name": "中青才能看", 
       "icons": [
         "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Alpha/youth.png", 
         "https://cdn.jsdelivr.net/gh/Orz-3/mini@master/Color/youth.png"
