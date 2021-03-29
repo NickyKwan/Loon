@@ -4,14 +4,14 @@
 #微客
 http://wx.tiantianaiyuedu.site/ wkzz.js
 #中青多账号
-^https?://ios\.baertt\.com/v5/article/complete https://raw.githubusercontent.com/ztxtop/x/main/zqread.js
-^https?://ios\.baertt\.com/v5/user/app_stay\.json https://raw.githubusercontent.com/ztxtop/x/main/zqread.js
-^https?://\w+\.youth\.cn/(TaskCenter|WebApi/NewTaskIos)/(sign|getSign)(\?.+)?$ https://raw.githubusercontent.com/ztxtop/x/main/zqread.js
+#^https?://ios\.baertt\.com/v5/article/complete https://raw.githubusercontent.com/ztxtop/x/main/zqread.js
+#^https?://ios\.baertt\.com/v5/user/app_stay\.json https://raw.githubusercontent.com/ztxtop/x/main/zqread.js
+#^https?://\w+\.youth\.cn/(TaskCenter|WebApi/NewTaskIos)/(sign|getSign)(\?.+)?$ https://raw.githubusercontent.com/ztxtop/x/main/zqread.js
 #中青看看赚
-^https?://ios\.baertt\.com\/v5\/task/browse_start\.json https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js
-^https?://ios\.baertt\.com/v5/Nameless/adlickstart\.json https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js
-^https://kd\.youth\.cn/WebApi/NewTaskIos/getTaskList https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js
-^https?://ios\.baertt\.com/v5/user/app_stay\.json https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js
+^https?://ios\.baertt\.com\/v5\/task/browse_start\.json youth_banner.js
+^https?://ios\.baertt\.com/v5/Nameless/adlickstart\.json youth_banner.js
+^https://kd\.youth\.cn/WebApi/NewTaskIos/getTaskList youth_banner.js
+^https?://ios\.baertt\.com/v5/user/app_stay\.json youth_banner.js
 #笑谱
 https:\/\/veishop\.iboxpay\.com\/nf_gateway\/nf_customer_activity\/day_cash\/v1\/give_gold_coin_by_video.json iboxpay.js
 https:\/\/veishop\.iboxpay\.com\/nf_gateway\/nf-user-auth-web\/ignore_tk\/veishop\/v1\/* iboxpay.js
