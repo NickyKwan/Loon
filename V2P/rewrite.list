@@ -3,6 +3,8 @@
 [elecV2P rewrite.list]
 #微客
 http://wx.tiantianaiyuedu.site/ wkzz.js
+#文创阅读
+http://yd.hzstzs.com/hfTask/startRead https://raw.githubusercontent.com/age174/-/main/wcyd.js
 #中青多账号
 #^https?://ios\.baertt\.com/v5/article/complete https://raw.githubusercontent.com/ztxtop/x/main/zqread.js
 #^https?://ios\.baertt\.com/v5/user/app_stay\.json https://raw.githubusercontent.com/ztxtop/x/main/zqread.js
