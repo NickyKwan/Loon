@@ -3,4 +3,4 @@
 https://play.gxhuancai.com/hlplay/task/doTasks https://raw.githubusercontent.com/age174/-/main/hlyy.js
 
 #MITM
-MITM play.gxhuancai.com
+^后面的填到MITM play.gxhuancai.com
