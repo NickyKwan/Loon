@@ -1,0 +1,25 @@
+
+#阅读N兄弟
+#云扫码
+^http://.+?[^/]/yunonline/v\d+/redirect/(?!undefined) https://raw.githubusercontent.com/age174/-/main/ysm.js
+#番茄看看
+^http://m.*./reada/getTask https://raw.githubusercontent.com/age174/-/main/fqkk.js
+#文创阅读
+http://qcjesnfs.bar/hfTask/startRead https://raw.githubusercontent.com/age174/-/main/wcyd.js
+#微客众智
+^http://wx.tiantianaiyuedu.site/ https://raw.githubusercontent.com/age174/-/main/wkzz.js
+#悦趣阅读
+^http://wechat04\.yqzh\.libcloud\.cn/\? https://raw.githubusercontent.com/age174/-/main/yqzh.js
+
+
+#MITM
+#云扫码
+.*.top
+#番茄看看
+m.*
+#文创阅读
+qcjesnfs.bar
+#微客众智
+wx.tiantianaiyuedu.site
+#悦趣阅读
+Host: api.yqzh.templet.vip
