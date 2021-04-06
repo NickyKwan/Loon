@@ -10,7 +10,8 @@ http://qcjesnfs.bar/hfTask/startRead https://raw.githubusercontent.com/age174/-/
 ^http://wx.tiantianaiyuedu.site/ https://raw.githubusercontent.com/age174/-/main/wkzz.js
 #悦趣阅读
 ^http://wechat04\.yqzh\.libcloud\.cn/\? https://raw.githubusercontent.com/age174/-/main/yqzh.js
-
+#文创阅读小程序
+^https://yd\.wcyd168\.com/hfTask/getUserByToken https://raw.githubusercontent.com/age174/-/main/wcxcx.js
 
 #MITM
 #云扫码
@@ -23,3 +24,5 @@ qcjesnfs.bar
 wx.tiantianaiyuedu.site
 #悦趣阅读
 Host: api.yqzh.templet.vip
+#文创阅读
+yd.wcyd168.com
