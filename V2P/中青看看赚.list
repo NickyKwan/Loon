@@ -1,0 +1,13 @@
+
+# 浏览赚：任务中心-》看看赚-》顶部的浏览赚-》点任务开始抓到任务数据包即可
+^https?://ios\.baertt\.com\/v5\/task/browse_start\.json https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js
+
+# 看看赚：任务中心-》看看赚-》点看看赚任务抓到任务数据包即可
+^https?://ios\.baertt\.com/v5/Nameless/adlickstart\.json https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js 
+# 任务中心尝试添加看看赚入口
+^https://kd\.youth\.cn/WebApi/NewTaskIos/getTaskList https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js
+
+# 已有阅读时长数据时，只保存大于1分钟的时长数据
+^https?://ios\.baertt\.com/v5/user/app_stay\.json https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js
+#MITM
+hostname = ios.baertt.com, kd.youth.cn
