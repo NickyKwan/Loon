@@ -5,7 +5,7 @@
 #番茄看看
 ^http://m.*./reada/getTask https://raw.githubusercontent.com/age174/-/main/fqkk.js
 #文创阅读
-http://qcjesnfs.bar/hfTask/startRead https://raw.githubusercontent.com/age174/-/main/wcyd.js
+http://.+?[^/]/hfTask/startRead https://raw.githubusercontent.com/age174/-/main/wcyd.js
 #微客众智
 ^http://wx.tiantianaiyuedu.site/ https://raw.githubusercontent.com/age174/-/main/wkzz.js
 #悦趣阅读
@@ -19,10 +19,10 @@ http://qcjesnfs.bar/hfTask/startRead https://raw.githubusercontent.com/age174/-/
 #番茄看看
 m.*
 #文创阅读
-qcjesnfs.bar
+mbeysxap.bar
 #微客众智
 wx.tiantianaiyuedu.site
 #悦趣阅读
 Host: api.yqzh.templet.vip
-#文创阅读
+#文创阅读小程序
 yd.wcyd168.com
