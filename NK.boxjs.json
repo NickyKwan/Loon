@@ -63,9 +63,13 @@
 		         ]
 	},
 	{
-		"id": "txstockapp",
+		"id": "txstockapp_N",
 		"name": "自选羊毛股",
-		"keys": ["signheader", "signkey", "taskheader", "taskkey", "userheader", "userkey", "wxtaskkey","cash"],		
+		"keys": ["signheader", "signkey", "taskheader", "taskkey", "userheader", "userkey", "wxtaskkey", "cash", "cashheader", "signheader2", "signkey2", "taskheader2", "taskkey2", "userheader2", "userkey2", "wxtaskkey2", "cash", "cashheader2"],		
+		"descs_html": ["<h4 align=\"center\">脚本配置请查看<a href=\"https://github.com/CenBoMin/GithubSync/tree/main/TXSTOCK\">配置说明</a></h4>", 
+                       "<br />"
+                      ],
+
 		"settings": [
 			{
 				"id": "cash",
