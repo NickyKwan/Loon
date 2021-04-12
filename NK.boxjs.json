@@ -9,7 +9,7 @@
 		"id": "chonghua",
 		"name": "再来点葱花",
 		"keys": ["uid","chgetbody_video", "chgetbody_share", "chgetbody_timered", "chgetbody_taskcenter", "chgetbody_sharereward", "logbutton", "tzbutton","chgetbody_video_index"],
-		"descs_html": ["<h4 align=\"center\">脚本配置请查看<a href=\"https://github.com/CenBoMin/GithubSync/tree/main/CONGHUA\">配置说明</a></h4>", 
+		"descs_html": ["<h4 align=\"center\">脚本配置请查看<a href=\"https://github.com/CenBoMin/GithubSync/tree/main/CONGHUA\">葱花视频</a></h4>", 
                        "<br />"
                       ],
 		"settings": [
@@ -63,10 +63,10 @@
 		         ]
 	},
 	{
-		"id": "txstockapp_N",
+		"id": "txstock_N",
 		"name": "自选羊毛股",
 		"keys": ["signheader", "signkey", "taskheader", "taskkey", "userheader", "userkey", "wxtaskkey", "cash", "cashheader", "signheader2", "signkey2", "taskheader2", "taskkey2", "userheader2", "userkey2", "wxtaskkey2", "cash", "cashheader2"],		
-		"descs_html": ["<h4 align=\"center\">脚本配置请查看<a href=\"https://github.com/CenBoMin/GithubSync/tree/main/TXSTOCK\">配置说明</a></h4>", 
+		"descs_html": ["<h4 align=\"center\">脚本不支持多账号配置请查看<a href=\"https://github.com/CenBoMin/GithubSync/tree/main/TXSTOCK\">腾讯自选股</a></h4>", 
                        "<br />"
                       ],
 
@@ -86,26 +86,6 @@
 		          "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png",
 				  "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png"
 				  ]
-	},
-	{
-		"id": "txstockapp2",
-		"name": "自选企鹅股",
-		"keys": ["signheader2", "signkey2", "taskheader2", "taskkey2", "userheader2", "userkey2", "wxtaskkey2","cash2"],	
-		"settings": [
-			{
-				"id": "cash",
-				"name": "提现开关:0,不自动提现;1，提现1元；5，提现5元",
-				"val": "",
-				"type": "number",
-				"desc": "默认为0,不自动提现"
-			}
-		],
-		"author": "@cenbomin",
-		"repo": "https://github.com/CenBoMin/GithubSync/tree/main/TXSTOCK",
-		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txstockqx.js",
-		"icons": ["https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png",
-		          "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/TXSTOCK/txzxg.png"
-		         ]
 	},	
 	{
 		"id": "dkdvideo",
