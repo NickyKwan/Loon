@@ -1,0 +1,7 @@
+
+#快手
+https:\/\/activity\.m\.kuaishou\.com\/rest\/wd\/taskCenter\/\w+\/module\/list https://raw.githubusercontent.com/Sunert/Scripts/master/Task/kuaishou.js
+https:\/\/nebula\.kuaishou\.com\/nebula\/task\/earning\? https://raw.githubusercontent.com/Sunert/Scripts/master/Task/kuaishou.js
+
+#MITM
+nebula.kuaishou.com, activity.m.kuaishou.com
