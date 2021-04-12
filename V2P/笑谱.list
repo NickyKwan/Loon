@@ -1,0 +1,9 @@
+
+#笑谱token
+https:\/\/veishop\.iboxpay\.com\/nf_gateway\/nf-user-auth-web\/ignore_tk\/veishop\/v1\/* iboxpay.js
+
+#笑谱获取视频ck
+https:\/\/veishop\.iboxpay\.com\/nf_gateway\/nf_customer_activity\/day_cash\/v1\/give_gold_coin_by_video.json iboxpay.js
+
+#MITM
+veishop.iboxpay.com
