@@ -10,8 +10,9 @@ https://www.xiaeke.com/benmao/index.php/Home/MorningTree/gainEnergy? https://raw
 #牛蒙蒙
 https://nmmapis.mengniu.com.cn/api/sign https://raw.githubusercontent.com/xl2101200/-/main/nmm.js
 
-#平安好车主
-https://hcz-member.pingan.com.cn/micro-api/cps-activity/know/v1/completeTask https://raw.githubusercontent.com/xl2101200/-/main/pahcz.js
+#积分赚挖矿
+https://api.dwhub.com.cn/point_go/v2/mining/start https://raw.githubusercontent.com/xl2101200/-/main/jfz.js
+
 
 #趣客有礼
 https://choujiang-server.deering.cn https://raw.githubusercontent.com/xl2101200/-/main/qkyl.js
@@ -27,8 +28,8 @@ www.xiaeke.com
 #牛蒙蒙
 nmmapis.mengniu.com.cn
 
-#平安好车主
-hcz-member.pingan.com.cn
+#积分赚挖矿
+api.dwhub.com.cn
 
 #趣客有礼
 choujiang-server.deering.cn
