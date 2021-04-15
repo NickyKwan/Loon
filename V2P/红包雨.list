@@ -1,0 +1,14 @@
+
+#最强蜗牛
+#ichenzhe
+#京东直播每日抓红包雨变量
+^https://api\.m\.jd\.com/client\.action\?functionId\=liveActivityV946 https://raw.githubusercontent.com/sngxpro2/AutoSyncScript/monk/backup/get_red_rain.js
+
+
+#lxk0301
+# 获取多账号京东Cookie
+https:\/\/wq\.jd\.com\/user_new\/info\/GetJDUserInfoUnion url script-request-header https://jdsharedresourcescdn.azureedge.net/jdresource/JD_extra_cookie.js
+
+
+#MITM
+wq.jd.com, 
