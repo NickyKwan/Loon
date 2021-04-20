@@ -1,0 +1,28 @@
+
+#百度极速版
+https:\/\/haokan\.baidu\.com\/activity\/h5\/vault\?productid=\d https://raw.githubusercontent.com/Sunert/Scripts/master/Task/baidu_speed.js
+
+#快手
+https:\/\/activity\.m\.kuaishou\.com\/rest\/wd\/taskCenter\/\w+\/module\/list https://raw.githubusercontent.com/Sunert/Scripts/master/Task/kuaishou.js
+https:\/\/nebula\.kuaishou\.com\/nebula\/task\/earning\? https://raw.githubusercontent.com/Sunert/Scripts/master/Task/kuaishou.js
+
+#聚看点
+https:\/\/www\.xiaodouzhuan\.cn\/jkd\/newMobileMenu\/infoMe\.action https://raw.githubusercontent.com/Sunert/Scripts/master/Task/jukan.js
+
+#腾讯新闻
+https:\/\/api\.inews\.qq\.com\/event\/v1\/user\/event\/report\? https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews.js
+https:\/\/api\.prize\.qq\.com\/v1\/newsapp\/chajianrp\/sendprize https://raw.githubusercontent.com/Sunert/Scripts/master/Task/txnews.js
+
+#MITM
+#百度极速版
+haokan.baidu.com
+
+#快手
+nebula.kuaishou.com
+activity.m.kuaishou.com
+
+#聚看点
+www.xiaodouzhuan.cn
+
+#腾讯新闻
+api.inews.qq.com
