@@ -1,0 +1,18 @@
+#中青看看
+https:\/\/kd\.youth\.cn\/WebApi\/NewTaskIos\/getTaskList https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
+
+https:\/\/ios\.baertt\.com\/v5\/article\/info\/get\.json https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
+
+https:\/\/ios\.baertt\.com\/v5\/user\/stay\.json url https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
+
+https:\/\/ios\.baertt\.com\/v5\/\w+\/withdraw\d?\.json https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth.js
+
+##中青浏览赚
+https:\/\/ios\.baertt\.com\/v5\/task\/browse_start\.json https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth_gain.js
+
+https:\/\/ios\.baertt\.com\/v5\/Nameless\/adlickstart\.json https://raw.githubusercontent.com/Sunert/Scripts/master/Task/youth_gain.js
+
+
+
+#MITM
+hostname = ios.baertt.com, kd.youth.cn
