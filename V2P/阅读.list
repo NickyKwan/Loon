@@ -12,6 +12,10 @@ http://.+?[^/]/hfTask/startRead https://raw.githubusercontent.com/age174/-/main/
 ^http://wechat04\.yqzh\.libcloud\.cn/\? https://raw.githubusercontent.com/age174/-/main/yqzh.js
 #文创阅读小程序
 ^https://yd\.wcyd168\.com/hfTask/getUserByToken https://raw.githubusercontent.com/age174/-/main/wcxcx.js
+#锦鲤看看
+http://m.*read_channel/do_read&pageshow https://raw.githubusercontent.com/age174/-/main/jlkk.js
+http://h5.qdwlfn.bar/withdrawal/submit_withdraw https://raw.githubusercontent.com/age174/-/main/jlkk.js
+
 
 #MITM
 #云扫码
