@@ -193,7 +193,7 @@
         },
 	{
             "id": "jdtq_N",
-            "name": "一点都不简单",
+            "name": "一点不简单",
             "keys": ["jdtquserbody", "jdtqcoinbody", "jdtqqpbody", "jdtqqp1body", "jdtqqp1fbbody", "jdtqqp2body", "jdtqqp2fbbody", "jdtqqp3body", "jdtqqp3fbbody", "jdtqqp4body",  "jdtquserbody2", "jdtqcoinbody2", "jdtqqpbody2", "jdtqqp1body2", "jdtqqp1fbbody2", "jdtqqp2body2", "jdtqqp2fbbody2", "jdtqqp3body2", "jdtqqp3fbbody2", "jdtqqp4body2", "jdtquserbody3", "jdtqcoinbody3", "jdtqqpbody3", "jdtqqp1body3", "jdtqqp1fbbody3", "jdtqqp2body3", "jdtqqp2fbbody3", "jdtqqp3body3", "jdtqqp3fbbody3", "jdtqqp4body3", "jdtquserbody4", "jdtqcoinbody4", "jdtqqpbody4", "jdtqqp1body4", "jdtqqp1fbbody4", "jdtqqp2body4", "jdtqqp2fbbody4", "jdtqqp3body4", "jdtqqp3fbbody4", "jdtqqp4body4", "jdtquserbody5", "jdtqcoinbody5", "jdtqqpbody5", "jdtqqp1body5", "jdtqqp1fbbody5", "jdtqqp2body5", "jdtqqp2fbbody5", "jdtqqp3body5", "jdtqqp3fbbody5", "jdtqqp4body5", "jdtquserbody6", "jdtqcoinbody6", "jdtqqpbody6", "jdtqqp1body6", "jdtqqp1fbbody6", "jdtqqp2body6", "jdtqqp2fbbody6", "jdtqqp3body6", "jdtqqp3fbbody6", "jdtqqp4body6"],
             "author": "@ziye",
             "settings": [{
@@ -470,54 +470,6 @@
             "script": "https://raw.githubusercontent.com/age174/-/main/fqkk.js"
     },
     {
-            "id": "cfz",
-            "name": "春风转不动",
-            "keys": ["cfzurl", "cfzhd", "cfzurl2", "cfzhd2","cfzurl3", "cfzhd3", "cfzurl4", "cfzhd4","cfzurl5", "cfzhd5", "cfzurl6", "cfzhd6", "cfzurl7", "cfzhd7"],
-            "author": "@feizao",
-            "settings": [
-		{
-                "id": "cfzConcurrency",
-                "val": "1",
-                "name": "并发执行账号数",
-                "type": "text",
-                "desc": "默认单账号跑任务，指定大于1的数值时，将并发执行多个账号的任务，请勿设置过大，避免NE工具崩溃（太大估计会崩溃吧）"
-        }, 
-		{
-            "id": "cfzstatus",
-            "name": "当前账号",
-            "val": "1",
-            "type": "number",
-            "desc": "当前账号对应"
-        },
-        {
-            "id": "cfzcount",
-            "name": "账号个数",
-            "val": "1",
-            "type": "number",
-            "desc": "需要几个账号，数字为几"
-        }],
-            "repo": "https://github.com/age174/-/blob/main/cfz.js",
-            "icons": ["https://ae01.alicdn.com/kf/U8a3a2572bf5d4584928d1d7cde52b50ba.jpg", "https://ae01.alicdn.com/kf/U8a3a2572bf5d4584928d1d7cde52b50ba.jpg"],
-            "script": "https://raw.githubusercontent.com/age174/-/main/cfz.js"
-    } ,
-    {
-            "id": "wkzz",
-            "name": "握草的微客",
-            "keys": ["wkzz"],
-            "author": "@feizao",
-            "settings": [{
-                "id": "wkzz",
-                "name": "CK 集合",
-                "val": "",
-                "type": "textarea",
-                "rows": 8,
-                "desc": "json格式的ck数据"
-                }],
-            "repo": "https://github.com/age174/-/blob/main/wkzz.js",
-            "icons": ["https://ae01.alicdn.com/kf/Uff0a0bb9e66a479591c9b02c176fd276A.jpg", "https://ae01.alicdn.com/kf/Uff0a0bb9e66a479591c9b02c176fd276A.jpg"],
-            "script": "https://raw.githubusercontent.com/age174/-/main/wkzz.js"
-    } ,
-    {
             "id": "ranlv",
             "name": "燃烧不旅游",
             "keys": ["rlurl", "rlheader","rlurl2","rlheader2","rlurl3","rlheader3","rlurl4","rlheader4","rlurl5", "rlheader5"],
@@ -554,44 +506,6 @@
              "repo": "https://github.com/ZhiYi-N/Private-Script/blob/master/Scripts/ranlv.js",
              "icons": ["https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/img/rl-mini.png", "https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/img/rl.png"],
              "script": "https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/ranlv.js"
-    },
-    {
-             "id": "fqxs",
-             "name": "番茄也想说",
-             "keys": ["fqxsurl", "fqxs","fqxsurl2","fqxs2","fqxsurl3","fqxs3","fqxsurl4","fqxs4","fqxsurl5","fqxs5","fqxsurl6","fqxs6"],
-             "author": "@ZhiYi-N",
-             "settings": [
-	    {
-             "id": "tz",
-             "name": "静默运行",
-             "val": "1",
-             "type": "number",
-             "desc": "0为不通知，1为全部通知"
-        },
-        {
-             "id": "fqxsstatus",
-             "name": "当前账号",
-             "val": "1",
-             "type": "number",
-             "desc": "当前账号对应"
-        },    
-        {
-             "id": "fqxscount",
-             "name": "账号个数",
-             "val": "1",
-             "type": "number",
-             "desc": "需要几个账号，数字为几"
-        },
-        {
-             "id": "fqxshost",
-             "name": "host",
-             "val": "ib.snssdk.com",
-             "type": "string",
-             "desc": "当前版本host"
-        } ],
-             "repo": "https://github.com/ZhiYi-N/Private-Script/blob/master/Scripts/fqxs.js",
-             "icons": ["https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/img/fqxs-mini.png", "https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/img/fqxs.png"],
-             "script": "https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/fqxs.js"
     },
     {
       "author": "@sunert", 
@@ -719,36 +633,6 @@
       "script": "https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js"
     } ,
     {
-            "id": "vsh_N",
-            "name": "大V的生活",
-            "keys": ["vshurl", "vshhd", "vshbody", "vsh1body", "vsh2body", "vshdspbody", "vshspbody", "vshqdbody", "vshurl2", "vshhd2", "vshbody2", "vsh1body2", "vsh2body2", "vshdspbody2", "vshspbody2", "vshqdbody2", "vshurl3", "vshhd3", "vshbody3", "vsh1body3", "vsh2body3", "vshdspbody3", "vshspbody3", "vshqdbody3", "vshurl4", "vshhd4", "vshbody4", "vsh1body4", "vsh2body4", "vshdspbody4", "vshspbody4", "vshqdbody4", "vshurl5", "vshhd5", "vshbody5", "vsh1body5", "vsh2body5", "vshdspbody5", "vshspbody5", "vshqdbody5"],
-            "author": "@feizao",
-            "settings": [{
-            "id": "vshstatus",
-            "name": "当前账号",
-            "val": "1",
-            "type": "number",
-            "desc": "当前账号对应"
-    },
-    {
-            "id": "vshcount",
-            "name": "账号个数",
-            "val": "1",
-            "type": "number",
-            "desc": "需要几个账号，数字为几"
-    },
-    {
-            "id": "vshsp",
-            "name": "短视频开关",
-            "val": "0",
-            "type": "number",
-            "desc": "填写0为关闭,1为开启,默认关闭,需要开启的建议先做完日常任务再开始"
-    }],
-            "repo": "https://github.com/age174/-/blob/main/vsh.js",
-            "icons": ["https://ae01.alicdn.com/kf/Uf0da879c7acd4c7bad91f0e5a97667e1O.jpg", "https://ae01.alicdn.com/kf/Uf0da879c7acd4c7bad91f0e5a97667e1O.jpg"],
-            "script": "https://raw.githubusercontent.com/age174/-/main/vsh.js"
-    } ,
-    {
             "id": "yqzh",
             "name": "悦趣能赚钱",
             "keys": ["yqzh"],
@@ -795,6 +679,29 @@
             "repo": "https://github.com/age174/-/blob/main/ximei.js",
             "icons": ["https://ae01.alicdn.com/kf/Ucd02ea79ef22473daf3576486d134509Q.jpg", "https://ae01.alicdn.com/kf/Ucd02ea79ef22473daf3576486d134509Q.jpg"],
             "script": "https://raw.githubusercontent.com/age174/-/main/ximei.js"
+    }, 
+    {
+            "id": "xfyjc",
+            "name": "幸福养鸡场",
+            "keys": ["xfyjchd", "xfyjchd2", "xfyjchd3", "xfyjchd4", "xfyjchd5", "xfyjchd6"],
+            "author": "@feizao",
+            "settings": [{
+            "id": "xfyjcstatus",
+            "name": "当前账号",
+            "val": "1",
+            "type": "number",
+            "desc": "当前账号对应"
+    },
+    {
+            "id": "xfyjccount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "需要几个账号，数字为几"
+    }],
+            "repo": "https://github.com/age174/-/blob/main/xfyjc.js",
+            "icons": ["https://ae01.alicdn.com/kf/Ue110888eddad48a8a78d99284e599b134.jpg", "https://ae01.alicdn.com/kf/Ue110888eddad48a8a78d99284e599b134.jpg"],
+            "script": "https://raw.githubusercontent.com/age174/-/main/xfyjc.js"
     } 
 	
 ]
