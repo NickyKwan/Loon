@@ -6,63 +6,6 @@
 	"repo": "https://github.com/NickyKwan/Loon",
 	"apps": [
 	{
-		"id": "chonghua",
-		"name": "再来点葱花",
-		"keys": ["uid","chgetbody_video", "chgetbody_share", "chgetbody_timered", "chgetbody_taskcenter", "chgetbody_sharereward", "logbutton", "tzbutton","chgetbody_video_index"],
-		"descs_html": ["<h4 align=\"center\">脚本配置请查看<a href=\"https://github.com/CenBoMin/GithubSync/tree/main/CONGHUA\">葱花视频</a></h4>", 
-                       "<br />"
-                      ],
-		"settings": [
-			{
-				"id": "chgetbody_video",
-				"name": "请求body",
-				"val": "",
-				"type": "textarea",
-				"autoGrow": false,
-				"rows": 1,
-				"desc": "看视频，倒计时转一圈显示金币到账。。建议看5篇视频,获取请求包"
-			},
-			{
-				"id": "uid",
-				"name": "自己的邀请码",
-				"val": "",
-				"type": "text",
-				"desc": "输入才可查看账户金币明细"
-			},
-			{
-					"id": "chgetbody_video_index",
-					"name": "上次执行位置",
-					"val": "",
-					"type": "textarea",
-					"autoGrow": false,
-					"rows": 1,
-					"desc": "记录上次执行的位置，可以控制从第几个body开始执行"
-				},
-			{
-				"id": "logbutton",
-				"name": "日志开关",
-				"val": "",
-				"type": "number",
-				"desc": "0为关闭日志，1为开启，默认为关闭日志"
-			}
-      ,
-			{
-				"id": "tzbutton",
-				"name": "安静开关",
-				"val": "",
-				"type": "number",
-				"desc": "0为关闭通知，1为所有通知，默认为关闭通知"
-			}
-		],
-		"author": "@cenbomin",
-		"repo": "https://github.com/CenBoMin/GithubSync/tree/main/CONGHUA",
-		"script": "https://raw.githubusercontent.com/CenBoMin/GithubSync/main/CONGHUA/chonghua.js",
-		"icons": [
-		         "https://raw.githubusercontent.com/ChuheGit/1/main/QuantumultX/Gallery/API-Icon/AutoRead.png",
-		         "https://raw.githubusercontent.com/58xinian/icon/master/chsp.png"
-		         ]
-	},
-	{
 		"id": "txstock_N",
 		"name": "自选羊毛股",
 		"keys": ["signheader", "signkey", "taskheader", "taskkey", "userheader", "userkey", "wxtaskkey", "cash", "cashheader", "signheader2", "signkey2", "taskheader2", "taskkey2", "userheader2", "userkey2", "wxtaskkey2", "cash", "cashheader2"],		
@@ -376,137 +319,65 @@
             "script": "https://raw.githubusercontent.com/NickyKwan/Loon/main/Task/zhima.js"
     },
     {
-            "id": "ysm",
-            "name": "白云扫个码",
-            "keys": ["ysm"],
-            "author": "@feizao",
-            "descs_html": [
-              "优化后的脚本存储ck的数据结构跟原先的不同，需要转换下或重新抓数据",
-              "转换步骤：1、NE工具（QX、Loon、Surge）中进入脚本编辑界面，手动修改变量 moveData=1 后直接执行一次即可",
-              "抓包备注：1、脚本已根据ck数据中的账户特征做区分，无需指定抓包账户及账户个数；2、扫码进入云扫码主页面后即可抓到脚本所需的全部数据"
-            ],
-            "settings": [{
-                "id": "ysmNotice",
-                "val": "",
-                "name": "是否通知",
-                "type": "boolean",
-                "desc": "开启该选项时，脚本执行完会发通知，否则只打印日志"
-              }, {
-                "id": "ysmBanfirstTask",
-                "val": "",
-                "name": "限制脚本跑每日首次任务",
-                "type": "boolean",
-                "desc": "开启该选项时，每需手动阅读一次文章后脚本才能正常执行任务，尽量避免因脚本跑首次任务遭微信限制的情况"
-              }, {
-                "id": "ysmBanhalfTask",
-                "val": "",
-                "name": "限制脚本跑每日第50篇任务",
-                "type": "boolean",
-                "desc": "开启该选项时，脚本做完第50篇任务时会自动结束任务，可手动去阅读2篇避免被限制或再次运行脚本可继续做其余任务"
-              }, {
-                "id": "ysmConcurrency",
-                "val": "1",
-                "name": "并发执行账号数",
-                "type": "text",
-                "desc": "默认单账号跑任务，指定大于1的数值时，将并发执行多个账号的任务，请勿设置过大，避免NE工具崩溃（太大估计会崩溃吧）"
-              }, {
-                "id": "ysmtxAmt",
-                "name": "提现金额",
-                "val": "3000",
-                "type": "number",
-                "desc": "需要自动提现多少，数字为金额的一万倍，如提现1元填写10000，默认提现0.3,最低提现额度为0.3元"
-                }, {
-                  "id": "ysm",
-                  "name": "CK 列表",
-                  "val": "",
-                  "type": "textarea",
-                  "rows": 8,
-                  "desc": "云扫码CK 列表 (JSON 格式)"
-              }],
-            "repo": "https://github.com/age174/-/blob/main/ysm.js",
-            "icons": ["https://raw.githubusercontent.com/erdongchanyo/icon/main/taskicon/Yunsaoma.png", "https://raw.githubusercontent.com/erdongchanyo/icon/main/taskicon/Yunsaoma.png"],
-            "script": "https://raw.githubusercontent.com/age174/-/main/ysm.js"
-    } ,
-	{
-            "id": "fqkk",
-            "name": "番茄看一看",
-            "keys": ["fqkk"],
-            "author": "@feizao",
-            "settings": [{
-                "id": "fqkkCkMove",
-                "val": "",
-                "name": "迁移旧数据",
-                "type": "boolean",
-                "desc": "开启该选项，执行一次脚本可将原有ck转换为此脚本可用的格式"
-              }, {
-                "id": "fqkkBanfirstTask",
-                "val": "",
-                "name": "限制脚本跑每日首次任务",
-                "type": "boolean",
-                "desc": "开启该选项时，每需手动阅读一次文章后脚本才能正常执行任务，尽量避免因脚本跑首次任务遭微信限制的情况"
-              }, {
-                "id": "fqkkConcurrency",
-                "val": "1",
-                "name": "并发执行账号数",
-                "type": "text",
-                "desc": "默认单账号跑任务，指定大于1的数值时，将并发执行多个账号的任务，请勿设置过大，避免NE工具崩溃（太大估计会崩溃吧）"
-              }, {
-                "id": "fqtx",
-                "name": "提现金额",
-                "val": "100",
-                "type": "number",
-                "desc": "需要自动提现多少，数字为金额的一百倍，如提现0.3元填写30，默认100为提现1元,最低提现额度为0.3元"
-              }, {
-                "id": "fqkk",
-                "name": "CK 列表",
-                "val": "",
-                "type": "textarea",
-                "autoGrow": true,
-                "rows": 8,
-                "desc": "番茄看看CK 列表 (JSON 格式)"
-              }],
-            "repo": "https://github.com/age174/-/blob/main/fqkk.js",
-            "icons": ["https://ftp.bmp.ovh/imgs/2021/02/f8306006536eb49c.jpeg", "https://ftp.bmp.ovh/imgs/2021/02/f8306006536eb49c.jpeg"],
-            "script": "https://raw.githubusercontent.com/age174/-/main/fqkk.js"
-    },
-    {
-            "id": "ranlv",
-            "name": "燃烧不旅游",
-            "keys": ["rlurl", "rlheader","rlurl2","rlheader2","rlurl3","rlheader3","rlurl4","rlheader4","rlurl5", "rlheader5"],
-            "author": "@ZhiYi-N",
-            "settings": [
-		{
+    "id": "ryhy",
+    "name": "如意也化缘",
+    "keys": ["ryhyheader", "ryhyadbody", "ryhyadheader", "ryhyheader2", "ryhyadbody2", "ryhyadheader2", "ryhyheader3", "ryhyadbody3", "ryhyadheader3", "ryhyheader4", "ryhyadbody4", "ryhyadheader4", "ryhyheader5",  "ryhyadbody5", "ryhyadheader5", "ryhyheader6", "ryhyadbody6", "ryhyadheader6"],
+    "author": "@Ariszy",
+    "settings": [{
             "id": "tz",
             "name": "静默运行",
             "val": "1",
             "type": "number",
             "desc": "0为不通知，1为全部通知"
         },
-        {
-             "id": "rlstatus",
-             "name": "当前账号",
-             "val": "1",
-             "type": "number",
-             "desc": "当前账号对应"
+      {
+        "id": "ryhystatus",
+        "name": "当前账号",
+        "val": "1",
+        "type": "number",
+        "desc": "当前账号对应"
+      },
+      {
+        "id": "ryhycount",
+        "name": "账号个数",
+        "val": "1",
+        "type": "number",
+        "desc": "需要几个账号，数字为几"
+      }],
+    "repo": "https://github.com/Ariszy/Private-Script/blob/master/Scripts/ryhy.js",
+    "icons": ["https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/ryhy-mini.png", "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/ryhy.png"],
+    "script": "https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/ryhy.js"
+  },
+     {
+    "id": "kxhy",
+    "name": "开心去化缘",
+    "keys": ["kxhyheader", "adheader", "adbody", "kxhyheader2", "adheader2", "adbody2", "kxhyheader3", "adheader3", "adbody3", "kxhyheader4", "adheader4", "adbody4", "kxhyheader5", "adheader5", "adbody5", "kxhyheader6", "adheader6", "adbody6"],
+    "author": "@Ariszy",
+    "settings": [{
+            "id": "tz",
+            "name": "静默运行",
+            "val": "1",
+            "type": "number",
+            "desc": "0为不通知，1为全部通知"
         },
-        {
-             "id": "rlcash",
-             "name": "提现金额",
-             "val": "0",
-             "type": "number",
-             "desc": "默认不提现，提现填需要的金额：1、3、10、20、45，建议填3"
-        },          
-        {
-             "id": "rlcount",
-             "name": "账号个数",
-             "val": "1",
-             "type": "number",
-             "desc": "需要几个账号，数字为几"
-        }],
-             "repo": "https://github.com/ZhiYi-N/Private-Script/blob/master/Scripts/ranlv.js",
-             "icons": ["https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/img/rl-mini.png", "https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/img/rl.png"],
-             "script": "https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/ranlv.js"
-    },
+      {
+        "id": "kxhystatus",
+        "name": "当前账号",
+        "val": "1",
+        "type": "number",
+        "desc": "当前账号对应"
+      },
+      {
+        "id": "kxhycount",
+        "name": "账号个数",
+        "val": "1",
+        "type": "number",
+        "desc": "需要几个账号，数字为几"
+      }],
+    "repo": "https://github.com/Ariszy/Private-Script/blob/master/Scripts/kxhy.js",
+    "icons": ["https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/kxhy-mini.png", "https://raw.githubusercontent.com/Ariszy/Private-Script/master/img/kxhy.png"],
+    "script": "https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/kxhy.js"
+  },
     {
       "author": "@sunert", 
       "descs_html": [
@@ -632,31 +503,6 @@
       "icons": ["https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/youth.png", "https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png"],
       "script": "https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js"
     } ,
-    {
-            "id": "yqzh",
-            "name": "悦趣能赚钱",
-            "keys": ["yqzh"],
-            "author": "@feizao",
-            "descs_html": [
-              "每轮任务跑之前请手动阅读鉴权一次。。否则当天就黑了，如果不小心没鉴权就跑了脚本可以等一个小时后再次鉴权（两次鉴权失败会黑一天）"
-            ],
-            "settings": [{
-                    "id": "yqzhNotice",
-                    "val": "",
-                    "name": "是否通知",
-                    "type": "boolean",
-                    "desc": "开启该选项时，脚本执行完会发通知，否则只打印日志"
-            }, {
-                    "id": "yqzhConcurrency",
-                    "val": "1",
-                    "name": "并发执行账号数",
-                    "type": "text",
-                    "desc": "默认单账号跑任务，指定大于1的数值时，将并发执行多个账号的任务，请勿设置过大，避免NE工具崩溃（太大估计会崩溃吧）"
-            }],
-            "repo": "https://github.com/age174/-/blob/main/yqzh.js",
-            "icons": ["https://ae01.alicdn.com/kf/U428ddcb68e304bc0822743cad88f5142n.jpg", "https://ae01.alicdn.com/kf/U428ddcb68e304bc0822743cad88f5142n.jpg"],
-            "script": "https://raw.githubusercontent.com/age174/-/main/yqzh.js"
-    },
     {
             "id": "ximei",
             "name": "西梅真好吃",
