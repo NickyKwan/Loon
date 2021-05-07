@@ -604,14 +604,14 @@
             "keys": ["xnmheader", "xnmurl", "xnmheader2", "xnmurl2", "xnmheader3", "xnmurl3", "xnmheader4", "xnmurl4", "xnmheader5", "xnmurl5", "xnmheader6", "xnmurl6"],
             "author": "@柠檬",
             "settings": [{
-            "id": "qmlzcsetting",
+            "id": "xnmstatus",
             "name": "当前账号",
             "val": "1",
             "type": "number",
             "desc": "当前账号对应"
     },
     {
-            "id": "qmlzccount",
+            "id": "xnmcount",
             "name": "账号个数",
             "val": "1",
             "type": "number",
