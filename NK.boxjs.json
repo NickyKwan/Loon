@@ -573,6 +573,31 @@
             "script": "https://raw.githubusercontent.com/age174/-/main/xfyjc.js"
     },
 	
+   {
+      "id": "fhxz",
+      "name": "富豪小镇",
+      "keys": ["fhxzurl", "fhxzhd", "fhxzurl2", "fhxzhd2", "fhxzurl3", "fhxzhd3", "fhxzurl4", "fhxzhd4", "fhxzurl5", "fhxzhd5"],
+      "author": "@ningmeng",
+      "settings": [{
+            "id": "fhxzsetting",
+            "name": "当前账号",
+            "val": "1",
+            "type": "number",
+            "desc": "当前账号对应"
+    },
+    {
+            "id": "fhxzcount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "需要几个账号，数字为几"
+    }],
+            "repo": "http://nm66.top/fhxz.js",
+            "icons": ["http://nm66.top/1.jpg", "http://nm66.top/1.jpg"],
+            "script": "http://nm66.top/fhxz.js"
+    },
+	
+	
     {
             "id": "qmlzc",
             "name": "全民来找茬",
@@ -586,7 +611,7 @@
             "desc": "当前账号对应"
     }],
             "repo": "http://nm66.top/qmlzc.js",
-            "icons": ["", ""],
+            "icons": ["http://nm66.top/1.jpg", "http://nm66.top/1.jpg"],
             "script": "http://nm66.top/qmlzc.js"
     }
 
