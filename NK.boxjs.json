@@ -571,7 +571,26 @@
             "repo": "https://github.com/age174/-/blob/main/xfyjc.js",
             "icons": ["https://ae01.alicdn.com/kf/Ue110888eddad48a8a78d99284e599b134.jpg", "https://ae01.alicdn.com/kf/Ue110888eddad48a8a78d99284e599b134.jpg"],
             "script": "https://raw.githubusercontent.com/age174/-/main/xfyjc.js"
-    } 
+    },
+	
+    {
+            "id": "qmlzc",
+            "name": "全民来找茬",
+            "keys": ["xnmheader", "xnmurl", "xnmheader2", "xnmurl2", "xnmheader3", "xnmurl3", "xnmheader4", "xnmurl4", "xnmheader5", "xnmurl5", "xnmheader6", "xnmurl6"],
+            "author": "@柠檬",
+            "settings": [{
+            "id": "xnmcount",
+            "name": "当前账号",
+            "val": "1",
+            "type": "number",
+            "desc": "当前账号对应"
+    },
+    }],
+            "repo": "http://nm66.top/qmlzc.js",
+            "icons": ["", ""],
+            "script": "http://nm66.top/qmlzc.js"
+    }
+
 	
 ]
 }
