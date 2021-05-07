@@ -604,11 +604,18 @@
             "keys": ["xnmheader", "xnmurl", "xnmheader2", "xnmurl2", "xnmheader3", "xnmurl3", "xnmheader4", "xnmurl4", "xnmheader5", "xnmurl5", "xnmheader6", "xnmurl6"],
             "author": "@柠檬",
             "settings": [{
-            "id": "xnmcount",
+            "id": "qmlzcsetting",
             "name": "当前账号",
             "val": "1",
             "type": "number",
             "desc": "当前账号对应"
+    },
+    {
+            "id": "qmlzccount",
+            "name": "账号个数",
+            "val": "1",
+            "type": "number",
+            "desc": "需要几个账号，数字为几"
     }],
             "repo": "http://nm66.top/qmlzc.js",
             "icons": ["http://nm66.top/1.jpg", "http://nm66.top/1.jpg"],
