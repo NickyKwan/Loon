@@ -1,0 +1,14 @@
+
+hostname = hlxcx.renmaibangvip.cn
+
+https://hlxcx.renmaibangvip.cn/user/getUserInfo url script-request-body https://raw.githubusercontent.com/CenBoMin/GithubSync/main/HELPBANG/helpbangck.js
+https://hlxcx.renmaibangvip.cn/reward/getRewardTaskConfigInfo_V5 url script-request-body https://raw.githubusercontent.com/CenBoMin/GithubSync/main/HELPBANG/helpbangck.js
+https://hlxcx.renmaibangvip.cn/user/collectCoin url script-request-body https://raw.githubusercontent.com/CenBoMin/GithubSync/main/HELPBANG/helpbangck.js
+https://hlxcx.renmaibangvip.cn/user/exchangeStepToCoin url script-request-body https://raw.githubusercontent.com/CenBoMin/GithubSync/main/HELPBANG/helpbangck.js
+https://hlxcx.renmaibangvip.cn/user/applyWithdraw url script-request-body https://raw.githubusercontent.com/CenBoMin/GithubSync/main/HELPBANG/helpbangck.js
+https://hlxcx.renmaibangvip.cn/user/signInWatchVideo url script-request-body https://raw.githubusercontent.com/CenBoMin/GithubSync/main/HELPBANG/helpbangck.js
+https://hlxcx.renmaibangvip.cn/user/completeWatchVideoTask url script-request-body https://raw.githubusercontent.com/CenBoMin/GithubSync/main/HELPBANG/helpbangck.js
+https://hlxcx.renmaibangvip.cn/user/completeShareWxGroupTask url script-request-body https://raw.githubusercontent.com/CenBoMin/GithubSync/main/HELPBANG/helpbangck.js
+https://hlxcx.renmaibangvip.cn/user/completeShareWxCircleTask url script-request-body https://raw.githubusercontent.com/CenBoMin/GithubSync/main/HELPBANG/helpbangck.js
+https://hlxcx.renmaibangvip.cn/user/completeMutualAidTask url script-request-body https://raw.githubusercontent.com/CenBoMin/GithubSync/main/HELPBANG/helpbangck.js
+https://hlxcx.renmaibangvip.cn/benefit/addTask url script-request-body https://raw.githubusercontent.com/CenBoMin/GithubSync/main/HELPBANG/helpbangck.js
