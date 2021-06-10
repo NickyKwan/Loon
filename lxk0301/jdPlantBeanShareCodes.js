@@ -7,14 +7,16 @@
 // 同一个京东账号的好友互助码用@符号隔开,不同京东账号之间用&符号或者换行隔开,下面给一个示例
 // 如: 京东账号1的shareCode1@京东账号1的shareCode2&京东账号2的shareCode1@京东账号2的shareCode2
 let PlantBeanShareCodes = [
-  //账号一的好友shareCode,不同好友的shareCode中间用@符号隔开
-  'igefhjvuw6xvt37nfopazasd736hoexc7noicyi@nkiu2rskjyetaflli3vdqmsxf3rlkthnluyyxbq@i3vumrj7z3arxbon4x5reiiabjmalomjudbnc7i@nkiu2rskjyetajviwcdnsmkgfgvv3h7vsaovmki@nbuilwje3miiimiax2gwyxjqci@t7obxmpebrxkdn7mbhopspvhar5hr3pdlyuftfq@e7lhibzb3zek2zojb2jp6wzsxnamwxvrvcdmqtq@o7eiltak46s2xhafluetpih5vrv6clgg4sllcpi@4npkonnsy7xi3ujlibvbfd54mgn7hksxfxzpfry@fn5sjpg5zdejmbncvb46675f2torudahvizq4xi@4npkonnsy7xi3kvbxwft56fuplueh55unnx3uyy@olmijoxgmjutyzdql6itlbsw2xceusnsciddpky',
-  //账号二的好友shareCode,不同好友的shareCode中间用@符号隔开
-  'igefhjvuw6xvt37nfopazasd736hoexc7noicyi@nkiu2rskjyetaflli3vdqmsxf3rlkthnluyyxbq@i3vumrj7z3arxbon4x5reiiabjmalomjudbnc7i@nkiu2rskjyetajviwcdnsmkgfgvv3h7vsaovmki@nbuilwje3miiimiax2gwyxjqci@t7obxmpebrxkdn7mbhopspvhar5hr3pdlyuftfq@e7lhibzb3zek2zojb2jp6wzsxnamwxvrvcdmqtq@o7eiltak46s2xhafluetpih5vrv6clgg4sllcpi@4npkonnsy7xi3ujlibvbfd54mgn7hksxfxzpfry@fn5sjpg5zdejmbncvb46675f2torudahvizq4xi@4npkonnsy7xi3kvbxwft56fuplueh55unnx3uyy@olmijoxgmjutyzdql6itlbsw2xceusnsciddpky',
-  'igefhjvuw6xvt37nfopazasd736hoexc7noicyi@nkiu2rskjyetaflli3vdqmsxf3rlkthnluyyxbq@i3vumrj7z3arxbon4x5reiiabjmalomjudbnc7i@nkiu2rskjyetajviwcdnsmkgfgvv3h7vsaovmki@nbuilwje3miiimiax2gwyxjqci@t7obxmpebrxkdn7mbhopspvhar5hr3pdlyuftfq@e7lhibzb3zek2zojb2jp6wzsxnamwxvrvcdmqtq@o7eiltak46s2xhafluetpih5vrv6clgg4sllcpi@4npkonnsy7xi3ujlibvbfd54mgn7hksxfxzpfry@fn5sjpg5zdejmbncvb46675f2torudahvizq4xi@4npkonnsy7xi3kvbxwft56fuplueh55unnx3uyy@olmijoxgmjutyzdql6itlbsw2xceusnsciddpky',
-  'igefhjvuw6xvt37nfopazasd736hoexc7noicyi@nkiu2rskjyetaflli3vdqmsxf3rlkthnluyyxbq@i3vumrj7z3arxbon4x5reiiabjmalomjudbnc7i@nkiu2rskjyetajviwcdnsmkgfgvv3h7vsaovmki@nbuilwje3miiimiax2gwyxjqci@t7obxmpebrxkdn7mbhopspvhar5hr3pdlyuftfq@e7lhibzb3zek2zojb2jp6wzsxnamwxvrvcdmqtq@o7eiltak46s2xhafluetpih5vrv6clgg4sllcpi@4npkonnsy7xi3ujlibvbfd54mgn7hksxfxzpfry@fn5sjpg5zdejmbncvb46675f2torudahvizq4xi@4npkonnsy7xi3kvbxwft56fuplueh55unnx3uyy@olmijoxgmjutyzdql6itlbsw2xceusnsciddpky',
-  'igefhjvuw6xvt37nfopazasd736hoexc7noicyi@nkiu2rskjyetaflli3vdqmsxf3rlkthnluyyxbq@i3vumrj7z3arxbon4x5reiiabjmalomjudbnc7i@nkiu2rskjyetajviwcdnsmkgfgvv3h7vsaovmki@nbuilwje3miiimiax2gwyxjqci@t7obxmpebrxkdn7mbhopspvhar5hr3pdlyuftfq@e7lhibzb3zek2zojb2jp6wzsxnamwxvrvcdmqtq@o7eiltak46s2xhafluetpih5vrv6clgg4sllcpi@4npkonnsy7xi3ujlibvbfd54mgn7hksxfxzpfry@fn5sjpg5zdejmbncvb46675f2torudahvizq4xi@4npkonnsy7xi3kvbxwft56fuplueh55unnx3uyy@olmijoxgmjutyzdql6itlbsw2xceusnsciddpky',
+  '66j4yt3ebl5ierjljoszp7e4izzbzaqhi5k2unz2afwlyqsgnasq@olmijoxgmjutyrsovl2xalt2tbtfmg6sqldcb3q@e7lhibzb3zek27amgsvywffxx7hxgtzstrk2lba@olmijoxgmjutyx55upqaqxrblt7f3h26dgj2riy',//账号一的好友shareCode,不同好友中间用@符号隔开
+  'mlrdw3aw26j3wgzjipsxgonaoyr2evrdsifsziy@mlrdw3aw26j3wgzjipsxgonaoyr2evrdsifsziy',//账号二的好友shareCode，不同好友中间用@符号隔开
 ]
+
+// 从日志获取互助码
+// const logShareCodes = require('./utils/jdShareCodes');
+// if (logShareCodes.PLANT_BEAN_SHARECODES.length > 0 && !process.env.PLANT_BEAN_SHARECODES) {
+//   process.env.PLANT_BEAN_SHARECODES = logShareCodes.PLANT_BEAN_SHARECODES.join('&');
+// }
+
 // 判断github action里面是否有种豆得豆互助码
 if (process.env.PLANT_BEAN_SHARECODES) {
   if (process.env.PLANT_BEAN_SHARECODES.indexOf('&') > -1) {
@@ -26,8 +28,8 @@ if (process.env.PLANT_BEAN_SHARECODES) {
   } else {
     PlantBeanShareCodes = process.env.PLANT_BEAN_SHARECODES.split();
   }
-} else if (process.env.JD_COOKIE) {
-  console.log(`由于您secret里面未提供助力码，故此处运行将会给脚本内置的码进行助力，请知晓！`)
+} else {
+  console.log(`由于您环境变量(PLANT_BEAN_SHARECODES)里面未提供助力码，故此处运行将会给脚本内置的码进行助力，请知晓！`)
 }
 for (let i = 0; i < PlantBeanShareCodes.length; i++) {
   const index = (i + 1 === 1) ? '' : (i + 1);
