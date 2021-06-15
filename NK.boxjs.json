@@ -2,8 +2,8 @@
 	"id": "NickyKwan.app.sub",
 	"name": "NickyKwan Boxjs🎬",
 	"author": "@NickyKwan",
-	"icon": "https://raw.githubusercontent.com/NickyKwan/Loon/main/icon/NickyKwan.png",
-	"repo": "https://github.com/NickyKwan/Loon",
+	"icon": "https://raw.githubusercontent.com/NickyKwan/JavaScript/main/icon/NickyKwan.png",
+	"repo": "https://github.com/NickyKwan/JavaScript",
 	"apps": [
 	{
 		"id": "txstock_N",
