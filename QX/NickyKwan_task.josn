@@ -2,8 +2,12 @@
  "name": "NickyKwan task",
  "description": "https://github.com/NickyKwan/JavaScript",
  "task": [
+#Tom 
     "0 0 1 1 * https://raw.githubusercontent.com/xl2101200/-/main/myxp.js, tag=美音新品（ios）, img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/icons/tom.png, enabled=true",
     "0 12 * * * https://raw.githubusercontent.com/xl2101200/-/main/bsj.js, tag=保时捷(小程序), img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/icons/tom.png, enabled=true",
+
+#Wenmoux
+    "0 8-14/1 * * * https://raw.githubusercontent.com/Wenmoux/scripts/wen/other/jrkuaixun.js, tag=10s阅读, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
 
     
     ]
