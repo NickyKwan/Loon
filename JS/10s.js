@@ -11,10 +11,10 @@
 
 [task_local]
 #10s阅读
-0 8-14/1 * * * https://raw.githubusercontent.com/Wenmoux/scripts/wen/other/jrkuaixun.js, tag=10s阅读, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+0 10-16 * * * https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/10s.js, tag=10s阅读, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 [rewrite_local]
 #10s阅读
-http:\/\/m.*.top\/read_channel\/do_read&pageshow.* url script-request-body https://raw.githubusercontent.com/Wenmoux/scripts/wen/other/jrkuaixun.js
+http:\/\/m.*.top\/read_channel\/do_read&pageshow.* url script-request-body https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/10s.js
  
  
 [MITM]
@@ -67,7 +67,7 @@ message = ""
         }
         if ($.isNode()) {
             if (message.length != 0) {
-                await notify.sendNotify("10s阅读", `${message}\n\n吹水群：https://t.me/wenmou_car`);
+                await notify.sendNotify("10s阅读", `${message}\n\nhttps://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/10s.js`);
             }
         } else {
             $.msg($.name, "", '10s阅读' + message)
