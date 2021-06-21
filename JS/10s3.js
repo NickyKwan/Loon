@@ -26,7 +26,7 @@ const notify = $.isNode() ? require('./sendNotify') : '';
 const jrpush = $.isNode() ? (process.env.jrpush ? process.env.jrpush : false) :false;
 
 let host = $.getdata('read10surl')?$.getdata('read10surl'):`http://m.lainiwl.top`;
-let cookiesArr = [$.getdata('read10sck2')]
+let cookiesArr = [$.getdata('read10sck3')]
 if ($.isNode()) {
     cookiesArr = process.env.Readck ? process.env.Readck.split("@") : []
     host = process.env.readapi ? process.env.readapi : host
@@ -35,7 +35,7 @@ message = ""
 
     !(async () => {
         if (typeof $request !== "undefined") {
-            await read10sck2()
+            await read10sck3()
         }
         if (!cookiesArr[0]) {
             $.msg($.name, '【提示】请先获取cookie', 'http://h5.jrkuaixun.xyz/j/r2?upuid=137149&ch=gzh', {
@@ -84,14 +84,14 @@ message = ""
 //获取活动信息
 
 
-function read10sck2() {
+function read10sck3() {
     if ($request.url.indexOf("do_read") > -1) {
         const read10surls = $request.url
         let read10surl = read10surls.match(/(.+?)\/read_channel/)
 //        $.msg($.name, "", '10s阅读 获取数据获取成功！'+read10surl)
           if(read10surl)     $.setdata(read10surl[1],"read10surl")
-        if ($request.headers.Cookie) $.setdata($request.headers.Cookie, `read10sck2`)
-        $.log(read10sck2)
+        if ($request.headers.Cookie) $.setdata($request.headers.Cookie, `read10sck3`)
+        $.log(read10sck3)
         $.msg($.name, "", '10s阅读 获取数据获取成功！')
     }
 }
