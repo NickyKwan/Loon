@@ -14,7 +14,7 @@
 0 10-16 * * * https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/10s.js, tag=10s阅读, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 [rewrite_local]
 #10s阅读
-http:\/\/m.*.top\/read_channel\/do_read&pageshow.* url script-request-body https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/10s.js
+http:\/\/m.*.top\/read_channel\/do_read&pageshow.* url script-request-header https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/10s.js
  
  
 [MITM]
@@ -23,8 +23,9 @@ hostname = m.*.top
 */
 const $ = new Env('10s阅读');
 const notify = $.isNode() ? require('./sendNotify') : '';
+const jrpush = $.isNode() ? (process.env.jrpush ? process.env.jrpush : false) :false;
 
-let host = `http://m.ltgggsa.top`;
+let host = $.getdata('read10surl')?$.getdata('read10surl'):`http://m.lainiwl.top`;
 let cookiesArr = [$.getdata('read10sck')]
 if ($.isNode()) {
     cookiesArr = process.env.Readck ? process.env.Readck.split("@") : []
@@ -65,7 +66,10 @@ message = ""
                 }
             }
         }
-        if ($.isNode()) {
+       if (message.length != 0) {
+         $.msg($.name, "", '10s阅读' + message) 
+         }
+        if ($.isNode() && jrpush) {
             if (message.length != 0) {
                 await notify.sendNotify("10s阅读", `${message}\n\nhttps://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/10s.js`);
             }
@@ -82,10 +86,10 @@ message = ""
 
 function read10sck() {
     if ($request.url.indexOf("do_read") > -1) {
-        // const read10surl = $request.url
-        //  if(read10surl)     $.setdata(read10surl,"read10surl")
-        //   $.log(read10surl)
-        //  const read10shd = JSON.stringify()
+        const read10surls = $request.url
+        let read10surl = read10surls.match(/(.+?)\/read_channel/)
+//        $.msg($.name, "", '10s阅读 获取数据获取成功！'+read10surl)
+          if(read10surl)     $.setdata(read10surl[1],"read10surl")
         if ($request.headers.Cookie) $.setdata($request.headers.Cookie, `read10sck`)
         $.log(read10sck)
         $.msg($.name, "", '10s阅读 获取数据获取成功！')
@@ -94,15 +98,20 @@ function read10sck() {
 
 function read(url1) {
     return new Promise(async (resolve) => {
-        let headers = {
-            cookie,
-            "X-Requested-With": "XMLHttpRequest"
-        }
+//        let headers = {
+//            cookie,
+//            "X-Requested-With": "XMLHttpRequest"
+//        }
         if (!url1) {
             url = `${host}/read_channel/do_read&pageshow&r=0.8321951810381554`
         } else {
             url = url1
         }
+      let headers = {
+            cookie,
+            referer:url,
+            "X-Requested-With": "XMLHttpRequest"
+        }		
         let options = {
             headers,
             url
@@ -124,9 +133,9 @@ function read(url1) {
                             //    console.log(data.url)
                         } else {
                             console.log(data.click_check)
-                            if (data.click_check) {
+                            if (data.click_check||data.data.jkey) {
                                 $.message = "该账号需要验证请手动阅读一次并关掉页面(不要点返回)"
-                                console.log($.message)
+                             //   console.log($.message)
 
                             } else {
                                 console.log(data)

@@ -80,14 +80,14 @@ message = ""
 //获取活动信息
 
 
-function read10sck() {
+function read10sck2() {
     if ($request.url.indexOf("do_read") > -1) {
         // const read10surl = $request.url
         //  if(read10surl)     $.setdata(read10surl,"read10surl")
         //   $.log(read10surl)
         //  const read10shd = JSON.stringify()
-        if ($request.headers.Cookie) $.setdata($request.headers.Cookie, `read10sck`)
-        $.log(read10sck2)
+        if ($request.headers.Cookie) $.setdata($request.headers.Cookie, `read10sck2`)
+        $.log(read10sck22)
         $.msg($.name, "", '10s阅读 获取数据获取成功！')
     }
 }
