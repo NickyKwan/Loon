@@ -27,9 +27,9 @@
 
 #执意
 #今日头条
-    "5,35 8-23 * * * https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/jrtt.js, tag=今日头条极速版, img-url=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/img/jrtt.png, enabled=true"
+    "5,35 8-23 * * * https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/jrtt.js, tag=今日头条极速版, img-url=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/img/jrtt.png, enabled=true",
 #番茄小说    
-	"*/30 9-22 * * * https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/fqxs.js, tag=番茄小说, img-url=https://raw.githubusercontent.com/sngxpro/icons/main/genshin/beidou.png, enabled=true",
+	"*/30 9-22 * * * https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/fqxs.js, tag=番茄小说, img-url=https://raw.githubusercontent.com/sngxpro/icons/main/genshin/beidou.png, enabled=true"
 	
     ]
 }
