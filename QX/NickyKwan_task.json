@@ -2,33 +2,25 @@
  "name": "NickyKwan task",
  "description": "https://github.com/NickyKwan/JavaScript",
  "task": [
-#Tom 
+
     "0 12 * * * https://raw.githubusercontent.com/xl2101200/-/main/bsj.js, tag=保时捷(小程序), img-url=https://raw.githubusercontent.com/sngxpro/QuanX/master/icons/tom.png, enabled=true",
 
-#10s阅读
     "0 10-16 * * * https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/10s.js, tag=10s阅读, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
 
-#肥皂
-#云扫码
+
     "15 12,14,16,20,22 * * * https://raw.githubusercontent.com/age174/-/main/ysm.js, tag=云扫码, img-url=https://raw.githubusercontent.com/erdongchanyo/icon/main/taskicon/Yunsaoma.png, enabled=true",
-#悦趣阅读
     "30 10 * * * https://raw.githubusercontent.com/age174/-/main/yqzh.js, tag=悦趣阅读, img-url=https://ae01.alicdn.com/kf/U428ddcb68e304bc0822743cad88f5142n.jpg, enabled=true",
 
-#ztxtop
-#京东宠汪汪兑换
+
     "56 59 7,15,23 * * * https://raw.githubusercontent.com/ztxtop/x/main/js/jd_joy_reward.js, tag=京东宠汪汪兑换, img-url=https://ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
-#财富岛提现
     "0 * * * * https://raw.githubusercontent.com/MoPoQAQ/Script/main/Me/jx_cfd.js, tag=京喜财富岛, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxcfd.png, enabled=true",  
     "59 59 23 * * * https://raw.githubusercontent.com/ztxtop/x/main/jx_cfdtx.js, tag=京喜财富岛提现, img-url=https://raw.githubusercontent.com/58xinian/icon/master/jxcfd.png, enabled=true", 
 	
-#photonmang
-#宠汪汪兑换
+
     "0 0-16/8 * * * https://ghproxy.com/https://raw.githubusercontent.com/photonmang/quantumultX/master/JDscripts/jd_joy_reward.js, tag=京东宠汪汪兑换photonmang修复版, img-url=https://ghproxy.com/https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true",
 
-#执意
-#今日头条
+
     "5,35 8-23 * * * https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/jrtt.js, tag=今日头条极速版, img-url=https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/img/jrtt.png, enabled=true",
-#番茄小说    
 	"*/30 9-22 * * * https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Scripts/fqxs.js, tag=番茄小说, img-url=https://raw.githubusercontent.com/sngxpro/icons/main/genshin/beidou.png, enabled=true"
 	
     ]
