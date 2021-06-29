@@ -211,9 +211,10 @@ if (!signurlArr[0]) {
 //      await invite()           //用户邀请
 //      await userinfo()
 //      await profit()           //金币收益
-      await sign_in()
-      await openbox()
-//      await reading()
+      await sign_in()          //签到
+      await openbox()          //开宝箱
+      await eat()	           //开饭	  
+//      await reading()        //阅读
 //      await farm_sign_in()   //农场签到
 //      await openfarmbox()    //农场宝箱
 //      await landwarer()        //农场浇水  
@@ -489,6 +490,36 @@ return new Promise((resolve, reject) => {
     })
    })
   }  
+
+//吃饭
+function eat() {
+return new Promise((resolve, reject) => {
+  let eaturl ={
+    //url: `https://it-lq.snssdk.com/score_task/v1/task/open_treasure_box/?${signurl}`,
+	url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/eat/done_eat/?${signurl}`,
+    headers :JSON.parse(signkey),
+      timeout: 60000,
+}
+   $.post(eaturl,(error, response, data) =>{
+     const result = JSON.parse(data)
+       if(logs) $.log(data)
+       other +='📣开饭\n'
+      if(result.err_no == 0) {
+        other += '开启成功'
+        other += '获得金币'+result.data.score_amount+'个\n'
+        }
+      else{
+         if(result.err_no == 9){
+        other += result.err_tips+'\n'
+        }else{
+        other +="不在开饭时间\n"
+           }
+    }
+          resolve()
+    })
+   })
+  } 
+
 
 //农场宝箱
 function openfarmbox() {
