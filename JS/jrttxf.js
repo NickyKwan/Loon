@@ -258,7 +258,8 @@ $.log(jrttfarmKey)
     $.msg(`获取signkey: 成功🎉`, ``)
 }
 
-if($request&&$request.url.indexOf("get_read_bonus")>=0) {
+if($request&&$request.url.indexOf("done_whole_scene_task")>=0) {
+//if($request&&$request.url.indexOf("get_read_bonus")>=0) {
   const readurlVal = $request.url.split(`?`)[1]
 
   //const article = readurlVal.replace(/\d{3}$/,Math.floor(Math.random()*1000));
@@ -417,7 +418,7 @@ const articles = readurl.replace(/\d{3}$/,Math.floor(Math.random()*1000));
 return new Promise((resolve, reject) => {
   let readurl ={
     //url: `https://api3-normal-lf.toutiaoapi.com/score_task/v1/task/get_read_bonus/?${articles}`,
-    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/activity/done_whole_scene_task/?${articles}`,
+    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/activity/done_whole_scene_task/?${readurl}`,
 	headers :JSON.parse(signkey),
       timeout: 60000,
 }
@@ -525,11 +526,11 @@ return new Promise((resolve, reject) => {
 
 //广告
 function ad() {
-const articles = readurl.replace(/\d{3}$/,Math.floor(Math.random()*1000));
+//const articles = readurl.replace(/\d{3}$/,Math.floor(Math.random()*1000));
 return new Promise((resolve, reject) => {
   let adurl ={
     //url: `https://it-lq.snssdk.com/score_task/v1/task/open_treasure_box/?${signurl}`,
-	url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/task/done/excitation_ad?${articles}`,
+	url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/task/done/excitation_ad?${readurl}`,
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
