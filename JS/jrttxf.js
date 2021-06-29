@@ -208,18 +208,18 @@ if (!signurlArr[0]) {
       readkey = readkeyArr[i];
       $.index = i + 1;
       console.log(`\n开始【今日头条极速版${$.index}】`)
-      await invite()
+      await invite()           //用户邀请
       await userinfo()
-      await profit()
+      await profit()           //金币收益
       await sign_in()
       await openbox()
       await reading()
-      await farm_sign_in()
-      await openfarmbox()
-      await landwarer()
-      await double_reward()
-      await sleepstatus()
-      await control()
+//      await farm_sign_in()   //农场签到
+//      await openfarmbox()    //农场宝箱
+      await landwarer()        //农场浇水  
+      await double_reward()    //农场视频双倍
+      await sleepstatus()      //睡觉状态
+      await control()          //起床
       //await sleepstart()
       //await sleepstop()
       //await collectcoins(coins)
@@ -302,6 +302,7 @@ return new Promise((resolve, reject) => {
    })
   } 
 
+//起床
 async function control(){
    if(collect == 0){
       await sleepstart();
@@ -363,7 +364,8 @@ return new Promise((resolve, reject) => {
 function userinfo() {
 return new Promise((resolve, reject) => {
   let userinfourl ={
-    url: `https://api3-normal-c-hl.snssdk.com/passport/account/info/v2/?${signurl}`,
+    //url: `https://api3-normal-c-hl.snssdk.com/passport/account/info/v2/?${signurl}`,
+    url: `https://security.snssdk.com/passport/account/info/v2/?${signurl}`,	
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
@@ -384,7 +386,7 @@ return new Promise((resolve, reject) => {
     })
    })
   } 
-
+//金币收益
 function profit() {
 return new Promise((resolve, reject) => {
   let profiturl ={
@@ -487,7 +489,7 @@ return new Promise((resolve, reject) => {
    })
   }  
 
-
+//农场宝箱
 function openfarmbox() {
 return new Promise((resolve, reject) => {
   let openfarmboxurl ={
@@ -511,6 +513,8 @@ return new Promise((resolve, reject) => {
     })
    })
   }  
+  
+//农场浇水 
 function landwarer() {
 return new Promise((resolve, reject) => {
   let landwaterurl ={
@@ -536,6 +540,7 @@ return new Promise((resolve, reject) => {
   } 
 //done 这个离线奖励当宝箱全部开完后，需要进入农场再运行脚本，才能获取离线奖励，应该有一个判定，目前没有找到
 //利用浇水激活进农场状态获取离线奖励，目前测试每天离线奖励足够开启农场5个宝箱，不需要做游戏加快生产，具体情况看后期是否需要，再考虑加做除虫，开地，三餐奖励
+//农场视频双倍
 function double_reward() {
 return new Promise((resolve, reject) => {
   let double_rewardurl ={
