@@ -525,6 +525,7 @@ return new Promise((resolve, reject) => {
 
 //广告
 function ad() {
+const articles = readurl.replace(/\d{3}$/,Math.floor(Math.random()*1000));
 return new Promise((resolve, reject) => {
   let adurl ={
     //url: `https://it-lq.snssdk.com/score_task/v1/task/open_treasure_box/?${signurl}`,
