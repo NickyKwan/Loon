@@ -279,7 +279,7 @@ $.log(jrttreadKey)
 function sign_in() {
 return new Promise((resolve, reject) => {
   let sign_inurl ={
-    url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/sign_in/?${signurl}`,
+    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/sign_in/action?${signurl}`,
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
@@ -464,7 +464,8 @@ return new Promise((resolve, reject) => {
 function openbox() {
 return new Promise((resolve, reject) => {
   let openboxurl ={
-    url: `https://it-lq.snssdk.com/score_task/v1/task/open_treasure_box/?${signurl}`,
+    //url: `https://it-lq.snssdk.com/score_task/v1/task/open_treasure_box/?${signurl}`,
+	url: `https://api3-normal-lf.toutiaoapi.com/score_task/v1/task/open_treasure_box/?${signurl}`,
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
