@@ -214,7 +214,7 @@ if (!signurlArr[0]) {
       await sign_in()          //签到
       await openbox()          //开宝箱
       await eat()	           //开饭
-      await ad()	           //广告	  
+//      await ad()	           //广告	  
 //      await reading()        //阅读
 //      await farm_sign_in()   //农场签到
 //      await openfarmbox()    //农场宝箱
