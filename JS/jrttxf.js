@@ -27,23 +27,20 @@ done 农场离线奖励(农场宝箱开完后，需要进农场再运行脚本�
 #进一次农场即可获取农场cookie
 #读文章弹出金币获取读文章cookie
 
+6.29 修复，测试
+
 [mitm]
 hostname = *.toutiaoapi.com
 
 #圈x
 [rewrite local]
 \/score_task\/v1\/task\/(sign_in|get_read_bonus) url script-request-header https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js
-\/ttgame\/game_farm\/home_info url script-request-header https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js
+\/ttgame\/game_farm\/home_info url script-request-header https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/jrttxf.js
+luckycat/lite/v1/sign_in/* url script-request-header https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/jrttxf.js
+
 [task]
-5,35 8-23 * * * https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js, tag=今日头条极速版, enabled=true
-#loon
-http-request \/score_task\/v1\/task\/(sign_in|get_read_bonus) script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js, requires-body=true, timeout=10, tag=今日头条极速版sign
-http-request \/ttgame\/game_farm\/home_info script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js, requires-body=true, timeout=10, tag=今日头条极速版farm
-cron "5,35 8-23 * * *" script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js, tag=今日头条极速版
-#surge
-jrttsign = type=http-request,pattern=\/score_task\/v1\/task\/(sign_in|get_read_bonus),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js,script-update-interval=0
-jrttfarm = type=http-request,pattern=\/ttgame\/game_farm\/home_info,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js,script-update-interval=0
-jrtt = type=cron,cronexp="5,35 8-23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js,script-update-interval=0
+5,35 8-23 * * * https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/jrttxf.js, tag=今日头条极速版, enabled=true
+
 */
 
 const $ = new Env('今日头条极速版')
