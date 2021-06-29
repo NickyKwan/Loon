@@ -212,15 +212,15 @@ if (!signurlArr[0]) {
 //      await userinfo()
 //      await profit()           //金币收益
       await sign_in()          //签到
-//      await openbox()          //开宝箱
+      await openbox()          //开宝箱
       await eat()	           //开饭	  
 //      await reading()        //阅读
 //      await farm_sign_in()   //农场签到
 //      await openfarmbox()    //农场宝箱
 //      await landwarer()        //农场浇水  
-      await double_reward()    //农场视频双倍
+//      await double_reward()    //农场视频双倍
 //      await sleepstatus()      //睡觉状态
-//      await control()          
+//      await control()          //起床
       //await sleepstart()
       //await sleepstop()
       //await collectcoins(coins)
@@ -442,7 +442,7 @@ return new Promise((resolve, reject) => {
 function farm_sign_in() {
 return new Promise((resolve, reject) => {
   let farm_sign_inurl ={
-    url: `https://api3-normal-lf.snssdk.com/ttgame/game_farm/reward/sign_in?watch_ad=1&${signurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/reward/sign_in?watch_ad=1&${signurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
 }
@@ -525,7 +525,7 @@ return new Promise((resolve, reject) => {
 function openfarmbox() {
 return new Promise((resolve, reject) => {
   let openfarmboxurl ={
-    url: `https://api3-normal-lf.snssdk.com/ttgame/game_farm/box/open?${farmurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/box/open?${farmurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
 }
@@ -550,7 +550,7 @@ return new Promise((resolve, reject) => {
 function landwarer() {
 return new Promise((resolve, reject) => {
   let landwaterurl ={
-    url: `https://api3-normal-lf.snssdk.com/ttgame/game_farm/land_water?tentimes=0${farmurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/land_water?tentimes=0${farmurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
 }
@@ -576,7 +576,7 @@ return new Promise((resolve, reject) => {
 function double_reward() {
 return new Promise((resolve, reject) => {
   let double_rewardurl ={
-    url: `https://api3-normal-lf.snssdk.com/ttgame/game_farm/double_reward?watch_ad=1&${farmurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/double_reward?watch_ad=1&${farmurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
 }
