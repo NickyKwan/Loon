@@ -217,7 +217,7 @@ if (!signurlArr[0]) {
 //      await reading()        //阅读
 //      await farm_sign_in()   //农场签到
 //      await openfarmbox()    //农场宝箱
-      await landwarer()        //农场浇水  
+//      await landwarer()        //农场浇水  
       await double_reward()    //农场视频双倍
 //      await sleepstatus()      //睡觉状态
 //      await control()          
