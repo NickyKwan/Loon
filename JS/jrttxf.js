@@ -213,13 +213,13 @@ if (!signurlArr[0]) {
       await profit()           //金币收益
       await sign_in()
       await openbox()
-      await reading()
+//      await reading()
 //      await farm_sign_in()   //农场签到
 //      await openfarmbox()    //农场宝箱
-      await landwarer()        //农场浇水  
-      await double_reward()    //农场视频双倍
-      await sleepstatus()      //睡觉状态
-      await control()          //起床
+//      await landwarer()        //农场浇水  
+//      await double_reward()    //农场视频双倍
+//      await sleepstatus()      //睡觉状态
+//      await control()          //起床
       //await sleepstart()
       //await sleepstop()
       //await collectcoins(coins)
