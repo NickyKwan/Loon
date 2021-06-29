@@ -208,9 +208,9 @@ if (!signurlArr[0]) {
       readkey = readkeyArr[i];
       $.index = i + 1;
       console.log(`\n开始【今日头条极速版${$.index}】`)
-      await invite()           //用户邀请
-      await userinfo()
-      await profit()           //金币收益
+//      await invite()           //用户邀请
+//      await userinfo()
+//      await profit()           //金币收益
       await sign_in()
       await openbox()
 //      await reading()
