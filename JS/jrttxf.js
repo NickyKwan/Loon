@@ -212,7 +212,7 @@ if (!signurlArr[0]) {
 //      await userinfo()
 //      await profit()           //金币收益
       await sign_in()          //签到
-      await openbox()          //开宝箱
+//      await openbox()          //开宝箱
       await eat()	           //开饭	  
 //      await reading()        //阅读
 //      await farm_sign_in()   //农场签到
