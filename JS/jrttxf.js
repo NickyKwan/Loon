@@ -212,9 +212,8 @@ if (!signurlArr[0]) {
 //      await userinfo()
 //      await profit()           //金币收益
       await sign_in()          //签到
-//      await openbox()          //开宝箱
-      await eat()	           //开饭
-//      await ad()	           //广告	  
+      await openbox()          //开宝箱
+      await eat()	           //开饭	  
 //      await reading()        //阅读
 //      await farm_sign_in()   //农场签到
 //      await openfarmbox()    //农场宝箱
@@ -258,8 +257,7 @@ $.log(jrttfarmKey)
     $.msg(`获取signkey: 成功🎉`, ``)
 }
 
-if($request&&$request.url.indexOf("done_whole_scene_task")>=0) {
-//if($request&&$request.url.indexOf("get_read_bonus")>=0) {
+if($request&&$request.url.indexOf("get_read_bonus")>=0) {
   const readurlVal = $request.url.split(`?`)[1]
 
   //const article = readurlVal.replace(/\d{3}$/,Math.floor(Math.random()*1000));
@@ -329,7 +327,7 @@ async function control(){
 function invite() {
 return new Promise((resolve, reject) => {
   let inviteurl ={
-    url: `https://api3-normal-lf.toutiaoapi.com/score_task/v1/user/new_tabs/?${signurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/score_task/v1/user/new_tabs/?${signurl}`,
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
@@ -350,7 +348,7 @@ return new Promise((resolve, reject) => {
 function invitation() {
 return new Promise((resolve, reject) => {
   let invitatonurl ={
-    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/invite/post_invite_code/?_request_from=web&device_platform=ios&ac=4G&${signurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/invite/post_invite_code/?_request_from=web&device_platform=ios&ac=4G&${signurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
     body: JSON.stringify({"invitecode" : "1980436898"})
@@ -393,9 +391,8 @@ return new Promise((resolve, reject) => {
 function profit() {
 return new Promise((resolve, reject) => {
   let profiturl ={
-    //url: `https://api3-normal-lf.toutiaoapi.com/score_task/v1/user/info/?${signurl}`,
-    url: `https://api3-normal-lf.toutiaoapi.com/score_task/v1/user/info/?${signurl}`,
-	headers :JSON.parse(signkey),
+    url: `https://api3-normal-c-lq.snssdk.com/score_task/v1/user/info/?${signurl}`,
+    headers :JSON.parse(signkey),
       timeout: 60000,
 }
 
@@ -417,9 +414,8 @@ function reading() {
 const articles = readurl.replace(/\d{3}$/,Math.floor(Math.random()*1000));
 return new Promise((resolve, reject) => {
   let readurl ={
-    //url: `https://api3-normal-lf.toutiaoapi.com/score_task/v1/task/get_read_bonus/?${articles}`,
-    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/activity/done_whole_scene_task/?${readurl}`,
-	headers :JSON.parse(signkey),
+    url: `https://api3-normal-c-lq.snssdk.com/score_task/v1/task/get_read_bonus/?${articles}`,
+    headers :JSON.parse(signkey),
       timeout: 60000,
 }
 
@@ -446,7 +442,7 @@ return new Promise((resolve, reject) => {
 function farm_sign_in() {
 return new Promise((resolve, reject) => {
   let farm_sign_inurl ={
-    url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/reward/sign_in?watch_ad=1&${signurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/reward/sign_in?watch_ad=1&${signurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
 }
@@ -524,41 +520,12 @@ return new Promise((resolve, reject) => {
    })
   } 
 
-//广告
-function ad() {
-//const articles = readurl.replace(/\d{3}$/,Math.floor(Math.random()*1000));
-return new Promise((resolve, reject) => {
-  let adurl ={
-    //url: `https://it-lq.snssdk.com/score_task/v1/task/open_treasure_box/?${signurl}`,
-	url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/task/done/excitation_ad?${readurl}`,
-    headers :JSON.parse(signkey),
-      timeout: 60000,
-}
-   $.post(adurl,(error, response, data) =>{
-     const result = JSON.parse(data)
-       if(logs) $.log(data)
-       other +='📣广告\n'
-      if(result.err_no == 0) {
-        other += '翻倍成功'
-        other += '获得金币'+result.data.score_amount+'个\n'
-        }
-      else{
-         if(result.err_no == 9){
-        other += result.err_tips+'\n'
-        }else{
-        other +="广告失败\n"
-           }
-    }
-          resolve()
-    })
-   })
-  } 
 
 //农场宝箱
 function openfarmbox() {
 return new Promise((resolve, reject) => {
   let openfarmboxurl ={
-    url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/box/open?${farmurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/box/open?${farmurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
 }
@@ -583,7 +550,7 @@ return new Promise((resolve, reject) => {
 function landwarer() {
 return new Promise((resolve, reject) => {
   let landwaterurl ={
-    url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/land_water?tentimes=0${farmurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/land_water?tentimes=0${farmurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
 }
@@ -609,7 +576,7 @@ return new Promise((resolve, reject) => {
 function double_reward() {
 return new Promise((resolve, reject) => {
   let double_rewardurl ={
-    url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/double_reward?watch_ad=1&${farmurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/double_reward?watch_ad=1&${farmurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
 }
@@ -637,7 +604,7 @@ return new Promise((resolve, reject) => {
 function sleepstatus() {
 return new Promise((resolve, reject) => {
   let sleepstatusurl ={
-    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/sleep/status/?_request_from=web&${signurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/sleep/status/?_request_from=web&${signurl}`,
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
@@ -681,7 +648,7 @@ if(result.data.history_amount!==0){
 function sleepstart() {
 return new Promise((resolve, reject) => {
   let sleepstarturl ={
-    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/sleep/start/?_request_from=web&${signurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/sleep/start/?_request_from=web&${signurl}`,
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
@@ -705,7 +672,7 @@ return new Promise((resolve, reject) => {
 function sleepstop() {
 return new Promise((resolve, reject) => {
   let sleepstopurl ={
-    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/sleep/stop/?_request_from=web&${signurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/sleep/stop/?_request_from=web&${signurl}`,
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
@@ -729,7 +696,7 @@ return new Promise((resolve, reject) => {
 function collectcoins(coins) {
 return new Promise((resolve, reject) => {
   let collectcoinsurl ={
-    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/sleep/done_task/?_request_from=web&device_platform=undefined&${signurl}`,
+    url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/sleep/done_task/?_request_from=web&device_platform=undefined&${signurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
     body :JSON.stringify({score_amount: coins}),
