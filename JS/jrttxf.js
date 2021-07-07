@@ -5,7 +5,7 @@ github：https://github.com/Ariszy/script
 转载给我留个名字，谢谢
 
 
-邀请码：1980436898
+邀请码：931850705
 我的--输入邀请码，立得一元，直接提现，谢谢
 
 作者：执意Ariszy
@@ -13,6 +13,7 @@ github：https://github.com/Ariszy/script
 签到
 开首页宝箱
 读文章30篇（具体效果自测）
+农场签到
 开农场宝箱
 农场浇水
 done 农场离线奖励(农场宝箱开完后，需要进农场再运行脚本才能开，有点问题)
@@ -49,6 +50,7 @@ $.idx = ($.idx = ($.getval("jrttcount") || "1") - 1) > 0 ? `${$.idx + 1}` : ""; 
 const signurlArr = [],signkeyArr=[]
 const farmurlArr = [],farmkeyArr=[]
 const readurlArr = [],readkeyArr=[]
+const infourlArr = [],infokeyArr=[]
 let signurl = $.getdata('signurl')
 let signkey = $.getdata('signkey')
 
@@ -57,10 +59,17 @@ let farmkey = $.getdata('farmkey')
 
 let readurl = $.getdata('readurl')
 let readkey = $.getdata('readkey')
+
+let infourl = $.getdata('infourl')
+let infokey = $.getdata('infokey')
+
+
+let	boxbody = '[{open_treasure_box_enter_from": ""}]'
+
 //var articles =''
 let tz = ($.getval('tz') || '1');//0关闭通知，1默认开启
 const invit=1;//新用户自动邀请，0关闭，1默认开启
-const logs =0;//0为关闭日志，1为开启
+const logs =1;//0为关闭日志，1为开启
 var coins=''
 var article =''
 var collect = ''
@@ -172,6 +181,17 @@ Object.keys(readurl).forEach((item) => {
           readkeyArr.push(readkey[item])
         }
     });
+//info
+Object.keys(infourl).forEach((item) => {
+        if (infourl[item]) {
+          infourlArr.push(infourl[item])
+        }
+    });
+    Object.keys(infokey).forEach((item) => {
+        if (infokey[item]) {
+          infokeyArr.push(infokey[item])
+        }
+    });	
     console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
     console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
  } else {
@@ -181,6 +201,8 @@ Object.keys(readurl).forEach((item) => {
     farmkeyArr.push($.getdata('farmkey'))
     readurlArr.push($.getdata('readurl'))
     readkeyArr.push($.getdata('readkey'))
+    infourlArr.push($.getdata('infourl'))
+    infokeyArr.push($.getdata('infokey'))	
     let jrttcount = ($.getval('jrttcount') || '1');
   for (let i = 2; i <= jrttcount; i++) {
     signurlArr.push($.getdata(`signurl${i}`))
@@ -189,6 +211,8 @@ Object.keys(readurl).forEach((item) => {
     farmkeyArr.push($.getdata(`farmkey${i}`))
     readurlArr.push($.getdata(`readurl${i}`))
     readkeyArr.push($.getdata(`readkey${i}`))
+    infourlArr.push($.getdata(`infourl${i}`))
+    infokeyArr.push($.getdata(`infokey${i}`))	
   }
 }
 !(async () => {
@@ -206,24 +230,34 @@ if (!signurlArr[0]) {
       farmkey = farmkeyArr[i];
       readurl = readurlArr[i];
       readkey = readkeyArr[i];
+      infourl = infourlArr[i];
+      infokey = infokeyArr[i];	  
       $.index = i + 1;
       console.log(`\n开始【今日头条极速版${$.index}】`)
-//      await invite()           //用户邀请
-//      await userinfo()
-//      await profit()           //金币收益
+      await invite()           //用户邀请
+      await userinfo()
+      await profit()           //金币收益
       await sign_in()          //签到
-      await openbox()          //开宝箱
-      await eat()	           //开饭	  
-//      await reading()        //阅读
-//      await farm_sign_in()   //农场签到
-//      await openfarmbox()    //农场宝箱
-//      await landwarer()        //农场浇水  
-//      await double_reward()    //农场视频双倍
-//      await sleepstatus()      //睡觉状态
-//      await control()          //起床
-      //await sleepstart()
-      //await sleepstop()
-      //await collectcoins(coins)
+////      await openbox()          //开宝箱
+////      await box_ad()          //开宝箱广告
+////      await eat()	           //开饭	  
+      await reading()        //阅读
+      await farm_sign_in()   //农场签到
+      await openfarmbox()    //农场宝箱
+      await landwarer()        //农场浇水  
+      await double_reward()    //农场视频双倍
+////      await farm_task1()        //农场每天任务
+////      await farm_task2()        //农场每天任务
+////      await farm_task3()        //农场每天任务	  
+////      await farm_task4()        //农场每天任务	  
+////      await farm_gift1()        //农场三餐
+////      await farm_gift2()        //农场三餐
+////      await farm_gift3()        //农场三餐	  
+      await sleepstatus()      //睡觉状态
+      await control()          
+      await sleepstart()        //睡觉
+      await sleepstop()         //起床
+      //await collectcoins(coins) //收取睡觉金币
       await showmsg()
   }
  }
@@ -303,7 +337,7 @@ return new Promise((resolve, reject) => {
    })
   } 
 
-//起床
+//起床控制
 async function control(){
    if(collect == 0){
       await sleepstart();
@@ -327,7 +361,8 @@ async function control(){
 function invite() {
 return new Promise((resolve, reject) => {
   let inviteurl ={
-    url: `https://api3-normal-c-lq.snssdk.com/score_task/v1/user/new_tabs/?${signurl}`,
+    //url: `https://api3-normal-c-lq.snssdk.com/score_task/v1/user/new_tabs/?${signurl}`,
+    url: `https://api3-normal-lf.toutiaoapi.com/score_task/v1/user/new_tabs/?${readurl}`,
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
@@ -348,10 +383,11 @@ return new Promise((resolve, reject) => {
 function invitation() {
 return new Promise((resolve, reject) => {
   let invitatonurl ={
-    url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/invite/post_invite_code/?_request_from=web&device_platform=ios&ac=4G&${signurl}`,
+    //url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/invite/post_invite_code/?_request_from=web&device_platform=ios&ac=4G&${signurl}`,
+    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/invite/post_invite_code/?_request_from=web&device_platform=ios&ac=4G&${readurl}`, 
     headers :JSON.parse(farmkey),
       timeout: 60000,
-    body: JSON.stringify({"invitecode" : "1980436898"})
+    body: JSON.stringify({"invitecode" : "931850705"})
 }
 
    $.post(invitatonurl,(error, response, data) =>{
@@ -366,11 +402,10 @@ function userinfo() {
 return new Promise((resolve, reject) => {
   let userinfourl ={
     //url: `https://api3-normal-c-hl.snssdk.com/passport/account/info/v2/?${signurl}`,
-    url: `https://security.snssdk.com/passport/account/info/v2/?${signurl}`,	
+    url: `https://security.snssdk.com/passport/account/info/v2/?${infourl}`,	
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
-
    $.get(userinfourl,(error, response, data) =>{
      const result = JSON.parse(data)
       //$.log(signurl+'\n'+signkey+'\n'+farmurl+'\n'+farmkey+'\n'+readurl+'\n'+readkey)
@@ -391,7 +426,9 @@ return new Promise((resolve, reject) => {
 function profit() {
 return new Promise((resolve, reject) => {
   let profiturl ={
-    url: `https://api3-normal-c-lq.snssdk.com/score_task/v1/user/info/?${signurl}`,
+    //url: `https://api3-normal-c-lq.snssdk.com/score_task/v1/user/info/?${signurl}`,
+    //url: `https://api3-normal-lf.toutiaoapi.com/score_task/v1/user/info/?${signurl}`,	
+	url: `https://api3-normal-lf.toutiaoapi.com/score_task/v1/user/info/?${readurl}&sub_version=2`,	
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
@@ -400,7 +437,7 @@ return new Promise((resolve, reject) => {
      const result = JSON.parse(data)
         if(logs)$.log(data)
       if(result.err_no == 0) {
-          other +='🎉金币收益:'+result.data.score.amount+'\n🎉估计兑换现金:'+(result.data.score.amount/30000).toFixed(2)+'\n🎉'+'现金收益:'+result.data.cash.amount+'\n'      
+          other +='🎉金币收益:'+result.data.score.amount+'\n🎉估计兑换现金:'+(result.data.score.amount/33000).toFixed(2)+'\n🎉'+'现金收益:'+result.data.cash.amount+'\n'      
 }else{
           other += '⚠️异常\n'
            }
@@ -411,15 +448,53 @@ return new Promise((resolve, reject) => {
 
 //文章阅读30篇每天
 function reading() {
-const articles = readurl.replace(/\d{3}$/,Math.floor(Math.random()*1000));
+//const articles = readurl.replace(/\d{3}$/,Math.floor(Math.random()*1000));
+  //const articles = readkey.replace(/\d{3}$/,Math.floor(Math.random()*1000));
+  const articles = 6980881736284897000 + Math.floor(Math.random()*1000);
 return new Promise((resolve, reject) => {
-  let readurl ={
-    url: `https://api3-normal-c-lq.snssdk.com/score_task/v1/task/get_read_bonus/?${articles}`,
+  let readingurl ={
+    //url: `https://api3-normal-c-lq.snssdk.com/score_task/v1/task/get_read_bonus/?${articles}`,
+	url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/activity/done_whole_scene_task/?${readurl}`,
     headers :JSON.parse(signkey),
+	body :JSON.parse(readkey),
+	//body :JSON.parse(articles),
+    /*body :{
+           "is_golden_egg": "false",
+           //"scene_key": "article_detail",
+		   //"group_id": "${articles}"
+           //"group_id": "6980881736284897828"
+		   "scene_key": "question_answer",
+		   "group_id": "695313804672402475"
+             },
+	*/		 
       timeout: 60000,
 }
 
-   $.post(readurl,(error, response, data) =>{
+   $.post(readingurl,(error, response, data) =>{
+     const result = JSON.parse(data)
+      if(logs)  $.log(data)
+      other +='📣文章阅读\n'
+      if(result.err_no == 0) {
+          other +='阅读完成'
+          other +='获得'+result.data.score_amount+'金币\n'
+          //other +='阅读进度'+result.data.icon_data.done_times+'/'+result.data.icon_data.read_limit+'\n'
+      }
+	  else{
+       if(result.err_no == 4){
+          other +='文章阅读已达上限\n'
+        }
+       else{
+          other +='这篇文章已经读过了\n'
+        }
+	      }	
+          resolve()
+    })
+   })
+  }
+ 
+  
+/* 原代码备份
+   $.post(readingurl,(error, response, data) =>{
      const result = JSON.parse(data)
       if(logs)  $.log(data)
       other +='📣文章阅读\n'
@@ -437,12 +512,14 @@ return new Promise((resolve, reject) => {
           resolve()
     })
    })
-  } 
+  }
+*/ 
 //农场签到
 function farm_sign_in() {
 return new Promise((resolve, reject) => {
   let farm_sign_inurl ={
-    url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/reward/sign_in?watch_ad=1&${signurl}`,
+    //url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/reward/sign_in?watch_ad=1&${signurl}`,
+      url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/reward/sign_in?watch_ad=1&${signurl}`, 	  
     headers :JSON.parse(farmkey),
       timeout: 60000,
 }
@@ -463,14 +540,18 @@ return new Promise((resolve, reject) => {
   } 
 //开宝箱
 function openbox() {
+//	const boxbody = {"open_treasure_box_enter_from": ""},
 return new Promise((resolve, reject) => {
   let openboxurl ={
     //url: `https://it-lq.snssdk.com/score_task/v1/task/open_treasure_box/?${signurl}`,
 	url: `https://api3-normal-lf.toutiaoapi.com/score_task/v1/task/open_treasure_box/?${signurl}`,
     headers :JSON.parse(signkey),
+	//body : boxbody,
+	body: {"open_treasure_box_enter_from": ""},
+	//body :JSON.stringify({open_treasure_box_enter_from:  }),
+	    //body :JSON.stringify({score_amount: coins}),
       timeout: 60000,
 }
-
    $.post(openboxurl,(error, response, data) =>{
      const result = JSON.parse(data)
        if(logs) $.log(data)
@@ -490,6 +571,8 @@ return new Promise((resolve, reject) => {
     })
    })
   }  
+
+
 
 //吃饭
 function eat() {
@@ -520,12 +603,52 @@ return new Promise((resolve, reject) => {
    })
   } 
 
+//广告
+function box_ad() {
+return new Promise((resolve, reject) => {
+  let box_adurl ={
+	url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/task/done/excitation_ad?${readurl}`,
+    headers :JSON.parse(farmkey),
+	body :{
+           "amount": "124",
+           "ad_rit": "2",
+           "is_post_login": "false",
+           "score_source": "1",
+           "ad_alias_position": "coin",
+           "task_id": "188",
+           "task_key": "excitation_ad",
+           "coin_count": "131",
+           "ad_from": "coin",
+           "ad_id": "2"
+           },
+      timeout: 60000,
+}
+   $.post(box_adurl,(error, response, data) =>{
+     const result = JSON.parse(data)
+       if(logs) $.log(data)
+       other +='📣开宝箱广告\n'
+      if(result.err_no == 0) {
+        other += '开启成功'
+        other += '获得金币'+result.data.score_amount+'个\n'
+        }
+      else{
+         if(result.err_no == 9){
+        other += result.err_tips+'\n'
+        }else{
+        other +="不在开宝箱时间\n"
+           }
+    }
+          resolve()
+    })
+   })
+  } 
 
 //农场宝箱
 function openfarmbox() {
 return new Promise((resolve, reject) => {
   let openfarmboxurl ={
-    url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/box/open?${farmurl}`,
+    //url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/box/open?${farmurl}`,
+	url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/box/open?${farmurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
 }
@@ -550,7 +673,8 @@ return new Promise((resolve, reject) => {
 function landwarer() {
 return new Promise((resolve, reject) => {
   let landwaterurl ={
-    url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/land_water?tentimes=0${farmurl}`,
+    //url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/land_water?tentimes=0${farmurl}`,
+    url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/land_water?tentimes=0&fivetimes=0&${farmurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
 }
@@ -576,11 +700,10 @@ return new Promise((resolve, reject) => {
 function double_reward() {
 return new Promise((resolve, reject) => {
   let double_rewardurl ={
-    url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/double_reward?watch_ad=1&${farmurl}`,
+    url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/double_reward?watch_ad=1&${farmurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
 }
-
    $.get(double_rewardurl,(error, response, data) =>{
      const result = JSON.parse(data)
        if(logs) $.log(data)
@@ -597,14 +720,168 @@ return new Promise((resolve, reject) => {
           resolve()
     })
    })
+  }
+
+//农场每日任务
+function farm_task1() {
+return new Promise((resolve, reject) => {
+  let farm_task1url ={
+	url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/reward/task?task_id=1&${farmurl}`,
+    headers :JSON.parse(farmkey),
+      timeout: 60000,
+}
+
+   $.get(farm_task1url,(error, response, data) =>{
+     const result = JSON.parse(data)
+       if(logs) $.log(data)
+       other +='📣农场每日任务\n'
+      if(result.status_code == 0) {
+          other +='已领取\n' 
+        }else{
+          other +=result.message+'\n'
+           }
+          resolve()
+    })
+   })
+  }    
+
+function farm_task2() {
+return new Promise((resolve, reject) => {
+  let farm_task2url ={
+	url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/reward/task?task_id=2&${farmurl}`,
+    headers :JSON.parse(farmkey),
+      timeout: 60000,
+}
+
+   $.get(farm_task2url,(error, response, data) =>{
+     const result = JSON.parse(data)
+       if(logs) $.log(data)
+       other +='📣农场每日任务\n'
+      if(result.status_code == 0) {
+          other +='已领取\n' 
+        }else{
+          other +=result.message+'\n'
+           }
+          resolve()
+    })
+   })
+  }
+
+function farm_task_3() {
+return new Promise((resolve, reject) => {
+  let farm_task3url ={
+	url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/reward/task?task_id=3&${farmurl}`,
+    headers :JSON.parse(farmkey),
+      timeout: 60000,
+}
+
+   $.get(farm_task3url,(error, response, data) =>{
+     const result = JSON.parse(data)
+       if(logs) $.log(data)
+       other +='📣农场每日任务\n'
+      if(result.status_code == 0) {
+          other +='已领取\n' 
+        }else{
+          other +=result.message+'\n'
+           }
+          resolve()
+    })
+   })
   }  
 
+function farm_task4() {
+return new Promise((resolve, reject) => {
+  let farm_task4url ={
+	url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/reward/task?task_id=4&${farmurl}`,
+    headers :JSON.parse(farmkey),
+      timeout: 60000,
+}
 
+   $.get(farm_task4url,(error, response, data) =>{
+     const result = JSON.parse(data)
+       if(logs) $.log(data)
+       other +='📣农场每日任务\n'
+      if(result.status_code == 0) {
+          other +='已领取\n' 
+        }else{
+          other +=result.message+'\n'
+           }
+          resolve()
+    })
+   })
+  } 
+  
+//农场三餐
+function farm_gift1() {
+return new Promise((resolve, reject) => {
+  let farm_gift1url ={
+	url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/reward/gift?gift_id=1&watch_ad=1&${farmurl}`,
+    headers :JSON.parse(farmkey),
+      timeout: 60000,
+}
+   $.get(farm_gift1url,(error, response, data) =>{
+     const result = JSON.parse(data)
+       if(logs) $.log(data)
+       other +='📣农场早餐礼包\n'
+      if(result.status_code == 0) {
+        other +='已领取\n' 
+        }else{
+          other +=result.message+'\n'
+           }
+          resolve()
+    })
+   })
+  }  
+
+function farm_gift2() {
+return new Promise((resolve, reject) => {
+  let farm_gifturl2 ={
+	url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/reward/gift?gift_id=2&watch_ad=0&double=1&${farmurl}`,
+    headers :JSON.parse(farmkey),
+      timeout: 60000,
+}
+   $.get(farm_gifturl2,(error, response, data) =>{
+     const result = JSON.parse(data)
+       if(logs) $.log(data)
+       other +='📣农场午餐礼包\n'
+      if(result.status_code == 0) {
+        other +='已领取\n' 
+        }else{
+          other +=result.message+'\n'
+           }
+          resolve()
+    })
+   })
+  }
+
+function farm_gift3() {
+return new Promise((resolve, reject) => {
+  let farm_gifturl3 ={
+	url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/reward/gift?gift_id=3&watch_ad=0&double=1&${farmurl}`,
+    headers :JSON.parse(farmkey),
+      timeout: 60000,
+}
+   $.get(farm_gifturl3,(error, response, data) =>{
+     const result = JSON.parse(data)
+       if(logs) $.log(data)
+       other +='📣农场晚餐礼包\n'
+      if(result.status_code == 0) {
+        other +='已领取\n' 
+        }else{
+          other +=result.message+'\n'
+           }
+          resolve()
+    })
+   })
+  }
+  
+  
 //睡觉状态
 function sleepstatus() {
 return new Promise((resolve, reject) => {
   let sleepstatusurl ={
-    url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/sleep/status/?_request_from=web&${signurl}`,
+    //url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/sleep/status/?_request_from=web&${signurl}`,
+    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/sleep/status/?${signurl}`,
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
@@ -622,7 +899,8 @@ return new Promise((resolve, reject) => {
            }else{
 if(result.data.history_amount!==0){ 
 //即使没有满足3600也在睡觉12小时后停止，以防封号
-         coins=result.data.history_amount
+         //coins=result.data.history_amount
+		 coins=result.data.max_coin  //或者这个待定？
          collect =3 //collect coins
           }else{
          collect=2
@@ -648,7 +926,8 @@ if(result.data.history_amount!==0){
 function sleepstart() {
 return new Promise((resolve, reject) => {
   let sleepstarturl ={
-    url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/sleep/start/?_request_from=web&${signurl}`,
+    //url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/sleep/start/?_request_from=web&${signurl}`,
+    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/sleep/start/?${signurl}`,
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
@@ -672,7 +951,8 @@ return new Promise((resolve, reject) => {
 function sleepstop() {
 return new Promise((resolve, reject) => {
   let sleepstopurl ={
-    url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/sleep/stop/?_request_from=web&${signurl}`,
+    //url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/sleep/stop/?_request_from=web&${signurl}`,
+    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/sleep/stop/?${signurl}`,	
     headers :JSON.parse(signkey),
       timeout: 60000,
 }
@@ -696,8 +976,10 @@ return new Promise((resolve, reject) => {
 function collectcoins(coins) {
 return new Promise((resolve, reject) => {
   let collectcoinsurl ={
-    url: `https://api3-normal-c-lq.snssdk.com/luckycat/lite/v1/sleep/done_task/?_request_from=web&device_platform=undefined&${signurl}`,
-    headers :JSON.parse(farmkey),
+    //url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/sleep/done_task/?_request_from=web&device_platform=undefined&${signurl}`,
+    url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/sleep/done_task/?${signurl}`,
+    //headers :JSON.parse(farmkey),
+    headers :JSON.parse(signkey),
       timeout: 60000,
     body :JSON.stringify({score_amount: coins}),
 
