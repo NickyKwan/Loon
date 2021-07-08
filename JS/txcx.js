@@ -113,7 +113,7 @@ function txcxck() {
   const txcxbody = JSON.stringify($request.body)
         if(txcxbody)    $.setdata(txcxbody,`txcxbody${status}`)
 $.log(txcxbody)
-   $.msg($.name,"",'西梅'+`${status}` +'数据获取成功！')
+   $.msg($.name,"",'腾讯出行'+`${status}` +'数据获取成功！')
   }
 }
 
@@ -128,7 +128,7 @@ $.log(txcxbody)
 
 
 
-async function signin() {
+function signin() {
   return new Promise((resolve) => {
     const option = { 
        url: 'https://tim.map.qq.com/marketing/signcash/sign',
@@ -156,7 +156,7 @@ async function signin() {
 }
 
 
-async function showMsg() {
+function showMsg() {
    $.msg($.name, subTitle, message, option);
    $.log(`\n${message}\n`);
  }
