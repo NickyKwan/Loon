@@ -4,7 +4,7 @@
 * @UpdateTime        202107088
 * @ScriptFunction    签到3天得现金
 * @Attention         Cookie有效期约XX天（待测试）
-* @AppletPath        微信小程序搜索🔍腾讯出行✈️点击主页下面的【火车票优惠】即可
+* @AppletPath        ###微信小程序搜索🔍腾讯出行✈️点击主页下面的【火车票优惠】即可
 * @ScriptURL         https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/txcx.js
 * ==/UserScript==
 【QuantumultX】 :
@@ -33,7 +33,7 @@ TCLX = type=cron,script-path=https://raw.githubusercontent.com/NickyKwan/JavaScr
 TCLXCookie = type=http-request,pattern=https://tim.map.qq.com/marketing/signcash/sign,script-path=https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/txcx.js
 *************************
 [mitm]
-hostname = openapi.17usoft.net
+hostname = tim.map.qq.com
 */
 const $ = new Env("腾讯出行")
 $.signKeyTXCX = 'txcx_usersignKey'
