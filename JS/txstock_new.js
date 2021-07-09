@@ -314,21 +314,20 @@ async function wxtask2() {
     console.log(`准备执行下一个任务...`)
     tz += `【WX阅读资讯】:已执行\n`
   }
-
 }
+//
 async function wxtask2_new() {
   console.log(`开始验证【WX阅读资讯】任务状态`)
   await wxstatuid1_new()
   if (wxstatuid1_new.done == 0) {
     console.log(`开始申请票据...`)
-    await wxtaskticket(); //申请票据
+    await wxtaskticket_new(); //申请票据
     console.log(`执行【WX阅读资讯】任务`)
     await wxtaskid1_new(wxticket);
   } else {
     console.log(`准备执行下一个任务...`)
     tz += `【WX阅读资讯】:已执行\n`
   }
-
 }
 async function task3() {
   console.log(`开始验证【分享股票行情】任务状态`)
@@ -2374,6 +2373,48 @@ function wxtaskticket() {
     let url = {
       url: `https://wzq.tenpay.com/cgi-bin/activity_task.fcgi?t=${rndtime}`,
       body: `_h5ver=2.0.1&actid=1100&action=taskticket`,
+      headers: {
+        'Accept': `application/json, text/plain, */*`,
+        'Origin': `https://wzq.tenpay.com`,
+        'Accept-Encoding': `gzip, deflate, br`,
+        'Cookie': `${wxtaskkeyVal}`,
+        'Content-Type': `application/x-www-form-urlencoded`,
+        'Host': `wzq.tenpay.com`,
+        'Connection': `keep-alive`,
+        'User-Agent': `Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.20(0x1700142b) NetType/4G Language/zh_CN`,
+        'Referer': `https://wzq.tenpay.com/mp/v2/index.html`,
+        'Accept-Language': `zh-cn`
+      },
+    };
+    $.post(url, async (err, resp, data) => {
+      try {
+        if (err) {
+          console.log("腾讯自选股: API查询请求失败 ‼️‼️");
+          console.log(JSON.stringify(err));
+          $.logErr(err);
+        } else {
+          if (safeGet(data)) {
+            if (logs == 1) $.log(data)
+            data = JSON.parse(data);
+            $.log(`本次验证时间🕐：` + time(rndtime));
+            $.log(`本次验证票据🎫：${data.task_ticket}`);
+            wxticket = data.task_ticket
+          }
+        }
+      } catch (e) {
+        $.logErr(e, resp);
+      } finally {
+        resolve();
+      }
+    });
+  });
+}
+
+function wxtaskticket_new() {
+  return new Promise((resolve) => {
+    let url = {
+      url: `https://wzq.tenpay.com/cgi-bin/activity_task.fcgi?t=${rndtime}`,
+      body: `_h5ver=2.0.1&actid=1110&action=taskticket`,
       headers: {
         'Accept': `application/json, text/plain, */*`,
         'Origin': `https://wzq.tenpay.com`,
