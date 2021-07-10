@@ -686,6 +686,20 @@ async function wxtask14() {
     tz += `【WX浏览社区】:已执行\n`
   }
 }
+//添加龙虎榜到自选
+async function task15() {
+  console.log(`开始验证【添加龙虎榜到自选】任务状态`)
+  await statuid6_new()
+  if (statuid6_new.done == 0) {
+    console.log(`开始申请票据...`)
+    await taskticket_new(); //申请票据
+    console.log(`执行【添加龙虎榜到自选】任务`)
+    await taskid6_new(ticket);
+  } else {
+    console.log(`准备执行下一个任务...`)
+    tz += `【添加龙虎榜到自选】:已执行\n`
+  }
+}
 //WX浏览选股题材热点
 async function wxtask15() {
   console.log(`开始验证【WX浏览选股题材热点】任务状态`)
@@ -700,6 +714,20 @@ async function wxtask15() {
     tz += `【WX浏览选股题材热点】:已执行\n`
   }
 }
+//浏览选股题材热点
+async function task16() {
+  console.log(`开始验证【浏览选股题材热点】任务状态`)
+  await statuid7_new()
+  if (statuid7_new.done == 0) {
+    console.log(`开始申请票据...`)
+    await taskticket_new(); //申请票据
+    console.log(`执行【浏览选股题材热点】任务`)
+    await taskid7_new(ticket);
+  } else {
+    console.log(`准备执行下一个任务...`)
+    tz += `【浏览选股题材热点】:已执行\n`
+  }
+}
 //WX浏览股票扫雷
 async function wxtask16() {
   console.log(`开始验证【WX浏览股票扫雷】任务状态`)
@@ -712,6 +740,20 @@ async function wxtask16() {
   } else {
     console.log(`准备执行下一个任务...`)
     tz += `【WX浏览股票扫雷】:已执行\n`
+  }
+}
+//浏览脱水研报
+async function task17() {
+  console.log(`开始验证【浏览脱水研报】任务状态`)
+  await statuid8_new()
+  if (statuid8_new.done == 0) {
+    console.log(`开始申请票据...`)
+    await taskticket_new(); //申请票据
+    console.log(`执行【浏览脱水研报】任务`)
+    await taskid8_new(ticket);
+  } else {
+    console.log(`准备执行下一个任务...`)
+    tz += `【浏览脱水研报】:已执行\n`
   }
 }
 //WX分享个股行情
@@ -2121,6 +2163,62 @@ function wxstatuid5_new() {
     })
   })
 }
+//添加龙虎榜到自选
+function taskid6_new(ticket) {
+  return new Promise((resolve, reject) => {
+    let testurl = {
+      url: `https://wzq.tenpay.com/cgi-bin/activity_task.fcgi?action=taskdone&channel=1&actid=1111&tid=61&id=6&task_ticket=${ticket}&_appName=ios${taskheaderVal}`,
+
+      headers: {
+        'Cookie': `${taskkeyVal}`,
+        'Accept': `*/*`,
+        'Connection': `keep-alive`,
+        'Referer': `http://zixuanguapp.finance.qq.com`,
+        'Accept-Encoding': `gzip,deflate`,
+        'Host': `wzq.tenpay.com`,
+        'User-Agent': `QQStock/8.7.0 (iPhone; iOS 14.1; Scale/2.00)`,
+        'Accept-Language': `zh-Hans-CN;q=1, en-CN;q=0.9`
+      },
+    }
+    $.get(testurl, async (error, resp, data) => {
+      if (logs == 1) $.log(data)
+      let task = JSON.parse(data)
+      $.log(`【添加龙虎榜到自选】:获得 ${task.reward_desc}\n`);
+      tz += `【添加龙虎榜到自选】:获得 ${task.reward_desc}\n`
+      await $.wait(10000); //等待10秒
+      resolve()
+    })
+  })
+}
+
+function statuid6_new() {
+  return new Promise((resolve, reject) => {
+    let testurl = {
+      url: `https://wzq.tenpay.com/cgi-bin/activity_task.fcgi?action=taskstatus&channel=1&actid=1111&id=6&tid=61&_appName=ios${taskheaderVal}`,
+
+      headers: {
+        'Cookie': `${taskkeyVal}`,
+        'Accept': `*/*`,
+        'Connection': `keep-alive`,
+        'Referer': `http://zixuanguapp.finance.qq.com`,
+        'Accept-Encoding': `gzip,deflate`,
+        'Host': `wzq.tenpay.com`,
+        'User-Agent': `QQStock/8.7.0 (iPhone; iOS 14.1; Scale/2.00)`,
+        'Accept-Language': `zh-Hans-CN;q=1, en-CN;q=0.9`
+      },
+    }
+    $.get(testurl, async (error, resp, data) => {
+      if (logs == 1) $.log(data)
+      statuid6_new = JSON.parse(data)
+      if (statuid6_new.done == 1) {
+        $.log(`验证状态失败,任务已执行🚫`);
+      } else {
+        $.log(`验证状态成功,可执行任务🎉`);
+      }
+      resolve()
+    })
+  })
+}
 //WX浏览股票扫雷
 function wxtaskid6_new(wxticket) {
   return new Promise((resolve) => {
@@ -2190,6 +2288,62 @@ function wxstatuid6_new() {
       if (logs == 1) $.log(data)
       wxstatuid6_new = JSON.parse(data)
       if (wxstatuid6_new.done == 1) {
+        $.log(`验证状态失败,任务已执行🚫`);
+      } else {
+        $.log(`验证状态成功,可执行任务🎉`);
+      }
+      resolve()
+    })
+  })
+}
+//浏览选股题材热点
+function taskid7_new(ticket) {
+  return new Promise((resolve, reject) => {
+    let testurl = {
+      url: `https://wzq.tenpay.com/cgi-bin/activity_task.fcgi?action=taskdone&channel=1&actid=1111&tid=58&id=7&task_ticket=${ticket}&_appName=ios${taskheaderVal}`,
+
+      headers: {
+        'Cookie': `${taskkeyVal}`,
+        'Accept': `*/*`,
+        'Connection': `keep-alive`,
+        'Referer': `http://zixuanguapp.finance.qq.com`,
+        'Accept-Encoding': `gzip,deflate`,
+        'Host': `wzq.tenpay.com`,
+        'User-Agent': `QQStock/8.7.0 (iPhone; iOS 14.1; Scale/2.00)`,
+        'Accept-Language': `zh-Hans-CN;q=1, en-CN;q=0.9`
+      },
+    }
+    $.get(testurl, async (error, resp, data) => {
+      if (logs == 1) $.log(data)
+      let task = JSON.parse(data)
+      $.log(`【浏览选股题材热点】:获得 ${task.reward_desc}\n`);
+      tz += `【浏览选股题材热点】:获得 ${task.reward_desc}\n`
+      await $.wait(10000); //等待10秒
+      resolve()
+    })
+  })
+}
+
+function statuid7_new() {
+  return new Promise((resolve, reject) => {
+    let testurl = {
+      url: `https://wzq.tenpay.com/cgi-bin/activity_task.fcgi?action=taskstatus&channel=1&actid=1111&id=7&tid=58&_appName=ios${taskheaderVal}`,
+
+      headers: {
+        'Cookie': `${taskkeyVal}`,
+        'Accept': `*/*`,
+        'Connection': `keep-alive`,
+        'Referer': `http://zixuanguapp.finance.qq.com`,
+        'Accept-Encoding': `gzip,deflate`,
+        'Host': `wzq.tenpay.com`,
+        'User-Agent': `QQStock/8.7.0 (iPhone; iOS 14.1; Scale/2.00)`,
+        'Accept-Language': `zh-Hans-CN;q=1, en-CN;q=0.9`
+      },
+    }
+    $.get(testurl, async (error, resp, data) => {
+      if (logs == 1) $.log(data)
+      statuid7_new = JSON.parse(data)
+      if (statuid7_new.done == 1) {
         $.log(`验证状态失败,任务已执行🚫`);
       } else {
         $.log(`验证状态成功,可执行任务🎉`);
@@ -2268,6 +2422,62 @@ function wxstatuid7_new() {
       if (logs == 1) $.log(data)
       wxstatuid7_new = JSON.parse(data)
       if (wxstatuid7_new.done == 1) {
+        $.log(`验证状态失败,任务已执行🚫`);
+      } else {
+        $.log(`验证状态成功,可执行任务🎉`);
+      }
+      resolve()
+    })
+  })
+}
+//浏览脱水研报
+function taskid8_new(ticket) {
+  return new Promise((resolve, reject) => {
+    let testurl = {
+      url: `https://wzq.tenpay.com/cgi-bin/activity_task.fcgi?action=taskdone&channel=1&actid=1111&tid=48&id=8&task_ticket=${ticket}&_appName=ios${taskheaderVal}`,
+
+      headers: {
+        'Cookie': `${taskkeyVal}`,
+        'Accept': `*/*`,
+        'Connection': `keep-alive`,
+        'Referer': `http://zixuanguapp.finance.qq.com`,
+        'Accept-Encoding': `gzip,deflate`,
+        'Host': `wzq.tenpay.com`,
+        'User-Agent': `QQStock/8.7.0 (iPhone; iOS 14.1; Scale/2.00)`,
+        'Accept-Language': `zh-Hans-CN;q=1, en-CN;q=0.9`
+      },
+    }
+    $.get(testurl, async (error, resp, data) => {
+      if (logs == 1) $.log(data)
+      let task = JSON.parse(data)
+      $.log(`【浏览脱水研报】:获得 ${task.reward_desc}\n`);
+      tz += `【浏览脱水研报】:获得 ${task.reward_desc}\n`
+      await $.wait(10000); //等待10秒
+      resolve()
+    })
+  })
+}
+
+function statuid8_new() {
+  return new Promise((resolve, reject) => {
+    let testurl = {
+      url: `https://wzq.tenpay.com/cgi-bin/activity_task.fcgi?action=taskstatus&channel=1&actid=1111&id=8&tid=48&_appName=ios${taskheaderVal}`,
+
+      headers: {
+        'Cookie': `${taskkeyVal}`,
+        'Accept': `*/*`,
+        'Connection': `keep-alive`,
+        'Referer': `http://zixuanguapp.finance.qq.com`,
+        'Accept-Encoding': `gzip,deflate`,
+        'Host': `wzq.tenpay.com`,
+        'User-Agent': `QQStock/8.7.0 (iPhone; iOS 14.1; Scale/2.00)`,
+        'Accept-Language': `zh-Hans-CN;q=1, en-CN;q=0.9`
+      },
+    }
+    $.get(testurl, async (error, resp, data) => {
+      if (logs == 1) $.log(data)
+      statuid8_new = JSON.parse(data)
+      if (statuid8_new.done == 1) {
         $.log(`验证状态失败,任务已执行🚫`);
       } else {
         $.log(`验证状态成功,可执行任务🎉`);
