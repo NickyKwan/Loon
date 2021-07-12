@@ -1717,6 +1717,7 @@ function wxtaskid2_new(wxticket) {
         'Accept-Encoding': `gzip, deflate, br`,
         'Cookie': `${wxtaskkeyVal}`,
         'Content-Type': `application/x-www-form-urlencoded`,
+        'Content-Length': `51`,
         'Host': `wzq.tenpay.com`,
         'Connection': `keep-alive`,
         'User-Agent': `Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.20(0x1700142b) NetType/4G Language/zh_CN`,
