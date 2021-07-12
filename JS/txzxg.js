@@ -622,7 +622,7 @@ async function wxtask12() {
   await wxstatuid3_new()
   if (wxstatuid3_new.done == 0) {
     console.log(`开始申请票据...`)
-    await wxtaskticket_new(); //申请票据
+    await wxtaskticket(); //申请票据
     console.log(`执行【WX阅读资讯】任务`)
     await wxtaskid3_new(wxticket);
   } else {
