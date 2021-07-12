@@ -349,12 +349,15 @@ const option =  {
      url: "https://inf-prdapi.wesure.cn/prdapp/rpc/insurance-day-activity/completeTask",
 	 headers:JSON.parse(wefitHD2),
 	 body:{
-       "requestId": "c9c21541",
+       //"requestId": "c9c21541", //变
+	   "requestId": "${HD2.Ws-Request-Id}",
        "appId": "wx06a561655ab8f5b2",
-       "cmd": "completeTask",
-       "sessionId": "55663162605932622271145",
+       "cmd": "receivepoint",
+       //"sessionId": "55663162605932622271145", //变
+	   "sessionId": "${HD2.Ws-sessionId}", 
        "userId": "oc2P70JNuJFDIaFjy1QA6FAYzvs8",
-       "token": "6F36614A10D8CABE9D5F0AF195E367BA",
+       //"token": "6F36614A10D8CABE9D5F0AF195E367BA", //变
+	   "token": "${HD2.Ws-Login-Token}",
        "version": "PRD_3.32.1_",
        "wtagId": "",
        "body": {
@@ -394,16 +397,20 @@ message+='HD已过期，请重新获取\n'
 //领取积分——我在微保做精算
 function Receive_Video1() {
  return new Promise(async resolve => {
+	 const HD2 = JSON.parse(wefitHD2)
 const option =  {
      url: "https://inf-prdapi.wesure.cn/prdapp/rpc/insurance-day-activity/receivePoint",
 	 headers:JSON.parse(wefitHD2),
 	 body:{
-       "requestId": "c9c21541", //变
+       //"requestId": "c9c21541", //变
+	   "requestId": "${HD2.Ws-Request-Id}",
        "appId": "wx06a561655ab8f5b2",
        "cmd": "receivepoint",
-       "sessionId": "55663162605932622271145", //变
+       //"sessionId": "55663162605932622271145", //变
+	   "sessionId": "${HD2.Ws-sessionId}", 
        "userId": "oc2P70JNuJFDIaFjy1QA6FAYzvs8",
-       "token": "6F36614A10D8CABE9D5F0AF195E367BA", //变
+       //"token": "6F36614A10D8CABE9D5F0AF195E367BA", //变
+	   "token": "${HD2.Ws-Login-Token}",
        "version": "PRD_3.32.1_",
        "wtagId": "",
        "body": {
@@ -426,7 +433,7 @@ message+= result.body.completeMessage +'\n'
        } else {
          if (data) {
 console.log(data)
-console.log(`任务已完成`)
+console.log(`HD已过期`)
 message+=result.body.completeMessage
 message+='HD已过期，请重新获取\n'
 }
@@ -466,7 +473,7 @@ const option =  {
 $.post(option,async (err, resp, data) => {
 const result = JSON.parse(data)
 try {
-	message+='📣观看视频——我在微保\n'
+	message+='📣观看视频——保瓶儿\n'
 if (result.body.code == 0) {
 console.log(`${JSON.parse(data)}`)
 console.log(`任务完成`)
@@ -475,7 +482,7 @@ message+= result.body.completeMessage +'\n'
        } else {
          if (data) {
 console.log(data)
-console.log(`任务已完成`)
+console.log(`\n HD已过期`)
 message+=result.body.completeMessage
 message+='HD已过期，请重新获取\n'
 }
@@ -564,7 +571,7 @@ const option =  {
 $.post(option,async (err, resp, data) => {
 const result = JSON.parse(data)
 try {
-	message+='📣观看视频——我在微保\n'
+	message+='📣观看视频——奶爸保\n'
 if (result.body.code == 0) {
 console.log(`${JSON.parse(data)}`)
 console.log(`任务完成`)

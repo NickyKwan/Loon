@@ -207,6 +207,7 @@ async function txstock(){
   await userhome(); //金币查询
   console.log(`\n✅ 执行【签到】任务\n`)
   await signtask();
+  await wxsigntask();
   if (!taskheaderArr[0]) {
     console.log($.name, '【提示】请先前往获取任务cookie')
     return;
@@ -878,6 +879,54 @@ async function signtask() {
               $.log(`【签到】:获得${data.amount}金币`);
               $.log(`【签到时间】:` + time(rndtime));
               tz += `【签到】:获得${data.amount}金币\n`
+              await $.wait(5000); //等待5秒
+            }
+          }
+        }
+      } catch (e) {
+        $.logErr(e, resp);
+      } finally {
+        resolve();
+      }
+    });
+  });
+}
+//WX签到
+async function wxsigntask() {
+  return new Promise((resolve) => {
+    let signurl = {
+      url: `https://wzq.tenpay.com/cgi-bin/activity_sign_task.fcgi?actid=2002&action=signdone&date=${signday}&_=${rndtime}`,
+
+      headers: {
+        'Cookie': `${taskkeyVal}`,
+        'Accept': `application/json, text/plain, */*`,
+        'Connection': `keep-alive`,
+        'Referer': `https://wzq.tenpay.com/activity/page/welwareCenter/`,
+        'Accept-Encoding': `gzip, deflate, br`,
+        'Host': `wzq.tenpay.com`,
+        'User-Agent': `Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 qqstock/8.7.1`,
+        'Accept-Language': `zh-cn`
+      },
+    };
+    $.get(signurl, async (err, resp, data) => {
+      try {
+        if (err) {
+          console.log("腾讯自选股: API查询请求失败 ‼️‼️");
+          console.log(JSON.stringify(err));
+          $.logErr(err);
+        } else {
+          if (safeGet(data)) {
+            if (logs == 1) $.log(data)
+            //问题
+            $.log(data)
+            data = JSON.parse(data);
+            if (data.retcode == 0) {
+              $.log(`【WX签到】:${data.retmsg}\n`);
+              tz += `【WX签到】:${data.retmsg}\n`
+            } else {
+              $.log(`【WX签到】:获得${data.amount}金币`);
+              $.log(`【WX签到时间】:` + time(rndtime));
+              tz += `【WX签到】:获得${data.amount}金币\n`
               await $.wait(5000); //等待5秒
             }
           }
@@ -1688,7 +1737,7 @@ function wxtaskid2_new(wxticket) {
             if(data.retcode == 0){
               $.log(`【WX浏览行情港股】:获得${data.reward_desc}`);
               tz += `【WX浏览行情港股】:获得${data.reward_desc}\n`
-              await $.wait(5000); //等待5秒
+              await $.wait(10000); //等待10秒
             }else{
               console.log(`任务完成失败，错误信息：${JSON.stringify(data)}\n`)
               tz += `【WX浏览行情港股】:${data.retmsg}\n`
