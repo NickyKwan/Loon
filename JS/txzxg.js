@@ -829,8 +829,8 @@ async function wxtask19() {
 }
 //WX查看今日大盘行情
 async function wxtask20() {
-  console.log(`开始验证【WX浏览行情港股】任务状态`)
-  await wxstatuid2_new()
+  console.log(`开始验证【WX查看今日大盘行情】任务状态`)
+  await wxstatuid1_new()
   if (wxstatuid1_new.done == 0) {
     console.log(`开始申请票据...`)
     await wxtaskticket_new(); //申请票据
@@ -1576,7 +1576,7 @@ function statuid2_new() {
       if (logs == 1) $.log(data)
       statuid2_new = JSON.parse(data)
       if (statuid2_new.done == 1) {
-        $.log(`验证状态失败,任务已执行🚫`);
+        $.log(`验证状态失败,任务已执行🚫,${JSON.parse(data)}`);
       } else {
         $.log(`验证状态成功,可执行任务🎉`);
       }
@@ -1826,7 +1826,7 @@ function wxtaskid3_new(wxticket) {
               tz += `【WX阅读资讯】:获得${data.reward_desc}\n`
               await $.wait(5000); //等待5秒
             }else{
-              console.log(`任务完成失败，错误信息：${JSON.stringify(data)}\n`)
+              console.log(`任务完成失败，}\n`)
               tz += `【WX阅读资讯】:${data.retmsg}\n`
             }
           }
@@ -1918,7 +1918,7 @@ function statuid4_new() {
       if (logs == 1) $.log(data)
       statuid4_new = JSON.parse(data)
       if (statuid4_new.done == 1) {
-        $.log(`验证状态失败,任务已执行🚫`);
+        $.log(`验证状态失败,任务已执行🚫错误信息：${JSON.stringify(data)}`);
       } else {
         $.log(`验证状态成功,可执行任务🎉`);
       }
@@ -1974,7 +1974,7 @@ function wxstatuid4_get() {
       if (logs == 1) $.log(data)
       wxstatuid4_get = JSON.parse(data)
       if (wxstatuid4_get.done == 1) {
-        $.log(`验证状态失败,任务已执行🚫`);
+        $.log(`验证状态失败,任务已执行🚫错误信息：${JSON.parse(data)}`);
       } else {
         $.log(`验证状态成功,可执行任务🎉`);
       }
