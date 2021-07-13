@@ -504,97 +504,30 @@
       "script": "https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js"
     } ,
     {
-            "id": "qlp",
-            "name": "我老婆是状元",
-            "keys": ["qlphd","kzyhd", "qlphd2","kzyhd2", "qlphd3","kzyhd3", "qlphd4","kzyhd4", "qlphd5","kzyhd5", "qlphd6","kzyhd6"],
-            "author": "@feizao",
+            "id": "wefit",
+            "name": "腾讯微保",
+            "keys": ["wefitHD"],
+            "author": "@NickyKwan",
             "settings": [{
-            "id": "qlpstatus",
+            "id": "wefitstatus",
             "name": "当前账号",
             "val": "1",
             "type": "number",
             "desc": "当前账号对应"
     },
     {
-            "id": "qlpcount",
+            "id": "wefitcount",
             "name": "账号个数",
             "val": "1",
             "type": "number",
             "desc": "需要几个账号，数字为几"
     }],
-            "repo": "https://github.com/age174/-/blob/main/qlp.js",
+            "repo": "https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/wefit/wefit_cookie.js",
             "icons": ["https://ae01.alicdn.com/kf/Uc2775b8f4abf41788ba89df0317e58050.jpg", "https://ae01.alicdn.com/kf/Uc2775b8f4abf41788ba89df0317e58050.jpg"],
-            "script": "https://raw.githubusercontent.com/age174/-/main/qlp.js"
-    }  ,	
-    {
-            "id": "xfyjc",
-            "name": "幸福养鸡场",
-            "keys": ["xfyjchd", "xfyjchd2", "xfyjchd3", "xfyjchd4", "xfyjchd5", "xfyjchd6"],
-            "author": "@feizao",
-            "settings": [{
-            "id": "xfyjcstatus",
-            "name": "当前账号",
-            "val": "1",
-            "type": "number",
-            "desc": "当前账号对应"
-    },
-    {
-            "id": "xfyjccount",
-            "name": "账号个数",
-            "val": "1",
-            "type": "number",
-            "desc": "需要几个账号，数字为几"
-    }],
-            "repo": "https://github.com/age174/-/blob/main/xfyjc.js",
-            "icons": ["https://ae01.alicdn.com/kf/Ue110888eddad48a8a78d99284e599b134.jpg", "https://ae01.alicdn.com/kf/Ue110888eddad48a8a78d99284e599b134.jpg"],
-            "script": "https://raw.githubusercontent.com/age174/-/main/xfyjc.js"
-    },
-    {
-            "id": "scdcg",
-            "name": "食材大冲关",
-            "keys": ["scdcghd","scdcgbody","scdcgspbody","scdcghd2","scdcgbody2","scdcgspbody2","scdcghd3","scdcgbody3","scdcgspbody3","scdcghd4","scdcgbody4","scdcgspbody4","scdcghd5","scdcgbody5","scdcgspbody5","scdcghd6","scdcgbody6","scdcgspbody6"],
-            "author": "@feizao",
-            "settings": [{
-            "id": "scdcgstatus",
-            "name": "当前账号",
-            "val": "1",
-            "type": "number",
-            "desc": "当前账号对应"
-    },
-    {
-            "id": "scdcgcount",
-            "name": "账号个数",
-            "val": "1",
-            "type": "number",
-            "desc": "需要几个账号，数字为几"
-    }],
-            "repo": "https://github.com/age174/-/blob/main/scdcg.js",
-            "icons": ["https://ae01.alicdn.com/kf/U9f2a16b203ed40318d22f9fd5fdce9a9S.jpg", "https://ae01.alicdn.com/kf/U9f2a16b203ed40318d22f9fd5fdce9a9S.jpg"],
-            "script": "https://raw.githubusercontent.com/age174/-/main/scdcg.js"
-    } ,
-    {
-            "id": "csxdr",
-            "name": "超市小达人",
-            "keys": ["csxdrhd","csxdrbody","csxdrspbody", "csxdrhd2","csxdrbody2","csxdrspbody2","csxdrhd3","csxdrbody3","csxdrspbody3","csxdrhd4","csxdrbody4","csxdrspbody4","csxdrhd5","csxdrbody5","csxdrspbody5","csxdrhd6","csxdrbody6","csxdrspbody6"],
-            "author": "@feizao",
-            "settings": [{
-            "id": "csxdrstatus",
-            "name": "当前账号",
-            "val": "1",
-            "type": "number",
-            "desc": "当前账号对应"
-    },
-    {
-            "id": "csxdrcount",
-            "name": "账号个数",
-            "val": "1",
-            "type": "number",
-            "desc": "需要几个账号，数字为几"
-    }],
-            "repo": "https://github.com/age174/-/blob/main/csxdr.js",
-            "icons": ["https://ae01.alicdn.com/kf/Udd9cb36174cf41a7a69e28a643a360a9a.jpg", "https://ae01.alicdn.com/kf/Udd9cb36174cf41a7a69e28a643a360a9a.jpg"],
-            "script": "https://raw.githubusercontent.com/age174/-/main/csxdr.js"
-    } 
+            "script": "https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/wefit/wefit_cookie.js"
+    }  
+
+
 
 	
 ]
