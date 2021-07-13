@@ -31,20 +31,20 @@ let wefitHD = $.getdata('wefitHD')
 let wefitHD2 = $.getdata('wefitHD2')
 
 !(async () => {
-await Task_PH01();
-await Task_PH18();
-//await Task_LH02();
-await Task_PA06();
-await Task_LL11();
-await Task_Entry();
-await Read();
-await Video();
-await Video1();
-await Receive_Video1();
-await Video2();
-await Receive_Video2();
-await Video3();
-await Receive_Video3();
+await Task_PH01(); //浏览百万医疗
+await Task_PH18(); //浏览药神保
+await Task_PA06(); //浏览意外险
+await Task_LH02(); //浏览少儿重疾险
+await Task_LL11(); //浏览高性价比寿险
+await Task_Entry(); //浏览保险词条
+await Read(); //阅读文章
+await Video(); //观看视频
+//await Video1();
+//await Receive_Video1();
+//await Video2();
+//await Receive_Video2();
+//await Video3();
+//await Receive_Video3();
 await Reward();
 await Tx();
 await showMsg();
@@ -166,7 +166,7 @@ message+='HD已过期，请重新获取\n'
  })
 }
 
-//浏览
+//浏览少儿重疾险
 function Task_LH02() {
  return new Promise(async resolve => {
   const option =  {
@@ -180,7 +180,7 @@ function Task_LH02() {
 $.post(option,async (err, resp, data) => {
 const result = JSON.parse(data)
 try {
-	message+='📣'+result.body.taskName+'\n'
+	message+='📣浏览意外险\n'
 if (result.code == 0) {
 console.log(`${JSON.parse(data)}`)
 console.log(data)
