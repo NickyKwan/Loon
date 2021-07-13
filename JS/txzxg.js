@@ -179,7 +179,7 @@ if ($.isNode()) {
   taskheaderVal = taskheaderArr[0];
   taskkeyVal = taskkeyArr[0];
   wxtaskkeyVal = wxtaskkeyArr[0];
-  if((hour == 15 && minute >= 15) || (hour == 11) || (hour == 17) || (hour == 18) || (hour == 19) || (hour == 20) || (hour == 21) || (hour == 22) || (hour == 23)){
+  if((hour == 15 && minute >= 15) || (hour == 16) || (hour == 17) || (hour == 18) || (hour == 19) || (hour == 20) || (hour == 21) || (hour == 22) || (hour == 23)){
 
 	await txstock();
   }else{
