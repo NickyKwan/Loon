@@ -14,6 +14,15 @@ if ($request && $request.method != `OPTIONS` && $request.url.indexOf("completeTa
   $.done()
 }
 
+//wefitHD2
+if ($request && $request.method != `OPTIONS` && $request.url.indexOf("insurance-day-activity") >= 0) {
+
+  const wefitHD2 = JSON.stringify($request.headers)
+  if (wefitHD2) $.setdata(wefitHD, 'wefitHD2')
+  $.log(`获取wefitHD2请求🎉: 成功,wefitHD: ${wefitHD2}`)
+  $.msg($.name, "添加【每日积分任务】请求: 成功🎉")
+  $.done()
+}
 
 
 //getallkey
