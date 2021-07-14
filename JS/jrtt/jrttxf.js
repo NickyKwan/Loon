@@ -1,24 +1,22 @@
 /*
 
-tgchannel：https://t.me/Ariszy_Script
-github：https://github.com/Ariszy/script
-转载给我留个名字，谢谢
-
-
-邀请码：931850705
-我的--输入邀请码，立得一元，直接提现，谢谢
-
-作者：执意Ariszy
+修改自执意Ariszy的jrtt.js脚本
 目前包含：
 签到
-开首页宝箱
-读文章30篇（具体效果自测）
+吃饭补贴
 农场签到
+农场三餐补贴
+农场领水滴
 开农场宝箱
 农场浇水
-done 农场离线奖励(农场宝箱开完后，需要进农场再运行脚本才能开，有点问题)
+农场补充水滴
+农场离线奖励(农场宝箱开完后，需要进农场再运行脚本才能开，待测试)
 ##通过农场浇水激活上线，达到获取理想奖励目的，目前测试每天的离线奖励足够开启农场5个宝箱，不需要做其他任务，具体情况看后期是否需要，再添加除虫，开地，施肥，三餐奖励以及农场签到活动
-20点睡觉，获取完全后（3600）或睡觉12小时，自动醒来（防止封号）
+20点睡觉，获取完全后（3600）或睡觉12小时，自动醒来（待测试）
+
+带完成：
+开首页宝箱
+读文章30篇（具体效果自测）
 自动收取睡觉金币
 
 
@@ -26,6 +24,8 @@ done 农场离线奖励(农场宝箱开完后，需要进农场再运行脚本�
 
 #右上角签到即可获取签到cookie
 #进一次农场即可获取农场cookie
+
+这个未修复
 #读文章弹出金币获取读文章cookie
 
 6.29 修复，测试
@@ -35,12 +35,12 @@ hostname = *.toutiaoapi.com
 
 #圈x
 [rewrite local]
-\/score_task\/v1\/task\/(sign_in|get_read_bonus) url script-request-header https://raw.githubusercontent.com/Ariszy/Private-Script/master/Scripts/jrtt.js
-\/ttgame\/game_farm\/home_info url script-request-header https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/jrttxf.js
-luckycat/lite/v1/sign_in/* url script-request-header https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/jrttxf.js
+\/score_task\/v1\/task\/(sign_in|get_read_bonus) url script-request-header https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/jrtt/jrttxf.js
+\/ttgame\/game_farm\/home_info url script-request-header https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/jrtt/jrttxf.js
+luckycat/lite/v1/sign_in/* url script-request-header https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/jrtt/jrttxf.js
 
 [task]
-5,35 8-23 * * * https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/jrttxf.js, tag=今日头条极速版, enabled=true
+5,35 8-23 * * * https://raw.githubusercontent.com/NickyKwan/JavaScript/main/JS/jrtt/jrttxf.js, tag=今日头条极速版, enabled=true
 
 */
 
@@ -241,9 +241,9 @@ if (!signurlArr[0]) {
 ////      await openbox()          //开宝箱
 ////      await box_ad()          //开宝箱广告
 ////      await eat()	           //开饭	  
-      await reading()        //阅读
+      //await reading()        //阅读
 ////      await farm_sign_in()   //农场签到
-      await openfarmbox()    //农场宝箱
+////   await openfarmbox()    //农场宝箱
 ////      await landwater()        //农场浇水  
       await water()              //农场浇水+补充水滴  
       await double_reward()    //农场视频双倍
@@ -268,9 +268,6 @@ if (!signurlArr[0]) {
 	  await eat();           //开饭
 	  await eat_ad();        //开饭视频
 	  await farm_gift1();    //农场早餐
-
-      await openfarmbox();   //农场宝箱
-      await farmbox_ad() //农场宝箱
       }else{
            }
 	  
@@ -297,8 +294,7 @@ if (!signurlArr[0]) {
 	if((hour == 21) || (hour == 22)){
 	  await eat();           //开饭
 	  await eat_ad();        //开饭视频
-      await openfarmbox();   //农场宝箱
-      await farmbox_ad() //农场宝箱
+
       }else{
            }
 	  
@@ -809,7 +805,7 @@ return new Promise((resolve, reject) => {
    })
   }
 
-
+//农场浇水+补充水滴
 async function water() {
   console.log(`📣执行【农场浇水】任务`)
   await landwater() //农场浇水
@@ -843,13 +839,11 @@ return new Promise((resolve, reject) => {
         if(logs)$.log(data)
        other +='📣农场浇水\n'
       if(result.status_code == '0') {
-	    console.log(`${JSON.parse(data)}`)  
         other += result.message+'\n'
         other += '💧水滴剩余'+result.data.water+'\n'
         }
       else{
         other +=result.message+'\n'
-	    console.log(`${JSON.parse(data)}`)
 	    console.log(`没有水咯...`)  
 	    console.log(`📣执行【补充水滴】任务`)
 		//await wateradd(); //补充水滴
