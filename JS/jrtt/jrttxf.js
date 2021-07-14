@@ -69,7 +69,7 @@ let	boxbody = '[{open_treasure_box_enter_from": ""}]'
 //var articles =''
 let tz = ($.getval('tz') || '1');//0关闭通知，1默认开启
 const invit=1;//新用户自动邀请，0关闭，1默认开启
-const logs =1;//0为关闭日志，1为开启
+const logs =0;//0为关闭日志，1为开启
 var coins=''
 var article =''
 var collect = ''
@@ -243,8 +243,9 @@ if (!signurlArr[0]) {
 ////      await eat()	           //开饭	  
       await reading()        //阅读
 ////      await farm_sign_in()   //农场签到
-////      await openfarmbox()    //农场宝箱
-      await landwarer()        //农场浇水  
+      await openfarmbox()    //农场宝箱
+////      await landwater()        //农场浇水  
+      await water()              //农场浇水+补充水滴  
       await double_reward()    //农场视频双倍
 ////      await farm_task1()        //农场每天任务
 ////      await farm_task2()        //农场每天任务
@@ -257,9 +258,9 @@ if (!signurlArr[0]) {
       await control()          
       await sleepstart()        //睡觉
       await sleepstop()         //起床
-      await collectcoins(coins) //收取睡觉金币
+////      await collectcoins(coins) //收取睡觉金币
 	  
-	if((hour == 8) || (hour == 9) ||){
+	if((hour == 8) || (hour == 9)){
 	  await sign_in();        //签到
 	  //await sign_in_ad();    //签到视频
       await farm_sign_in();   //农场签到
@@ -267,35 +268,39 @@ if (!signurlArr[0]) {
 	  await eat();           //开饭
 	  await eat_ad();        //开饭视频
 	  await farm_gift1();    //农场早餐
-	  //await gift_ad();    //农场三餐视频
+
       await openfarmbox();   //农场宝箱
-      //await farmbox_ad() //农场宝箱
-      }
+      await farmbox_ad() //农场宝箱
+      }else{
+           }
 	  
-	if((hour == 11) || (hour == 12) ||){
+	if((hour == 11) || (hour == 12)){
 	  await eat();           //开饭
 	  await eat_ad();        //开饭视频
 	  await farm_gift2();    //农场午餐
-	  //await gift_ad();    //农场三餐视频
+
       await openfarmbox();   //农场宝箱
-      //await farmbox_ad() //农场宝箱
-      }
+      await farmbox_ad() //农场宝箱
+      }else{
+           }
 	  
-	if((hour == 17) || (hour == 18) ||){
+	if((hour == 17) || (hour == 18)){
 	  await await eat();     //开饭
 	  await eat_ad();        //开饭视频
 	  await farm_gift3();    //农场午餐
-	  //await gift_ad();    //农场三餐视频
+
       await openfarmbox();   //农场宝箱
-      //await farmbox_ad()   //农场宝箱
-      }
+      await farmbox_ad()   //农场宝箱
+      }else{
+           }
 	  
-	if((hour == 21) || (hour == 22) ||){
+	if((hour == 21) || (hour == 22)){
 	  await eat();           //开饭
 	  await eat_ad();        //开饭视频
       await openfarmbox();   //农场宝箱
-      //await farmbox_ad() //农场宝箱
-      }
+      await farmbox_ad() //农场宝箱
+      }else{
+           }
 	  
       await showmsg()
   }
@@ -779,9 +784,52 @@ return new Promise((resolve, reject) => {
     })
    })
   }  
-  
+ 
+//农场宝箱视频
+function farmbox_ad() {
+return new Promise((resolve, reject) => {
+  let farmbox_adurl ={
+	url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/excitation_ad/add?$excitation_ad_score_amount=134&{farmurl}`,
+    headers :JSON.parse(farmkey),
+      timeout: 60000,
+}
+   $.get(farmbox_adurl,(error, response, data) =>{
+     const result = JSON.parse(data)
+       if(logs) $.log(data)
+       other +='📣开宝箱视频\n'
+      if(result.status_code == 0) {
+        other += '开启成功'
+        other += '获得金币'+result.data.incr_coin+'个\n'
+        }
+      else if(result.status_code == 5003){
+        other +="已全部开启\n"
+        }
+          resolve()
+    })
+   })
+  }
+
+
+async function water() {
+  console.log(`📣执行【农场浇水】任务`)
+  await landwater() //农场浇水
+
+  if (landwater.status_code == '0') {
+		//console.log(`${JSON.parse(data)}`)
+    await $.wait(1000); //等待1秒  
+	console.log(`📣执行【农场浇水】成功`)
+	await water(); 
+  } else {
+	  
+	//console.log(`没有水咯...`)  
+	console.log(`📣执行【补充水滴】任务`)
+    await wateradd(); //补充水滴
+
+  }
+}
+
 //农场浇水 
-function landwarer() {
+async function landwater() {
 return new Promise((resolve, reject) => {
   let landwaterurl ={
     //url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/land_water?tentimes=0${farmurl}`,
@@ -795,16 +843,49 @@ return new Promise((resolve, reject) => {
         if(logs)$.log(data)
        other +='📣农场浇水\n'
       if(result.status_code == '0') {
+	    console.log(`${JSON.parse(data)}`)  
         other += result.message+'\n'
         other += '💧水滴剩余'+result.data.water+'\n'
         }
       else{
         other +=result.message+'\n'
+	    console.log(`${JSON.parse(data)}`)
+	    console.log(`没有水咯...`)  
+	    console.log(`📣执行【补充水滴】任务`)
+		//await wateradd(); //补充水滴
            }
           resolve()
     })
    })
   } 
+
+//补充水滴
+function wateradd() {
+return new Promise((resolve, reject) => {
+  let wateraddurl ={
+    //url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/land_water?tentimes=0${farmurl}`,
+    url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/water/add?${farmurl}`,
+    headers :JSON.parse(farmkey),
+      timeout: 60000,
+}
+
+   $.get(wateraddurl,(error, response, data) =>{
+     const result = JSON.parse(data)
+        if(logs)$.log(data)
+       other +='📣补充水滴\n'
+      if(result.status_code == '0') {
+        other += result.message+'\n'
+        other += '💧补充水滴'+result.data.water+'\n'
+        }
+      else{
+        other +=result.message+'\n'
+		
+           }
+          resolve()
+    })
+   })
+  } 
+  
 //done 这个离线奖励当宝箱全部开完后，需要进入农场再运行脚本，才能获取离线奖励，应该有一个判定，目前没有找到
 //利用浇水激活进农场状态获取离线奖励，目前测试每天离线奖励足够开启农场5个宝箱，不需要做游戏加快生产，具体情况看后期是否需要，再考虑加做除虫，开地，三餐奖励
 //农场视频双倍
@@ -1089,8 +1170,8 @@ return new Promise((resolve, reject) => {
   let collectcoinsurl ={
     //url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/sleep/done_task/?_request_from=web&device_platform=undefined&${signurl}`,
     url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/sleep/done_task/?${signurl}`,
-    //headers :JSON.parse(farmkey),
-    headers :JSON.parse(signkey),
+    headers :JSON.parse(farmkey),
+    //headers :JSON.parse(signkey),
       timeout: 60000,
     body :JSON.stringify({score_amount: coins}),
 
