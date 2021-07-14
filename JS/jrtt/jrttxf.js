@@ -237,13 +237,13 @@ if (!signurlArr[0]) {
       await invite()           //用户邀请
       await userinfo()
       await profit()           //金币收益
-      await sign_in()          //签到
+////      await sign_in()          //签到
 ////      await openbox()          //开宝箱
 ////      await box_ad()          //开宝箱广告
 ////      await eat()	           //开饭	  
       await reading()        //阅读
-      await farm_sign_in()   //农场签到
-      await openfarmbox()    //农场宝箱
+////      await farm_sign_in()   //农场签到
+////      await openfarmbox()    //农场宝箱
       await landwarer()        //农场浇水  
       await double_reward()    //农场视频双倍
 ////      await farm_task1()        //农场每天任务
@@ -257,7 +257,46 @@ if (!signurlArr[0]) {
       await control()          
       await sleepstart()        //睡觉
       await sleepstop()         //起床
-      //await collectcoins(coins) //收取睡觉金币
+      await collectcoins(coins) //收取睡觉金币
+	  
+	if((hour == 8) || (hour == 9) ||){
+	  await sign_in();        //签到
+	  //await sign_in_video();    //签到视频
+      await farm_sign_in();   //农场签到
+	  //await farm_sign_in_video();    //农场签到视频
+	  await eat();           //开饭
+	  await eat_ad();        //开饭视频
+	  await farm_gift1();    //农场早餐
+	  //await gift_ad();    //农场三餐视频
+      await openfarmbox();   //农场宝箱
+      //await farmbox_ad() //农场宝箱
+      }
+	  
+	if((hour == 11) || (hour == 12) ||){
+	  await eat();           //开饭
+	  await eat_ad();        //开饭视频
+	  await farm_gift2();    //农场午餐
+	  //await gift_ad();    //农场三餐视频
+      await openfarmbox();   //农场宝箱
+      //await farmbox_ad() //农场宝箱
+      }
+	  
+	if((hour == 17) || (hour == 18) ||){
+	  await await eat();     //开饭
+	  await eat_ad();        //开饭视频
+	  await farm_gift3();    //农场午餐
+	  //await gift_ad();    //农场三餐视频
+      await openfarmbox();   //农场宝箱
+      //await farmbox_ad()   //农场宝箱
+      }
+	  
+	if((hour == 21) || (hour == 22) ||){
+	  await eat();           //开饭
+	  await eat_ad();        //开饭视频
+      await openfarmbox();   //农场宝箱
+      //await farmbox_ad() //农场宝箱
+      }
+	  
       await showmsg()
   }
  }
@@ -332,6 +371,31 @@ return new Promise((resolve, reject) => {
           other +='📣首页签到\n'
           other +='今日已完成签到\n'
            }
+          resolve()
+    })
+   })
+  } 
+
+function sign_in_video() {
+return new Promise((resolve, reject) => {
+  let url ={
+    //url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/box/open?${farmurl}`,
+	url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/box/open?${farmurl}`,
+    headers :JSON.parse(farmkey),
+      timeout: 60000,
+}
+
+   $.post(url,(error, response, data) =>{
+     const result = JSON.parse(data)
+       if(logs) $.log(data) 
+       other +='📣农场宝箱\n'
+      if(result.status_code == 0) {
+        other += "第"+(5-result.data.box_num)+"开启成功"
+        other += "还可以开启"+result.data.box_num+"个\n"
+        }
+      else if(result.status_code == 5003){
+        other +="已全部开启\n"
+        }
           resolve()
     })
    })
@@ -602,8 +666,55 @@ return new Promise((resolve, reject) => {
     })
    })
   } 
+  
+//吃饭视频
+function eat_ad() {
+return new Promise((resolve, reject) => {
+  let url ={
+	url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/task/done/excitation_ad?${readurl}`,
+    headers :JSON.parse(farmkey),
+	body :{
+      "extra": {"stage_score_amount": null},
+      "ad_alias_position": "coin",
+      "amount": 50,
+      "ad_from": "coin",
+      "act_common": {
+        "sdk_version": "0.1.0",
+        "act_data": "H4O1AzcSdx9YA7fD_gcPzQ",
+        "settings_version": 15,
+        "act_token": "xsEbJhtEc-n3eYdbwLYpezlWPH0-SPP_Dfb020hPmqfyCQrrL4x1NAuYstngkbfFwSnMeC42ve4LQUro0RS7mfOZNJXxIiXJVLOLRpnO887TdCGJQG4fkdfVJIJ61n6lDlstYhSv64eZXNK80Zm_4Xj5t47iPay4WH8PNN7vowg",
+        "act_base": "6qvbXBO0-XKL6jyQzg8Q6qmambLEiqUw03D9RSA1cR1eRNihmxogiXR-_3SYJ-KRXozLP28SpGj2db13e6p6Ob7rcdmQTW6nQgomoyHyX9mCWABpqythlYsrRZdnt7ji24pZfxbd8vmYmeUEX_-fds8EOTsD_aJRCzXjofjKKIhtDwz9daEEz8HhRicrgzt1"},
+      "task_id": "181",
+      "is_post_login": false,
+      "task_key": "excitation_ad",
+      "ad_rit": 5,
+      "score_source": 1,
+      "coin_count": 50,
+      "ad_id": 5
+      },
+      timeout: 60000,
+}
+   $.post(url,(error, response, data) =>{
+     const result = JSON.parse(data)
+       if(logs) $.log(data)
+       other +='📣开宝箱视频\n'
+      if(result.err_no == 0) {
+        other += '开启成功'
+        other += '获得金币'+result.data.score_amount+'个\n'
+        }
+      else{
+         if(result.err_no == 9){
+        other += result.err_tips+'\n'
+        }else{
+        other +="不在开宝箱时间\n"
+           }
+    }
+          resolve()
+    })
+   })
+  } 
 
-//广告
+//开箱视频
 function box_ad() {
 return new Promise((resolve, reject) => {
   let box_adurl ={
@@ -626,7 +737,7 @@ return new Promise((resolve, reject) => {
    $.post(box_adurl,(error, response, data) =>{
      const result = JSON.parse(data)
        if(logs) $.log(data)
-       other +='📣开宝箱广告\n'
+       other +='📣开宝箱视频\n'
       if(result.err_no == 0) {
         other += '开启成功'
         other += '获得金币'+result.data.score_amount+'个\n'
@@ -815,7 +926,7 @@ return new Promise((resolve, reject) => {
 function farm_gift1() {
 return new Promise((resolve, reject) => {
   let farm_gift1url ={
-	url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/reward/gift?gift_id=1&watch_ad=1&${farmurl}`,
+	url: `https://api3-normal-lf.toutiaoapi.com/ttgame/game_farm/reward/gift?gift_id=1&watch_ad=0&double=1&${farmurl}`,
     headers :JSON.parse(farmkey),
       timeout: 60000,
 }
