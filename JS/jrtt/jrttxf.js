@@ -261,9 +261,9 @@ if (!signurlArr[0]) {
 	  
 	if((hour == 8) || (hour == 9) ||){
 	  await sign_in();        //签到
-	  //await sign_in_video();    //签到视频
+	  //await sign_in_ad();    //签到视频
       await farm_sign_in();   //农场签到
-	  //await farm_sign_in_video();    //农场签到视频
+	  //await farm_sign_in_ad();    //农场签到视频
 	  await eat();           //开饭
 	  await eat_ad();        //开饭视频
 	  await farm_gift1();    //农场早餐
@@ -376,7 +376,7 @@ return new Promise((resolve, reject) => {
    })
   } 
 
-function sign_in_video() {
+function sign_in_ad() {
 return new Promise((resolve, reject) => {
   let url ={
     //url: `https://api3-normal-c-lq.snssdk.com/ttgame/game_farm/box/open?${farmurl}`,
@@ -697,7 +697,7 @@ return new Promise((resolve, reject) => {
    $.post(url,(error, response, data) =>{
      const result = JSON.parse(data)
        if(logs) $.log(data)
-       other +='📣开宝箱视频\n'
+       other +='📣吃饭视频\n'
       if(result.err_no == 0) {
         other += '开启成功'
         other += '获得金币'+result.data.score_amount+'个\n'
@@ -706,7 +706,7 @@ return new Promise((resolve, reject) => {
          if(result.err_no == 9){
         other += result.err_tips+'\n'
         }else{
-        other +="不在开宝箱时间\n"
+        other +="不在吃饭时间\n"
            }
     }
           resolve()
