@@ -7,6 +7,7 @@
 农场签到
 农场三餐补贴
 农场领水滴
+农场每日任务
 开农场宝箱
 农场浇水
 农场补充水滴
@@ -240,13 +241,14 @@ if (!signurlArr[0]) {
       await profit()           //金币收益
 ////      await sign_in()          //签到
 ////      await openbox()          //开宝箱
+////      await $.wait(2000);    //等待2秒  
 ////      await box_ad()          //开宝箱广告
 ////      await eat()	           //开饭	  
       //await reading()        //阅读
 ////      await farm_sign_in()   //农场签到
 ////   await openfarmbox()    //农场宝箱
 ////      await landwater()        //农场浇水  
-      await water()              //农场浇水模块  
+
       await double_reward()    //农场视频双倍
 ////      await farm_task1()        //农场每天任务
 ////      await farm_task2()        //农场每天任务
@@ -273,7 +275,7 @@ if (!signurlArr[0]) {
 
 	  await farm_gift1();    //农场早餐
       await openfarmbox();   //农场宝箱
-      await farmbox_ad()     //农场宝箱视频
+      await farmbox_ad();    //农场宝箱视频
       }
 	  
 	if(hour == 12){
@@ -283,6 +285,7 @@ if (!signurlArr[0]) {
 	  await farm_gift2();    //农场午餐
       await openfarmbox();   //农场宝箱
       await farmbox_ad();    //农场宝箱视频
+      await water();         //农场浇水模块  
       await farm_task1();    //农场每天任务
       await $.wait(2000);    //等待2秒  
       await farm_task2();    //农场每天任务
@@ -295,10 +298,9 @@ if (!signurlArr[0]) {
 	if(hour == 18){
 	  await await eat();     //晚餐
 	  await eat_ad();        //晚餐视频
-
 	  await farm_gift3();    //农场晚餐
       await openfarmbox();   //农场宝箱
-      await farmbox_ad()     //农场宝箱视频
+      await farmbox_ad();     //农场宝箱视频
       }
 	  
 	if(hour == 21){
@@ -308,7 +310,8 @@ if (!signurlArr[0]) {
       await sleepstart();    //开始睡觉
 	  
       await openfarmbox();   //农场宝箱
-      await farmbox_ad()     //农场宝箱视频
+      await farmbox_ad();    //农场宝箱视频
+      await water();         //农场浇水模块  
       }
 	  
       await showmsg()
@@ -635,16 +638,11 @@ return new Promise((resolve, reject) => {
   } 
 //开宝箱
 function openbox() {
-//	const boxbody = {"open_treasure_box_enter_from": ""},
 return new Promise((resolve, reject) => {
   let openboxurl ={
-    //url: `https://it-lq.snssdk.com/score_task/v1/task/open_treasure_box/?${signurl}`,
 	url: `https://api3-normal-lf.toutiaoapi.com/score_task/v1/task/open_treasure_box/?${signurl}`,
     headers :JSON.parse(signkey),
-	//body : boxbody,
 	body: {"open_treasure_box_enter_from": ""},
-	//body :JSON.stringify({open_treasure_box_enter_from:  }),
-	    //body :JSON.stringify({score_amount: coins}),
       timeout: 60000,
 }
    $.post(openboxurl,(error, response, data) =>{
@@ -667,7 +665,45 @@ return new Promise((resolve, reject) => {
    })
   }  
 
-
+//开箱视频
+function box_ad() {
+return new Promise((resolve, reject) => {
+  let box_adurl ={
+	url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/task/done/excitation_ad?${readurl}`,
+    headers :JSON.parse(signkey),
+	body :{
+           "amount": "145",
+           "ad_rit": "2",
+           "is_post_login": "false",
+           "score_source": "1",
+           "ad_alias_position": "coin",
+           "task_id": "188",
+           "task_key": "excitation_ad",
+           "coin_count": "145",
+           "ad_from": "coin",
+           "ad_id": "2"
+           },
+      timeout: 60000,
+}
+   $.post(box_adurl,(error, response, data) =>{
+     const result = JSON.parse(data)
+       if(logs) $.log(data)
+       other +='📣开宝箱视频\n'
+      if(result.err_no == 0) {
+        other += '开启成功'
+        other += '获得金币'+result.data.score_amount+'个\n'
+        }
+      else{
+         if(result.err_no == 9){
+        other += result.err_tips+'\n'
+        }else{
+        other +="不在开宝箱时间\n"
+           }
+    }
+          resolve()
+    })
+   })
+  } 
 
 //吃饭
 function eat() {
@@ -745,45 +781,7 @@ return new Promise((resolve, reject) => {
    })
   } 
 
-//开箱视频
-function box_ad() {
-return new Promise((resolve, reject) => {
-  let box_adurl ={
-	url: `https://api3-normal-lf.toutiaoapi.com/luckycat/lite/v1/task/done/excitation_ad?${readurl}`,
-    headers :JSON.parse(farmkey),
-	body :{
-           "amount": "124",
-           "ad_rit": "2",
-           "is_post_login": "false",
-           "score_source": "1",
-           "ad_alias_position": "coin",
-           "task_id": "188",
-           "task_key": "excitation_ad",
-           "coin_count": "131",
-           "ad_from": "coin",
-           "ad_id": "2"
-           },
-      timeout: 60000,
-}
-   $.post(box_adurl,(error, response, data) =>{
-     const result = JSON.parse(data)
-       if(logs) $.log(data)
-       other +='📣开宝箱视频\n'
-      if(result.err_no == 0) {
-        other += '开启成功'
-        other += '获得金币'+result.data.score_amount+'个\n'
-        }
-      else{
-         if(result.err_no == 9){
-        other += result.err_tips+'\n'
-        }else{
-        other +="不在开宝箱时间\n"
-           }
-    }
-          resolve()
-    })
-   })
-  } 
+
 
 //农场宝箱
 function openfarmbox() {
@@ -882,6 +880,7 @@ return new Promise((resolve, reject) => {
            } 
 	  else{
 		  other +=result.message+'\n'
+		farmwater = 2 //停止浇水
            }
           resolve()
     })
